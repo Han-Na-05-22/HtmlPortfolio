@@ -7,36 +7,38 @@
     <title>기업형 포트폴리오</title>
     <script src="https://kit.fontawesome.com/d1d2824d3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./main.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/anime.js"></script>
 </head>
 <body>
     <header id="header">
         <div class="inner">
-        <h1><a href="#">PORTFOLIO<span class="hidden">로고</span></a></h1>
-        <div class="btnCall">
-            <span class="hidden">메뉴호출</span>
+            <h1 class="logo"><a href="index.html">PORTFOLIO<span class="hidden">로고</span></a></h1>
+            <div class="btnCall">
+                <div></div>
+                <span class="hidden">메뉴호출</span>
+            </div>
+
+            <nav class="menuMo">
+                <h1><a href="index.html">PORTFOLIO<span class="hidden">로고2</span></a></h1>
+
+                <ul class="gnb">
+                    <li><a href="./html/about.html">ABOUT</a></li>
+                    <li><a href="./html/youtube.html">YOUTUBE</a></li>
+                    <li><a href="./html/community.html">COMMUNITY</a></li>
+                    <li><a href="./html/gallery.html">GALLERY</a></li>
+                    <li><a href="./html/location.html">LOCATION</a></li>
+                </ul>
+                <ul class="util">
+                    <li><a href="./html/loing.html">LOING</a></li>
+                    <li><a href="./html/join.html">JOIN</a></li>
+                </ul>
+
+                <button class="close">
+                    <i class="fas fa-times"></i> 
+                </button>
+            </nav>
         </div>
-
-        <nav class="menuMo">
-            <ul class="gnb">
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">YOUTUBE</a></li>
-                <li><a href="#">COMMUNITY</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">LOCATION</a></li>
-            </ul>
-            <ul class="util">
-                <li><a href="#">LOING</a></li>
-                <li><a href="#">JOIN</a></li>
-            </ul>
-
-            <button class="close">
-                CLOSE
-            </button>
-
-        </nav>
-        </div>
-        
     </header>
 
     <figure id="figure">
@@ -80,29 +82,109 @@
                     <article>
                         <b>WHAT WE DO</b>
                         <h2>PROVIDE THE BEST SERVICES</h2>
-                        <ul class="content">
+                        <div class="content">
+                            <div class="contentGroup">
+                                <div class="contentBack">
+                                    <i class="far fa-gem"></i>
+                                </div>
+                                <div class="contentFront">
+                                    <i class="far fa-gem"></i>
+                                    <span>ARCHITECTURE</span>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contentGroup">
+                                <div class="contentBack">
+                                    <i class="fas fa-fill-drip"></i>
+                                </div>
+                                <div class="contentFront">
+                                    <i class="fas fa-fill-drip"></i>
+                                    <span>INTERIOR DESIGN</span>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                </div>
+                            </div>
+                            <div class="contentGroup">
+                                <div class="contentBack">
+                                    <i class="fas fa-couch"></i>
+                                </div>
+                                <div class="contentFront">
+                                    <i class="fas fa-couch"></i>
+                                    <span>FURNITURE DESIGN</span>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                </div>
+                            </div>
+                            <div class="contentGroup">
+                                <div class="contentBack">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="contentFront">
+                                    <i class="fas fa-headset"></i>
+                                    <span>CONSULTING</span>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="ProvideBtn"><i class="fas fa-times"></i></a>
+                    </article>
+                    <!-- <div class="architecturePic">
+                            <ul>
+                                <li data-index="1">
+                                    <img src="./img/INTERIOR DESIGN.jpg" alt="">
+                                </li>
+                                <li data-index="1">
+                                    <img src="./img/INTERIOR DESIGN.jpg" alt="">
+                                </li>
+                                <li data-index="1">
+                                    <img src="./img/INTERIOR DESIGN.jpg" alt="">
+                                </li>
+                                <li data-index="1">
+                                    <img src="./img/INTERIOR DESIGN.jpg" alt="">
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="architectureTxt">
+                        <ul>
                             <li>
-                                <i class="far fa-gem"></i>
-                                <span>ARCHITECTURE</span>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                <div>
+                                    <h3>01. ARCHITECTURE</h3>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad reprehenderit iste commodi, ullam perspiciatis sint qui laboriosam nostrum itaque, expedita maiores voluptate?</p>
+                                    <span><b>01</b>/04</span>
+                                </div>
                             </li>
                             <li>
-                                <i class="fas fa-fill-drip"></i>
-                                <span>INTERIOR DESIGN</span>
-                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                <div>
+                                    <h3>02. ARCHITECTURE</h3>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad reprehenderit iste commodi, ullam perspiciatis sint qui laboriosam nostrum itaque, expedita maiores voluptate?</p>
+                                    <span><b>01</b>/04</span>
+                                </div>
                             </li>
                             <li>
-                                <i class="fas fa-couch"></i>
-                                <span>FURNITURE DESIGN</span>
-                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                <div>
+                                    <h3>03. ARCHITECTURE</h3>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad reprehenderit iste commodi, ullam perspiciatis sint qui laboriosam nostrum itaque, expedita maiores voluptate?</p>
+                                    <span><b>01</b>/04</span>
+                                </div>
                             </li>
                             <li>
-                                <i class="fas fa-headset"></i>
-                                <span>CONSULTING</span>
-                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Eius ab non consequatur<br> aperiam aspernatur corrupti<br> atque vel?</p>
+                                <div>
+                                    <h3>04. ARCHITECTURE</h3>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad reprehenderit iste commodi, ullam perspiciatis sint qui laboriosam nostrum itaque, expedita maiores voluptate?</p>
+                                    <span>01</span>
+                                </div>
                             </li>
                         </ul>
-                    </article>
+                    </div>
+                    <a href="#" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <a href="#" class="next">
+                        <i class="fas fas fa-arrow-right"></i>
+                    </a> -->
                 </div>
             </div>
         </section>
@@ -114,24 +196,32 @@
                         <li>
                             <a href="#">
                                 <img src="./img/Provide01.jpg" alt="">
+                                <div class="line"></div>
+                                <div class="line2"></div>
                             </a>
                             <p>ARCH BUILDING<br>PROJECTS</p>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="./img/Provide02.jpg" alt="">
+                                <div class="line"></div>
+                                <div class="line2"></div>
                             </a>
                             <p>FURNITURE DESIGN<br>PROJECTS</p>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="./img/Provide03.jpg" alt="">
+                                <div class="line"></div>
+                                <div class="line2"></div>
                             </a>
                             <p>HOUSE DESIGN<br>PROJECTS</p>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="./img/Provide04.jpg" alt="">
+                                <div class="line"></div>
+                                <div class="line2"></div>
                             </a>
                             <p>OUR INTERIORS<br>PROJECTS</p>
                         </li>
@@ -147,21 +237,21 @@
                 <div class="wrap">
                     <ul class="contentList">
                         <li>
-                            <img src="./img/Blog01.webp" alt="">
+                            <a href="#"><img src="./img/Blog01.webp" alt=""></a>
                             <a href="#" class="picBtn">NATURE</a>
                             <h3>SOMETHING | NEED TO TELL YOU</h3>
                             <span>MAY 16, 2021</span>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore est incidunt corporis dolor reiciendis possimus.</p>
                         </li>
                         <li>
-                            <img src="./img/Blog02.jpg" alt="">
+                            <a href="#"><img src="./img/Blog02.jpg" alt=""></a>
                             <a href="#" class="picBtn">BRANDING</a>
                             <h3>ARE YOU DOING THE RIGHT WAY?</h3>
                             <span>MAY 28, 2021</span>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore est incidunt corporis dolor reiciendis possimus.</p>
                         </li>
                         <li>
-                            <img src="./img/Blog03.jpg" alt="">
+                            <a href="#"><img src="./img/Blog03.jpg" alt=""></a>
                             <a href="#" class="picBtn">DESIGN</a>
                             <h3>WHY YOU SHOULD ALWAYS FIRST</h3>
                             <span>JUNE 29, 2021</span>
@@ -188,7 +278,7 @@
         <div class="inner">
             <div class="wrap">
                 <p>2020.Designed by robirurk.</p>
-                <span>GO TO TOP</span>
+                <a href="#header">GO TO TOP</a>
                 <ul>
                     <li><i class="fab fa-facebook-f"></i></li>
                     <li><i class="fab fa-twitter"></i></li>
