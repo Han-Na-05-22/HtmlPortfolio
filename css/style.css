@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Montserrat:wght@500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
 * {
@@ -215,7 +214,6 @@ table {
   width: 30px;
   height: 30px;
   background: rgba(241, 195, 121, 0.849);
-  bottom: 0;
   left: 51%;
   transform: translateX(-50%);
   text-align: center;
@@ -224,19 +222,287 @@ table {
 #main_sub .member .inner .warp .next i {
   line-height: 30px;
 }
-#main_sub .services {
+#main_sub .aboutPic {
   width: 100%;
+  background: rgba(0, 0, 0, 0.87);
+  border-bottom: 1px solid white;
 }
-#main_sub .services .inner {
+#main_sub .aboutPic .inner {
   width: 1180px;
-  height: 1000px;
   position: relative;
   margin: 0 auto;
-  border: 1px solid red;
+  padding: 150px 0px;
 }
-#main_sub .services .inner .wrap {
+#main_sub .aboutPic .inner h2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font: bold 50px/1 "Dongle";
+  letter-spacing: 3.5px;
+  color: #fff;
+  text-align: right;
+  width: 30%;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+#main_sub .aboutPic .inner h2 strong {
+  color: #fcbf5d;
+  opacity: 0.4;
+}
+#main_sub .aboutPic .inner h2 strong::after {
+  content: "";
+  display: block;
+  width: 29%;
+  height: 2.5px;
+  background: #a37b3b;
+  position: absolute;
+  left: 77.5px;
+}
+#main_sub .aboutPic .inner .wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0px 200px;
+}
+#main_sub .aboutPic .inner .wrap article {
+  width: 30%;
+  height: 300px;
+  overflow: hidden;
+  margin-right: 5%;
+  border-radius: 10px;
+}
+#main_sub .aboutPic .inner .wrap article:nth-child(2) {
+  position: relative;
+  top: 30px;
+  border-radius: 10px;
+}
+#main_sub .aboutPic .inner .wrap article:nth-child(3) {
+  margin-right: 0;
+}
+#main_sub .aboutPic .inner .wrap article .pic {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+#main_sub .aboutPic .inner .wrap article .pic.on {
+  opacity: 1;
+  transition: 0.3s;
+}
+#main_sub .aboutPic .inner .wrap article .pic img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+#main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover {
+  position: relative;
+  bottom: 372.5px;
+  border-radius: 10px 10px 0px 0px;
+}
+#main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover.on {
+  display: block;
+  opacity: 0.7;
+  transition: 0.3s;
+  bottom: 300px;
+}
+#main_sub .aboutPic .inner .wrap article .hover {
+  position: relative;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.98);
+  height: 75px;
+  text-align: center;
+  display: block;
+  border-radius: 0px 0px 10px 10px;
+  transition: 0.3s;
+  opacity: 0;
+}
+#main_sub .aboutPic .inner .wrap article .hover.on {
+  display: block;
+  opacity: 0.7;
+  transition: 0.3s;
+  bottom: 72.5px;
+}
+#main_sub .aboutPic .inner .wrap article .hover span {
+  font: bold 20px/75px "Dongle";
+  letter-spacing: 1.3px;
+  color: #fff;
+}
+#main_sub .aboutPic .inner .wrap article .hover a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px 5px 0px 5px;
+  background: rgba(241, 195, 121, 0.849);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 275px;
+}
+#main_sub .aboutPic .inner .wrap article .hover a i {
+  font-size: 20px;
+  color: #fff;
+}
+#main_sub .aboutPic .inner .wrap .content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+}
+#main_sub .aboutPic .inner .wrap .content h3 {
+  font: bold 45px/1 "Dongle";
+  letter-spacing: 3.5px;
+  color: #fff;
+  text-align: left;
+  width: 30%;
+  margin-left: 30px;
+}
+#main_sub .aboutPic .inner .wrap .content h3::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 100px;
+  background: #a37b3b;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#main_sub .aboutPic .inner .wrap .content h3 strong {
+  color: #fcbf5d;
+  opacity: 0.4;
+}
+#main_sub .aboutPic .inner .wrap .content div {
+  width: 50%;
+  padding-top: 25px;
+}
+#main_sub .aboutPic .inner .wrap .content div p {
+  font: bold 19px/1 "Dongle";
+  color: #eee;
+}
+#main_sub .aboutPic .inner .wrap .content div span {
+  display: block;
+  position: relative;
+  left: 280px;
+  font: bold 20px/1 "Dongle";
+  color: #a37b3b;
+}
+#main_sub .aboutPic .inner .wrap .content div a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px 5px 0px 5px;
+  background: rgba(241, 195, 121, 0.849);
+  position: relative;
+  left: 450px;
+  bottom: 20px;
+}
+#main_sub .aboutPic .inner .wrap .content div a i {
+  font-size: 20px;
+  color: #fff;
+}
+#main_sub .service {
+  width: 100%;
+  background: rgba(247, 247, 247, 0.9);
+}
+#main_sub .service .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+#main_sub .service .inner h2 {
+  font: bold 43px/1 "Montserrat";
+  letter-spacing: 3px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#main_sub .service .inner .wrap {
+  width: 100%;
+  height: 650px;
+}
+#main_sub .service .inner .wrap .serviceGroup2 {
+  padding: 0px 205px;
+  bottom: 260px;
+  justify-content: space-between;
+}
+#main_sub .service .inner .wrap .serviceGroup2 > div {
+  padding-left: 5px;
+}
+#main_sub .service .inner .wrap .serviceGroup2 > div:nth-of-type(2) {
+  padding-right: 7px;
+}
+#main_sub .service .inner .wrap .serviceGroup3 {
+  bottom: 525px;
+  justify-content: center;
+}
+#main_sub .service .inner .wrap article {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main_sub .service .inner .wrap article > div .contentBg {
+  position: relative;
   width: 100%;
 }
+#main_sub .service .inner .wrap article > div .contentBg img {
+  width: 330px;
+  height: 270px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+#main_sub .service .inner .wrap article > div .content {
+  position: relative;
+  bottom: 220px;
+  left: 82.5px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main_sub .service .inner .wrap article > div .content > div i {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+#main_sub .service .inner .wrap article > div .content h3 {
+  font: bold 16px/1 "Montserrat";
+  letter-spacing: 3px;
+  color: #eee;
+  margin-bottom: 10px;
+}
+#main_sub .service .inner .wrap article > div .content span {
+  font: bold 12px/1 "Comforter Brush";
+  font-style: italic;
+  letter-spacing: 3px;
+  color: #ccc;
+}
+#main_sub .service .inner > p {
+  width: 100%;
+  font: normal 20px/1 "Comforter Brush";
+  letter-spacing: 1.3px;
+  text-align: left;
+  position: absolute;
+  bottom: 30px;
+  left: 62.5%;
+  transform: translateX(-50%);
+}
+
 #main_sub {
   width: 100%;
 }
@@ -547,16 +813,26 @@ table {
   justify-content: flex-start;
   align-items: center;
   float: left;
+  margin-bottom: 30px;
 }
 #main_sub .gallery .inner > ul li {
-  padding: 10px;
+  padding: 20px;
 }
 #main_sub .gallery .inner > ul li a {
   display: block;
   padding: 10px;
-  border: 1px solid blue;
-  font: bold 12px/1 "Montserrat";
+  font: normal 12px/1 "Montserrat";
+  color: #fff;
   letter-spacing: 3px;
+  background: #a5a5a5;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(167, 167, 167, 0.96);
+  transition: 1s;
+}
+#main_sub .gallery .inner > ul li a:hover {
+  transform: scale(1.15);
+  transition: 1s;
+  font-weight: bold;
 }
 #main_sub .gallery .inner input[type=text] {
   width: 200px;
@@ -570,7 +846,8 @@ table {
 #main_sub .gallery .inner .wrap {
   width: 100%;
   overflow: hidden;
-  margin-top: 150px;
+  padding-top: 115px;
+  border-top: 2px solid rgba(214, 214, 214, 0.739);
 }
 #main_sub .gallery .inner .wrap #list::after {
   content: "";
@@ -695,7 +972,7 @@ table {
 #figure_sub .sub_visual .pic {
   width: inherit;
   height: 350px;
-  background-image: url(../이미지/pexels-pixabay-534174.jpg);
+  background-image: url(../img/ABOUT01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -967,7 +1244,6 @@ table {
   object-fit: cover;
   opacity: 0.5;
   position: absolute;
-  transition: 2s;
 }
 #figure .inner {
   width: 1180px;

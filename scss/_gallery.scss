@@ -16,16 +16,30 @@
                 justify-content: flex-start;
                 align-items: center;
                 float: left;
+                margin-bottom: 30px;
+
                 
                 li{
-                    padding: 10px;
+                    padding: 20px;
 
                     a{
                         display: block;
                         padding: 10px;
-                        border:1px solid blue;
-                        font:bold 12px/1 'Montserrat';
+                        font:normal 12px/1 'Montserrat';
+                        color:#fff;
                         letter-spacing: 3px;
+                        // background: rgb(246, 201, 128);
+                        background: rgb(165, 165, 165);
+                        border-radius: 10px;
+                        // box-shadow: 3px 3px 5px rgba(248, 218, 162, 0.96);
+                        box-shadow: 3px 3px 5px rgba(167, 167, 167, 0.96);
+                        transition: 1s;
+
+                        &:hover{
+                            transform: scale(1.15);
+                            transition: 1s;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
@@ -48,7 +62,9 @@
             .wrap{
                 width: 100%;
                 overflow: hidden;
-                margin-top: 150px;
+                padding-top: 115px;
+                // border-top: 2px solid rgb(241, 205, 146);
+                border-top: 2px solid rgba(214, 214, 214, 0.739);
 
                 #list{
 

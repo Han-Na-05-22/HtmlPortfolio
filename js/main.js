@@ -9,6 +9,7 @@ const logo = document.querySelector(".logo");
 const contentF = document.querySelector("#figure .content");
 const changeBtn = document.querySelector("#figure .changeBtn");
 const imgF = document.querySelector("#figure img");
+const lis = document.querySelectorAll("#figure .changeBtn li");
 
 // Provide
 const contentGroup = document.querySelectorAll(".contentGroup");
@@ -31,6 +32,20 @@ btnClose.addEventListener("click",e=>{
     btnCall.classList.remove("on");
 })
 
+
+lis.forEach((btn,index)=>{
+    btn.addEventListener("click",()=>{
+        for(let i=0; i<lis.length; i++){
+            lis[i].classList.remove("on");
+            imgF.classList.remove("on");
+            imgF.src="../img/figure.png";
+
+        }
+        lis[index].classList.add("on");
+        imgF.classList.add("on");
+        imgF.src=`../img/figure0${index}.png`;
+    })
+})
 
 
 contentBack.forEach((btn,index)=>{

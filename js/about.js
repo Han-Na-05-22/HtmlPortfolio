@@ -1,3 +1,5 @@
+// member
+
 const slider = document.querySelector(".slider");
 const ul = slider.querySelector("ul");
 const lis = ul.querySelectorAll("li");
@@ -6,6 +8,7 @@ const next = document.querySelector("#main_sub .next");
 const speed = 500;
 let enableClick = true;
 let len = lis.length;
+
 
 init();
 
@@ -67,4 +70,40 @@ function prevSlide(){
         }
     })
 }
+
+
+
+// aboutPic
+
+const pic = document.querySelectorAll(".aboutPic .pic");
+const hovers = document.querySelectorAll(".hover");
+
+pic.forEach((hover,index)=>{
+    hover.addEventListener("mouseenter",()=>{
+        for(let el of hovers){
+            el.classList.remove("on");
+        }
+
+        for(let el of pic){
+            el.classList.remove("on");
+        }
+
+        hovers[index].classList.add("on");
+        pic[index].classList.add("on");
+    })
+})
+
+pic.forEach((hover,index)=>{
+    hover.addEventListener("mouseleave",()=>{
+        for(let el of hovers){
+            el.classList.remove("on");
+        }
+
+        for(let el of pic){
+            el.classList.remove("on");
+        }
+    })
+})
+
+
 
