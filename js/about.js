@@ -10,36 +10,70 @@ let enableClick = true;
 let len = lis.length;
 
 
-init();
+// if(ul.style.width = 500){
+//     init();
+// }
+// }else(ul.style.width == "100%")
+//     init2();
+
+
+
+
 
 next.addEventListener("click",(e)=>{
     e.preventDefault();
-    
-    if(enableClick){
-        enableClick = false;
-        nextSlide();
+
+    if(ul.style.width == "500%"){
+        if(enableClick){
+            enableClick = false;
+            nextSlide();
+        }
     }
+
+
+    if(ul.style.width == "100%"){
+        if(enableClick){
+            enableClick = false;
+            nextSlide2();
+        }
+    }
+
 });
 
 prev.addEventListener("click",(e)=>{
     e.preventDefault();
 
-    if(enableClick){
-        enableClick = false;
-        prevSlide();
+    if(ul.style.width == "500%"){
+        if(enableClick){
+            enableClick = false;
+            prevSlide();
+        }
+    }
+
+    if(ul.style.width == "100%"){
+        if(enableClick){
+            enableClick = false;
+            prevSlide2();
+        }
     }
 });
 
 
+
 function init(){
-    ul.style.left="-100%";
+        ul.style.left="-100%";
+        ul.prepend(ul.lastElementChild);
+
+    // ul.style.width = `${100 * len}%`;
+    
+    // lis.forEach(li=>{
+    //     li.style.width = `${100 / len}%`;
+    // })
+}
+
+function init2(){
+    ul.style.top="-100%";
     ul.prepend(ul.lastElementChild);
-    
-    ul.style.width = `${100 * len}%`;
-    
-    lis.forEach(li=>{
-        li.style.width = `${100 / len}%`;
-    })
 }
 
 function nextSlide(){
@@ -56,6 +90,20 @@ function nextSlide(){
     })
 }
 
+function nextSlide2(){
+
+    new Anim(ul,{
+        prop:"top",
+        value:"-200%",
+        duration:speed,
+        callback:()=>{
+            ul.style.top="-100%";
+            ul.append(ul.firstElementChild);
+            enableClick=true;
+        }
+    })
+}
+
 
 function prevSlide(){
 
@@ -65,6 +113,20 @@ function prevSlide(){
         duration:speed,
         callback:()=>{
             ul.style.left="-100%";
+            ul.prepend(ul.lastElementChild);
+            enableClick=true;
+        }
+    })
+}
+
+function prevSlide2(){
+
+    new Anim(ul,{
+        prop:"top",
+        value:"0%",
+        duration:speed,
+        callback:()=>{
+            ul.style.top="-100%";
             ul.prepend(ul.lastElementChild);
             enableClick=true;
         }
@@ -104,6 +166,7 @@ pic.forEach((hover,index)=>{
         }
     })
 })
+
 
 
 

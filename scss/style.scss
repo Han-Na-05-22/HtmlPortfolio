@@ -76,10 +76,10 @@
             top: -100%;
             left:-700px;
             opacity: 0;
-            transition: all 10s;
+            transition: all 2s;
 
             &.on{
-                animation: MenuMo 3s;
+                animation: MenuMo 1.7s;
                 animation-fill-mode: forwards;
                 opacity: 1;
             }
@@ -1097,24 +1097,32 @@
                     article{
     
                         .content{
-    
-                            li{
-                                width: calc((100% - 5%)/4);
-                                height: 230px;
-                                padding-left: 2.5vw;
-    
-                                i{
-                                    font-size: 2.5vw;
-                                    margin-bottom: 1.5vh;
+
+                            .contentGroup{
+                                width: 240px;
+                                height: 240px;
+                                margin-right: 20px;
+
+                                .contentBack{
+                                    i{
+
+                                    }
                                 }
-    
-                                span{
-                                    font-size:1.6vw;
-                                    margin-bottom: 1.5vh;
-                                }
-    
-                                p{
-                                    font-size:1.5vw;
+
+                                .contentFront{
+                                    i{
+                                        font-size: 2.5vw;
+                                        margin-bottom: 1.5vh;
+                                    }
+        
+                                    span{
+                                        font-size:1.6vw;
+                                        margin-bottom: 1.5vh;
+                                    }
+        
+                                    p{
+                                        font-size:1.5vw;
+                                    }
                                 }
                             }
                         }
@@ -1190,6 +1198,10 @@
     
                     .btnMore{
                         bottom: -110px;
+
+                        &:hover{
+                            bottom: -110px;
+                        }
                     }
                 }
             }
@@ -1423,44 +1435,35 @@
                 .wrap{
     
                     article{
-    
+
                         .content{
-                            display: block;
+                            flex-wrap: wrap
+                            ;
+                            .contentGroup{
+                                width: 280px;
+                                height: 280px;
+                                margin-bottom: 90px;
 
-                            &::after{
-                                content: '';
-                                display: block;
-                                clear: both;
-                            }
-                            
-                            li{
-                                width: 45%;
-                                height: 330px;
-                                float: left;
-                                margin-right: 10%;
-                                padding-left: 8.5%;
+                                .contentBack{
+                                    i{
 
-                                &:nth-child(1), &:nth-child(2){
-                                    margin-bottom: 10%;
+                                    }
                                 }
-                                
-                                &:nth-child(2), &:nth-child(4){
-                                    margin-right: 0%;  
-                                }
-    
-                                i{
-                                    font-size: 4.5vw;
-                                    margin-bottom: 2vh;
-                                }
-    
-                                span{
-                                    font-size:3vw;
-                                    margin-bottom: 2vh;
-                                }
-    
-                                p{
-                                    width: 80%;
-                                    font-size:2.5vw;
+
+                                .contentFront{
+                                    i{
+                                        font-size: 6.5vw;
+                                        margin-bottom: 2vh;
+                                    }
+        
+                                    span{
+                                        font-size:4.5vw;
+                                        margin-bottom: 1.7vh;
+                                    }
+        
+                                    p{
+                                        font-size:2vw;
+                                    }
                                 }
                             }
                         }
@@ -1531,6 +1534,10 @@
 
                     .btnMore{
                         bottom: -135px;
+
+                        &:hover{
+                            bottom: -135px;
+                        }
                     }
                 }
             }
@@ -1743,34 +1750,31 @@
                         }
 
                         .content{
-                            
-                            li{
-                                width: 47%;
-                                height: 230px;
-                                padding-left: 9%;
-                                margin-right: 6%;
-    
-                                span{
-                                    font-size:22px;
-                                    line-height: 20px;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;   
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 2; 
-                                    -webkit-box-orient: vertical;
-                                    width: 80%;
-                                    margin-top: 5px;
+
+                            .contentGroup{
+                                width: 210px;
+                                height: 210px;
+                                margin-bottom: 25px;
+                                .contentBack{
+                                    i{
+
+                                    }
                                 }
-            
-                                p{
-                                    font-size: 20px;
-                                    line-height: 20px;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;   
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 4; 
-                                    -webkit-box-orient: vertical;
-                                    width: 80%;
+
+                                .contentFront{
+                                    i{
+                                        font-size: 6.5vw;
+                                        margin-bottom: 2vh;
+                                    }
+        
+                                    span{
+                                        font-size:4.5vw;
+                                        margin-bottom: 1.7vh;
+                                    }
+        
+                                    p{
+                                        font-size:2.2vw;
+                                    }
                                 }
                             }
                         }
@@ -1778,7 +1782,6 @@
                 }
             }
         }
-    
     
         .Projects{
 
@@ -1863,6 +1866,10 @@
     
                     .btnMore{
                         bottom: -110px;
+
+                        &:hover{
+                            bottom: -110px;
+                        }
                     }
                 }
             }
@@ -2055,34 +2062,32 @@
                 .wrap{
     
                     article{
-    
                         .content{
-                            
-                            li{
-                                width: 100%;
-                                height: 300px;
-                                padding-left: 14%;
-                                margin-right: 0;
 
-                                &:nth-child(1), &:nth-child(2),&:nth-child(3){
-                                    margin-bottom: 5%;
+                            .contentGroup{
+                                width: 295px;
+                                height: 295px;
+                                margin-bottom: 25px;
+                                .contentBack{
+                                    i{
+
+                                    }
                                 }
-                            
-    
-                                i{
-                                    font-size: 10vw;
-                                    margin-bottom: 2vh;
-                                }
-    
-                                span{
-                                    font-size:10vw;
-                                    margin-bottom: 2vh;
-                                    line-height: 30px;
-                                }
-    
-                                p{
-                                    width: 80%;
-                                    font-size:6vw;
+
+                                .contentFront{
+                                    i{
+                                        font-size: 18vw;
+                                        margin-bottom: 2vh;
+                                    }
+        
+                                    span{
+                                        font-size:10vw;
+                                        margin-bottom: 1.7vh;
+                                    }
+        
+                                    p{
+                                        font-size:5vw;
+                                    }
                                 }
                             }
                         }
@@ -2159,6 +2164,10 @@
     
                     .btnMore{
                         bottom: -30px;
+    
+                        &:hover{
+                            bottom: -30px;
+                        }
                     }
                 }
             }

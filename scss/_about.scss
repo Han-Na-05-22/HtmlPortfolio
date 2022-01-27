@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 
 
+
 #main_sub{
 
     .about{
@@ -102,12 +103,12 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 100%;
+                        width: 500%;
                         height:100%;
 
                         li{
                             float: left;
-                            width: 100%;
+                            width: 20%;
                             height: 100%;
                             display: flex;
                             justify-content: center;
@@ -233,7 +234,6 @@
     .aboutPic{
         width: 100%;
         background: rgba(0,0,0,0.87);
-        border-bottom: 1px solid white;
 
         .inner{
             width: 1180px;
@@ -449,151 +449,250 @@
         }
     }
 
-    .service{
+    .info{
         width: 100%;
-        background: rgba(247, 247, 247, 0.9);
-
+        background: rgba(7, 7, 7, 0.945);
+        
         .inner{
             width: 1180px;
-            margin: 0 auto;
             position: relative;
-            padding-top:150px;
-            padding-bottom: 30px;
+            margin: 0 auto;
+            padding: 150px 0px 120px;
 
-            h2{
-                font:bold 43px/1 'Montserrat';
-                letter-spacing: 3px;
-                color:#000;
-                text-align: center;
-                margin-bottom: 70px;
-            }
-
-            .wrap{
+            .warp{
                 width: 100%;
-                height: 650px;
-
-
-                .serviceGroup2{
-                    padding: 0px 205px;
-                    bottom: 260px;
-                    justify-content: space-between;
-
-                    >div{
-                        padding-left: 5px;
-
-                        &:nth-of-type(2){
-                            padding-right:7px;
-                        }
-                    }
-                }
-
-                .serviceGroup3{
-                    bottom: 525px;
-                    justify-content: center;
-                }
 
                 article{
-                    position: relative;
                     display: flex;
+                    flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
 
-                    >div{
+                    h2{
+                        font:bold 20px/1 'Montserrat';
+                        letter-spacing: 2.3px;
+                        margin-bottom: 50px;
+                        text-align: center;
+                        color:#fff;
+                        position: relative;
 
-                        .contentBg{
-                            position: relative;
-                            width: 100%;
-
-                            img{
-                                width: 330px;
-                                height: 270px;
-                                object-fit: cover;
-                                opacity: 0.9;
-                            }
+                        &::after{
+                            content: '';
+                            display: block;
+                            width:50px;
+                            height: 2px;
+                            background: rgb(163, 123, 59);
+                            position: absolute;
+                            bottom: -25px;
+                            left: 50%;
+                            transform: translateX(-50%);
                         }
+                    }
 
-                        .content{
-                            position: relative;
-                            bottom: 220px;
-                            left:82.5px;
-                            width:50%;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            
-                            >div{
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
 
-                                // &::before{
-                                //     content: '';
-                                //     display: block;
-                                //     width: 70px;
-                                //     height: 2px;
-                                //     background: rgb(252, 252, 252);;
-                                //     position: absolute;
-                                //     left: -15px;
-                                //     top: 45%;
-                                //     opacity: 0.5;
-                                // }
+                        li{
+                            margin-top: 10px;
+                            font:normal 12px/1 'Montserrat';
+                            letter-spacing: 1.5px;
+                            color:#ccc;
+                            margin-bottom: 10px;
+                        }
+                    }
 
-                                // &::after{
-                                //     content: '';
-                                //     display: block;
-                                //     width: 70px;
-                                //     height: 2px;
-                                //     background: rgb(252, 252, 252);;
-                                //     position: absolute;
-                                //     right: -15px;
-                                //     top: 45%;
-                                //     opacity: 0.5;
-                                // }
+                    .Letter{
+                        position: relative;
+                        ul{
 
-                                i{
-                                    font-size: 30px;
-                                    color:#fff;
-                                    margin-bottom: 40px;
-
+                            li{
+                                input[type=text]{
+                                    display: block;
+                                    width: 175px;
+                                    height: 40px;
+                                    border:1px solid #eee;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -10px;
+                                    text-align: center;
+                                    line-height: 40px;
+                                    color:#eee;
+                                    background: rgba(7, 7, 7, 0.945);
                                 }
 
-                            }
-
-                            h3{
-                                font:bold 16px/1 'Montserrat';
-                                letter-spacing: 3px;
-                                color:#eee;
-                                margin-bottom: 10px;
-                            }
-
-                            // >p{
-                            //     font:bold 14px/1 'Dongle';
-                            //     letter-spacing: 3px;
-                            //     color:#eee;
-                            //     margin-bottom: 10px;
-                            // }
-
-                            span{
-                                font:bold 12px/1 'Comforter Brush';
-                                font-style: italic;
-                                letter-spacing: 3px;
-                                color:#ccc;
+                                i{
+                                    display: block;
+                                    width: 40px;
+                                    height: 40px;
+                                    background: rgb(163, 123, 59);
+                                    position: absolute;
+                                    bottom: -10px;
+                                    right: 0;
+                                    font-size: 20px;
+                                    text-align: center;
+                                    line-height: 40.5px;
+                                    color:#fff;
+                                    border-top:1px solid #eee;
+                                    border-bottom:1px solid #eee;
+                                    border-right:1px solid #eee;
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }
                 }
             }
-
-            >p{
-                width: 100%;
-                font:normal 20px/1 'Comforter Brush';
-                letter-spacing: 1.3px;
-                text-align: left;
-                position: absolute;
-                bottom: 30px;
-                left: 62.5%;
-                transform: translateX(-50%);
-            }
         }
     }
+
+    // .service{
+    //     width: 100%;
+    //     background: rgba(247, 247, 247, 0.9);
+
+    //     .inner{
+    //         width: 1180px;
+    //         margin: 0 auto;
+    //         position: relative;
+    //         padding-top:150px;
+    //         padding-bottom: 30px;
+
+    //         h2{
+    //             font:bold 43px/1 'Montserrat';
+    //             letter-spacing: 3px;
+    //             color:#000;
+    //             text-align: center;
+    //             margin-bottom: 70px;
+    //         }
+
+    //         .wrap{
+    //             width: 100%;
+    //             height: 650px;
+
+
+    //             .serviceGroup2{
+    //                 padding: 0px 205px;
+    //                 bottom: 260px;
+    //                 justify-content: space-between;
+
+    //                 >div{
+    //                     padding-left: 5px;
+
+    //                     &:nth-of-type(2){
+    //                         padding-right:7px;
+    //                     }
+    //                 }
+    //             }
+
+    //             .serviceGroup3{
+    //                 bottom: 525px;
+    //                 justify-content: center;
+    //             }
+
+    //             article{
+    //                 position: relative;
+    //                 display: flex;
+    //                 justify-content: space-between;
+    //                 align-items: center;
+
+    //                 >div{
+
+    //                     .contentBg{
+    //                         position: relative;
+    //                         width: 100%;
+
+    //                         img{
+    //                             width: 330px;
+    //                             height: 270px;
+    //                             object-fit: cover;
+    //                             opacity: 0.9;
+    //                         }
+    //                     }
+
+    //                     .content{
+    //                         position: relative;
+    //                         bottom: 220px;
+    //                         left:82.5px;
+    //                         width:50%;
+    //                         display: flex;
+    //                         flex-direction: column;
+    //                         justify-content: center;
+    //                         align-items: center;
+                            
+    //                         >div{
+
+    //                             // &::before{
+    //                             //     content: '';
+    //                             //     display: block;
+    //                             //     width: 70px;
+    //                             //     height: 2px;
+    //                             //     background: rgb(252, 252, 252);;
+    //                             //     position: absolute;
+    //                             //     left: -15px;
+    //                             //     top: 45%;
+    //                             //     opacity: 0.5;
+    //                             // }
+
+    //                             // &::after{
+    //                             //     content: '';
+    //                             //     display: block;
+    //                             //     width: 70px;
+    //                             //     height: 2px;
+    //                             //     background: rgb(252, 252, 252);;
+    //                             //     position: absolute;
+    //                             //     right: -15px;
+    //                             //     top: 45%;
+    //                             //     opacity: 0.5;
+    //                             // }
+
+    //                             i{
+    //                                 font-size: 30px;
+    //                                 color:#fff;
+    //                                 margin-bottom: 40px;
+
+    //                             }
+
+    //                         }
+
+    //                         h3{
+    //                             font:bold 16px/1 'Montserrat';
+    //                             letter-spacing: 3px;
+    //                             color:#eee;
+    //                             margin-bottom: 10px;
+    //                         }
+
+    //                         // >p{
+    //                         //     font:bold 14px/1 'Dongle';
+    //                         //     letter-spacing: 3px;
+    //                         //     color:#eee;
+    //                         //     margin-bottom: 10px;
+    //                         // }
+
+    //                         span{
+    //                             font:bold 12px/1 'Comforter Brush';
+    //                             font-style: italic;
+    //                             letter-spacing: 3px;
+    //                             color:#ccc;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+
+    //         >p{
+    //             width: 100%;
+    //             font:normal 20px/1 'Comforter Brush';
+    //             letter-spacing: 1.3px;
+    //             text-align: left;
+    //             position: absolute;
+    //             bottom: 30px;
+    //             left: 62.5%;
+    //             transform: translateX(-50%);
+    //         }
+    //     }
+    // }
 
     // .services{
     //     width: 100%;
@@ -797,4 +896,1115 @@
     //         }
     //     }
     // }
+}
+
+@media screen and(max-width:1179px){
+
+    #main_sub{
+
+        .about{
+    
+            .inner{
+                width: 100%;
+            }
+        }
+
+        .member{
+
+            .inner{
+
+    
+                .warp{
+                    width: 100%;
+                    
+                    .slider{
+    
+                        ul{
+    
+                            li{
+                                .content{
+                                    h2{
+                                        font:normal 40px/1 'Dongle';
+                                        margin-bottom: 30px;
+    
+                                        &::after{
+                                            bottom:-10px;
+                                        }
+                                    }
+    
+                                    b{
+                                        font:normal 16px/1 'Dongle';
+                                    }
+    
+                                    p{
+                                        margin-top: 10px;
+                                        margin-bottom: 10px;
+                                        font:normal 15.5px/1 'Dongle';
+                                    }
+    
+                                    strong{
+                                        font:normal 22px/1 'Dongle';
+                                    }
+    
+                                    span{
+                                        font:normal 17px/1 'Dongle';
+                                        letter-spacing: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .prev{
+                        left: 47%;
+                        bottom: 10px;
+                    }
+    
+                    .next{
+                        left: 53%;
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    
+        .aboutPic{
+
+            .inner{
+                width: 100%;
+    
+                h2{
+                    position: absolute;
+                    right: 3.5%;
+                    top: 0;
+                    margin-top: 125px;
+    
+                    strong{
+    
+                        &::after{
+                        width:35%;
+                        left: 8px;
+                        }
+                    }
+                }
+    
+                .wrap{
+                    justify-content: space-evenly;
+                    padding: 125px 0px 200px;
+
+                    article{
+                        width: 27%;
+                        height: 230px;
+                        margin-right: 2%;                           
+    
+                        &:nth-of-type(2) .hover{
+                            bottom: 305.5px;
+    
+                            &.on{
+                                bottom:230px;
+                            }
+                        }
+    
+                        .hover{
+    
+                            span{
+                                font:normal 18px/75px 'Dongle';
+                                letter-spacing: 1.2px;                         
+                            }
+    
+                            a{
+                                width: 15px;
+                                height: 15px;
+                                top: 49.5%;
+                                left:215px;
+    
+                                i{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+    
+                    .content{
+                        justify-content:space-evenly;
+                        align-items: center;
+                        padding: 50px 50px 100px 20px;
+    
+                        h3{
+                            margin-left: 0px;
+    
+                            &::after{
+                                height: 120px;
+                                left: 33.5%;
+                                top: 37.5%;
+                                }
+                        }
+    
+                        div{
+    
+                            p{
+                                font:normal 19px/1 'Dongle';
+                            }
+    
+                            span{
+                                left:250px;
+                                padding-top: 10px;
+                                font:normal 18px/1 'Dongle';
+                            }
+    
+                            a{
+                                left: 405px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .info{
+
+            .inner{
+                width: 100%;
+    
+                .warp{
+    
+                    article{
+                        justify-content: space-evenly;
+    
+                        h2{
+                            font:normal 15px/1 'Montserrat';
+                            
+                            &::after{
+                                width:47px;
+                            }
+                        }
+    
+                        ul{
+    
+                            li{
+                                margin-top: 5px;
+                                font:normal 11.5px/1 'Montserrat';
+                                letter-spacing: 1.5px;
+                                margin-bottom: 7.5px;
+                            }
+                        }
+    
+                        .Letter{
+
+                            ul{
+    
+                                li{
+                                    input[type=text]{
+                                        width: 150px;
+                                        left: 10px;
+                                        bottom: -5px;
+                                    }
+    
+                                    i{
+                                        bottom: -5px;
+                                        right: 10px;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:959px){
+
+    #main_sub{
+
+        .about{
+    
+            .inner{
+
+                h2{
+                    font:normal 45px/1 'Dongle';
+
+                    span{
+                        color:rgb(252, 191, 93);
+                        opacity: 0.4;
+
+                        &::after{
+                            width: 80px;
+                            right: 13%;
+                        }
+                    }
+                }
+
+                .warp{
+    
+                    b{
+                        font:normal 19px/1 'Dongle';
+                    }
+    
+                    span{
+                        font:normal 18px/1 'Dongle';
+                    }
+    
+                    strong{
+                        font:normal 40px/1 'Comforter Brush';
+                    }
+                }
+            }
+        }
+
+        .member{
+    
+            .inner{
+                min-height: 600px;
+    
+                .warp{
+                    width: 100%;
+                    
+                    .slider{
+    
+                        ul{
+    
+                            li{
+                                .content{
+                                    padding-right: 70px;
+                                    h2{
+                                        font:normal 37px/1 'Dongle';
+                                        margin-bottom: 20px;
+                                    }
+    
+                                    b{
+                                        font:normal 13px/1 'Dongle';
+                                        text-overflow: ellipsis;   
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 5; 
+                                        -webkit-box-orient: vertical;
+                                        margin-bottom: 5px;
+                                    }
+    
+                                    p{
+                                        font:normal 14px/1 'Dongle';
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;   
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 10; 
+                                        -webkit-box-orient: vertical;
+                                    }
+    
+                                    strong{
+                                        font:normal 18px/1 'Dongle';
+                                    }
+    
+                                    span{
+                                        font:normal 15px/1 'Dongle';
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .prev{
+                        left: 47%;
+                        bottom: 10px;
+                    }
+    
+                    .next{
+                        left: 53%;
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    
+        .aboutPic{
+
+            .inner{
+    
+                h2{
+                    right: 25px;
+                    top: 0;
+                    font:normal 40px/1 'Dongle';
+                    width: 35%;
+    
+                    strong{
+    
+                        &::after{
+                        left: 40px;
+                        }
+                    }
+                }
+    
+                .wrap{
+                    justify-content: space-evenly;
+                    padding: 125px 0px 150px;
+
+                    article{
+                        height: 200px;
+                        margin-right: 1%;                           
+    
+                        &:nth-of-type(2) .hover{
+                            bottom: 305.5px;
+    
+                            &.on{
+                                bottom:205px;
+                            }
+                        }
+    
+                        .hover{
+    
+                            span{
+                                font:normal 15px/75px 'Dongle';
+                                letter-spacing: 1.2px;      
+                                padding-right: 15px;                   
+                            }
+    
+                            a{
+                                left:175px;
+                            }
+                        }
+                    }
+    
+                    .content{
+
+                        h3{
+                            font:normal 40px/1 'Dongle';
+                        }
+                    }
+                }
+            }
+        }
+    
+        .info{
+
+            .inner{
+    
+                .warp{
+    
+                    article{
+    
+                        h2{
+                            font:normal 12px/1 'Montserrat';
+                            
+                            &::after{
+                                width:47px;
+                            }
+                        }
+    
+                        ul{
+    
+                            li{
+                                margin-top: 0px;
+                                font:normal 10px/1 'Montserrat';
+                                letter-spacing: 1px;
+                                margin-bottom: 10px;
+                            }
+                        }
+    
+                        .Letter{
+
+                            ul{
+    
+                                li{
+                                    input[type=text]{
+                                        width: 130px;
+                                        left: 0px;
+                                        bottom: 0px;
+                                    }
+    
+                                    i{
+                                        bottom: 0px;
+                                        right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:779px){
+
+
+    #main_sub{
+
+        .about{
+    
+            .inner{
+
+                h2{
+                    font:normal 50px/1 'Dongle';
+                    width: 100%;
+                    text-align: center;
+
+                    span{
+
+
+                        &::after{
+                            right: 23%;
+                        }
+                    }
+                }
+
+                .warp{
+                    padding-top: 50px;
+
+                    b{
+                        font:normal 15px/1 'Dongle';
+                    }
+
+                    p{
+                        font:normal 14px/1 'Dongle';
+                    }
+    
+                    span{
+                        font:normal 18px/1 'Dongle';
+                    }
+    
+                    strong{
+                        font:normal 35px/1 'Comforter Brush';
+                    }
+                }
+            }
+        }
+
+        .member{
+
+
+            .inner{
+                min-height: 900px;
+    
+                .warp{
+                    
+                    .slider{
+    
+                        ul{
+                            width: 100%;
+    
+                            li{
+                                width: 100%;
+                                flex-direction: column-reverse;
+
+                                .content{
+                                    height: 450px;
+                                    width: 100%;
+                                    padding-top: 20px;
+                                    padding-left: 20px;
+
+                                    h2{
+                                        font:normal 65px/40px 'Dongle';
+                                        margin-bottom:30px;
+                                        text-align: left;
+                                        width: 70%;
+    
+                                        &::after{
+                                            content: '';
+                                            display: block;
+                                            width:65%;
+                                            height: 2.5px;
+                                            background: rgb(163, 123, 59);
+                                            position: absolute;
+                                            bottom:-7.5px;
+                                            left: 0%;
+                                        }
+                                    }
+    
+                                    b{
+                                        font:normal 15px/1 'Dongle';
+                                        width: 70%;
+                                    }
+    
+                                    p{
+                                        margin-top: 15px;
+                                        margin-bottom: 10px;
+                                        width: 70%;
+                                        font:normal 14px/1 'Dongle';
+                                    }
+    
+                                    strong{
+                                        font:normal 20px/1 'Dongle';
+                                        width: 70%;
+                                    }
+    
+                                    span{
+                                        font:normal 15px/1 'Dongle';
+                                        width: 70%;
+                                    }
+
+                                }
+                                .pic{
+                                    width: 100%;
+                                    height: 450px;
+    
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .prev{
+                        background: none;
+                        left: 10px;
+                        bottom: 225px;
+                        transform: rotateZ(90deg);
+
+                        i{
+                            font-size: 30px;
+                            color:#ddd;
+
+                            &:hover{
+                                color: rgba(241, 195, 121, 0.849);
+                            }
+
+                        }
+                    }
+    
+                    .next{
+                        background: none;
+                        left: 10px;
+                        bottom: 180px;
+                        transform: rotateZ(90deg);
+                        
+                        i{
+                            font-size: 30px;
+                            color:#ddd;
+
+                            &:hover{
+                                color: rgba(241, 195, 121, 0.849);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    
+
+        .aboutPic{
+            padding:0px 50px;
+
+            .inner{
+    
+                h2{
+                    font:bold 60px/1 'Dongle';
+                    width: 80%;
+                    margin-top: 100px;
+    
+                    strong{
+                        margin-right: 10px;
+
+                        &::after{
+                        width:35%;
+                        left:6px;
+                        }
+                    }
+                }
+    
+                .wrap{
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    
+                    padding: 130px 0px 200px;
+    
+                    article{
+                        width: 100%;
+                        height: 400px;
+                        margin-right: 0%;
+
+                        &:nth-child(2){
+                            top: 40px;
+                        }
+                        
+                        &:nth-child(3){
+                            position: relative;
+                            top: 80px;
+                            margin-bottom: 150px;
+                        }
+    
+                        .pic{
+
+                            img{
+                                height: 400px;
+                            }
+                        }
+    
+                        &:nth-of-type(2) .hover{
+                            bottom:0px;                   
+                            height: 120px;
+                            border-radius: 0px 0px 10px 10px;
+    
+                            &.on{
+                                display: block;
+                                opacity: 0.7;
+                                transition: 0.3s;
+                                bottom:112.5px;
+                            }
+                        }
+    
+                        .hover{
+                            height: 120px;
+    
+                            &.on{
+                                display: block;
+                                opacity: 0.7;
+                                transition: 0.3s;
+                                bottom:112.5px;
+                            }
+    
+                            span{
+                                font:normal 35px/125px 'Dongle';
+                                letter-spacing: 1.5px;
+                                color: #fff;
+                                opacity: 0.8;
+                                margin-right: 30px;
+                            }
+    
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                background: rgba(241, 195, 121, 0.849);
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left:350px;
+    
+                                i{
+                                    font-size: 27.5px;
+                                    color:#fff;
+                                }
+                            }
+                        }
+                    }
+    
+                    .content{
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 50px 10px;
+    
+                        h3{
+                            font:bold 55px/1 'Dongle';
+                            width: 110%;
+                            margin-left: 0px;
+                            position: relative;
+                            bottom: 100px;
+                            padding-bottom:10px;
+    
+                        &::after{
+                            width: 370px;
+                            height: 3px;
+                            left: 0%;
+                            top: 110%;
+                            transform: translateY(0%);
+                            opacity: 0.8;
+                            }
+                        }
+    
+                        div{
+                            width: 88%;
+                            padding-top:30px;
+                            position: absolute;
+    
+                            p{
+                                font:normal 19px/1 'Dongle';
+                                position: absolute;
+                            }
+    
+                            span{
+                                width: 50%;
+                                font:normal 17px/1 'Dongle';
+                                position: absolute;
+                                top: 85px;
+                                left: 180px;
+                            }
+    
+                            a{
+                                top: 62.5px;
+                                left: 325px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+        .info{
+            
+            .inner{
+                padding: 150px 0px 120px;
+    
+                .warp{
+    
+                    article{
+                        flex-wrap: wrap;
+
+                        div{
+                            
+                            &:nth-child(1){
+                                margin-bottom: 75px;
+                            }
+
+                            &:nth-child(2){
+                                margin-bottom: 75px;
+                            }
+                        }
+    
+                        h2{
+                            font:bold 20px/1 'Montserrat';
+                            margin-bottom: 50px;
+    
+                        }
+    
+                        ul{
+                            flex-wrap: wrap;
+    
+                            li{
+                                margin-top: 10px;
+                                font:normal 12px/1 'Montserrat';
+                                margin-bottom: 10px;
+                            }
+                        }
+    
+                        .Letter{
+                            ul{
+    
+                                li{
+                                    input[type=text]{
+                                        width: 175px;
+                                        height: 40px;
+                                        bottom: -10px;
+                                        line-height: 40px;
+                                    }
+    
+                                    i{
+                                        width: 40px;
+                                        bottom: -10px;
+                                        font-size: 20px;
+                                        line-height: 40.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:539px){
+
+    #main_sub{
+
+        .about{
+    
+            .inner{
+
+                h2{
+                    font:bold 35px/1 'Dongle';
+                    top: 20%;
+
+                    span{
+
+
+                        &::after{
+                            right: 12.5%;
+                        }
+                    }
+                }
+
+                .warp{
+                    padding-top: 30px;
+                    
+                    strong{
+                        font:normal 30px/1 'Comforter Brush';
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+
+        .member{
+
+            .inner{
+                min-height: 750px;
+    
+                .warp{
+                    
+                    .slider{
+    
+                        ul{
+    
+                            li{
+
+                                .content{
+                                    height: 300px;
+
+                                    h2{
+                                        font:normal 40px/40px 'Dongle';
+                                        margin-bottom:20px;
+                                        text-align: left;
+                                        width: 85%;
+    
+                                        &::after{
+                                            content: '';
+                                            display: block;
+                                            width:90%;
+                                            height: 2.5px;
+                                            background: rgb(163, 123, 59);
+                                            position: absolute;
+                                            bottom:-7.5px;
+                                            left: 0%;
+                                        }
+                                    }
+    
+                                    b{
+                                        font:normal 16px/1 'Dongle';
+                                        width: 85%;
+                                    }
+    
+                                    p{
+                                        display: none;
+                                    }
+    
+                                    strong{
+                                        font:normal 16px/1 'Dongle';
+                                        width: 85%;
+                                    }
+    
+                                    span{
+                                        font:normal 13px/1 'Dongle';
+                                        width: 85%;
+                                    }
+
+                                }
+                                .pic{
+                                    width: 100%;
+                                    height: 450px;
+    
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .prev{
+                        left: 5px;
+                        bottom: 150px;
+
+                        i{
+                            font-size: 25px;
+                        }
+                    }
+    
+                    .next{
+                        left: 5px;
+                        bottom: 100px;
+                        
+                        i{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    
+
+        .aboutPic{
+            padding:0px 25px;
+
+            .inner{
+                padding-bottom: 0;
+    
+                h2{
+                    font:bold 34px/1 'Dongle';
+                    margin-top: 80px;
+    
+                    strong{
+
+                        &::after{
+                        width:32%;
+                        left:14px;
+                        }
+                    }
+                }
+    
+                .wrap{
+                    padding: 50px 0px 0px;
+    
+                    article{
+
+                        &:nth-child(2){
+                            top: -80px;
+                        }
+                        
+                        &:nth-child(3){
+                            position: relative;
+                            top: -160px;
+                            margin-bottom: 50px;
+                        }
+    
+                        .pic{
+                            height: 275px;
+
+                            img{
+                                height: 275px;
+                            }
+                        }
+    
+                        &:nth-of-type(2) .hover{                 
+                            height: 100px;
+    
+                            &.on{
+                                bottom:85.5px;
+                            }
+                        }
+    
+                        .hover{
+                            height: 100px;
+    
+                            &.on{
+                                bottom:85.5px;
+                            }
+    
+                            span{
+                                font:normal 22.5px/125px 'Dongle';
+                                letter-spacing: 1.5px;
+                                color: #fff;
+                                opacity: 0.8;
+                                margin-right: 10px;
+                            }
+    
+                            a{
+                                width: 20px;
+                                height: 20px;
+                                top: 60%;
+                                left:240px;
+    
+                                i{
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+    
+                    .content{
+                        bottom: 0px;
+                        padding: 30px 10px;
+                        height: 300px;
+    
+                        h3{
+                            font:bold 30px/1 'Dongle';
+
+                        }
+    
+                        div{
+                            margin-bottom: 70px;
+    
+                            p{
+                                font:normal 18px/1 'Dongle';
+                            }
+    
+                            span{
+                                width: 60%;
+                                font:normal 16px/1 'Dongle';
+                                position: absolute;
+                                top: 115px;
+                                left: 0px;
+                            }
+    
+                            a{
+                                top: 95px;
+                                left: 135px;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .info{
+            padding:0px 10px;
+            .inner{
+                padding: 100px 0px 100px;
+    
+                .warp{
+    
+                    article{
+                        flex-wrap: wrap;
+
+                        div{
+                            
+                            &:nth-child(1){
+                                margin-bottom: 40px;
+                            }
+
+                            &:nth-child(2){
+                                margin-bottom: 40px;
+                            }
+
+                            &:nth-child(3){
+                                margin-bottom: 40px;
+                            }
+                        }
+    
+                        h2{
+                            font:bold 20px/1 'Montserrat';
+                            margin-bottom: 30px;
+    
+                        }
+    
+                        ul{
+                            flex-wrap: wrap;
+    
+                            li{
+                                margin-top: 10px;
+                                font:normal 10px/1 'Montserrat';
+                                margin-bottom: 10px;
+                            }
+                        }
+    
+                        .Letter{
+                            ul{
+    
+                                li{
+                                    input[type=text]{
+                                        width: 175px;
+                                        height: 40px;
+                                        bottom: -10px;
+                                        line-height: 40px;
+                                    }
+    
+                                    i{
+                                        right: -10px;
+                                        width: 40px;
+                                        bottom: -10px;
+                                        font-size: 20px;
+                                        line-height: 40.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

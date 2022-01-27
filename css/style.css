@@ -115,12 +115,12 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 500%;
   height: 100%;
 }
 #main_sub .member .inner .warp .slider ul li {
   float: left;
-  width: 100%;
+  width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -225,7 +225,6 @@ table {
 #main_sub .aboutPic {
   width: 100%;
   background: rgba(0, 0, 0, 0.87);
-  border-bottom: 1px solid white;
 }
 #main_sub .aboutPic .inner {
   width: 1180px;
@@ -412,97 +411,814 @@ table {
   font-size: 20px;
   color: #fff;
 }
-#main_sub .service {
+#main_sub .info {
   width: 100%;
-  background: rgba(247, 247, 247, 0.9);
+  background: rgba(7, 7, 7, 0.945);
 }
-#main_sub .service .inner {
+#main_sub .info .inner {
   width: 1180px;
+  position: relative;
   margin: 0 auto;
-  position: relative;
-  padding-top: 150px;
-  padding-bottom: 30px;
+  padding: 150px 0px 120px;
 }
-#main_sub .service .inner h2 {
-  font: bold 43px/1 "Montserrat";
-  letter-spacing: 3px;
-  color: #000;
-  text-align: center;
-  margin-bottom: 70px;
-}
-#main_sub .service .inner .wrap {
+#main_sub .info .inner .warp {
   width: 100%;
-  height: 650px;
 }
-#main_sub .service .inner .wrap .serviceGroup2 {
-  padding: 0px 205px;
-  bottom: 260px;
-  justify-content: space-between;
-}
-#main_sub .service .inner .wrap .serviceGroup2 > div {
-  padding-left: 5px;
-}
-#main_sub .service .inner .wrap .serviceGroup2 > div:nth-of-type(2) {
-  padding-right: 7px;
-}
-#main_sub .service .inner .wrap .serviceGroup3 {
-  bottom: 525px;
-  justify-content: center;
-}
-#main_sub .service .inner .wrap article {
-  position: relative;
+#main_sub .info .inner .warp article {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#main_sub .service .inner .wrap article > div .contentBg {
+#main_sub .info .inner .warp article h2 {
+  font: bold 20px/1 "Montserrat";
+  letter-spacing: 2.3px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #fff;
   position: relative;
-  width: 100%;
 }
-#main_sub .service .inner .wrap article > div .contentBg img {
-  width: 330px;
-  height: 270px;
-  object-fit: cover;
-  opacity: 0.9;
+#main_sub .info .inner .warp article h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #a37b3b;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#main_sub .service .inner .wrap article > div .content {
-  position: relative;
-  bottom: 220px;
-  left: 82.5px;
-  width: 50%;
+#main_sub .info .inner .warp article ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#main_sub .service .inner .wrap article > div .content > div i {
-  font-size: 30px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-#main_sub .service .inner .wrap article > div .content h3 {
-  font: bold 16px/1 "Montserrat";
-  letter-spacing: 3px;
-  color: #eee;
+#main_sub .info .inner .warp article ul li {
+  margin-top: 10px;
+  font: normal 12px/1 "Montserrat";
+  letter-spacing: 1.5px;
+  color: #ccc;
   margin-bottom: 10px;
 }
-#main_sub .service .inner .wrap article > div .content span {
-  font: bold 12px/1 "Comforter Brush";
-  font-style: italic;
-  letter-spacing: 3px;
-  color: #ccc;
+#main_sub .info .inner .warp article .Letter {
+  position: relative;
 }
-#main_sub .service .inner > p {
-  width: 100%;
-  font: normal 20px/1 "Comforter Brush";
-  letter-spacing: 1.3px;
-  text-align: left;
+#main_sub .info .inner .warp article .Letter ul li input[type=text] {
+  display: block;
+  width: 175px;
+  height: 40px;
+  border: 1px solid #eee;
   position: absolute;
-  bottom: 30px;
-  left: 62.5%;
-  transform: translateX(-50%);
+  left: 0;
+  bottom: -10px;
+  text-align: center;
+  line-height: 40px;
+  color: #eee;
+  background: rgba(7, 7, 7, 0.945);
+}
+#main_sub .info .inner .warp article .Letter ul li i {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #a37b3b;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40.5px;
+  color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  cursor: pointer;
 }
 
+@media screen and (max-width: 1179px) {
+  #main_sub .about .inner {
+    width: 100%;
+  }
+  #main_sub .member .inner .warp {
+    width: 100%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2 {
+    font: normal 40px/1 "Dongle";
+    margin-bottom: 30px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2::after {
+    bottom: -10px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content b {
+    font: normal 16px/1 "Dongle";
+  }
+  #main_sub .member .inner .warp .slider ul li .content p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: normal 15.5px/1 "Dongle";
+  }
+  #main_sub .member .inner .warp .slider ul li .content strong {
+    font: normal 22px/1 "Dongle";
+  }
+  #main_sub .member .inner .warp .slider ul li .content span {
+    font: normal 17px/1 "Dongle";
+    letter-spacing: 2px;
+  }
+  #main_sub .member .inner .warp .prev {
+    left: 47%;
+    bottom: 10px;
+  }
+  #main_sub .member .inner .warp .next {
+    left: 53%;
+    bottom: 10px;
+  }
+  #main_sub .aboutPic .inner {
+    width: 100%;
+  }
+  #main_sub .aboutPic .inner h2 {
+    position: absolute;
+    right: 3.5%;
+    top: 0;
+    margin-top: 125px;
+  }
+  #main_sub .aboutPic .inner h2 strong::after {
+    width: 35%;
+    left: 8px;
+  }
+  #main_sub .aboutPic .inner .wrap {
+    justify-content: space-evenly;
+    padding: 125px 0px 200px;
+  }
+  #main_sub .aboutPic .inner .wrap article {
+    width: 27%;
+    height: 230px;
+    margin-right: 2%;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover {
+    bottom: 305.5px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover.on {
+    bottom: 230px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover span {
+    font: normal 18px/75px "Dongle";
+    letter-spacing: 1.2px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a {
+    width: 15px;
+    height: 15px;
+    top: 49.5%;
+    left: 215px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a i {
+    font-size: 15px;
+  }
+  #main_sub .aboutPic .inner .wrap .content {
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 50px 100px 20px;
+  }
+  #main_sub .aboutPic .inner .wrap .content h3 {
+    margin-left: 0px;
+  }
+  #main_sub .aboutPic .inner .wrap .content h3::after {
+    height: 120px;
+    left: 33.5%;
+    top: 37.5%;
+  }
+  #main_sub .aboutPic .inner .wrap .content div p {
+    font: normal 19px/1 "Dongle";
+  }
+  #main_sub .aboutPic .inner .wrap .content div span {
+    left: 250px;
+    padding-top: 10px;
+    font: normal 18px/1 "Dongle";
+  }
+  #main_sub .aboutPic .inner .wrap .content div a {
+    left: 405px;
+  }
+  #main_sub .info .inner {
+    width: 100%;
+  }
+  #main_sub .info .inner .warp article {
+    justify-content: space-evenly;
+  }
+  #main_sub .info .inner .warp article h2 {
+    font: normal 15px/1 "Montserrat";
+  }
+  #main_sub .info .inner .warp article h2::after {
+    width: 47px;
+  }
+  #main_sub .info .inner .warp article ul li {
+    margin-top: 5px;
+    font: normal 11.5px/1 "Montserrat";
+    letter-spacing: 1.5px;
+    margin-bottom: 7.5px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li input[type=text] {
+    width: 150px;
+    left: 10px;
+    bottom: -5px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li i {
+    bottom: -5px;
+    right: 10px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 959px) {
+  #main_sub .about .inner h2 {
+    font: normal 45px/1 "Dongle";
+  }
+  #main_sub .about .inner h2 span {
+    color: #fcbf5d;
+    opacity: 0.4;
+  }
+  #main_sub .about .inner h2 span::after {
+    width: 80px;
+    right: 13%;
+  }
+  #main_sub .about .inner .warp b {
+    font: normal 19px/1 "Dongle";
+  }
+  #main_sub .about .inner .warp span {
+    font: normal 18px/1 "Dongle";
+  }
+  #main_sub .about .inner .warp strong {
+    font: normal 40px/1 "Comforter Brush";
+  }
+  #main_sub .member .inner {
+    min-height: 600px;
+  }
+  #main_sub .member .inner .warp {
+    width: 100%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content {
+    padding-right: 70px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2 {
+    font: normal 37px/1 "Dongle";
+    margin-bottom: 20px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content b {
+    font: normal 13px/1 "Dongle";
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content p {
+    font: normal 14px/1 "Dongle";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+  }
+  #main_sub .member .inner .warp .slider ul li .content strong {
+    font: normal 18px/1 "Dongle";
+  }
+  #main_sub .member .inner .warp .slider ul li .content span {
+    font: normal 15px/1 "Dongle";
+  }
+  #main_sub .member .inner .warp .prev {
+    left: 47%;
+    bottom: 10px;
+  }
+  #main_sub .member .inner .warp .next {
+    left: 53%;
+    bottom: 10px;
+  }
+  #main_sub .aboutPic .inner h2 {
+    right: 25px;
+    top: 0;
+    font: normal 40px/1 "Dongle";
+    width: 35%;
+  }
+  #main_sub .aboutPic .inner h2 strong::after {
+    left: 40px;
+  }
+  #main_sub .aboutPic .inner .wrap {
+    justify-content: space-evenly;
+    padding: 125px 0px 150px;
+  }
+  #main_sub .aboutPic .inner .wrap article {
+    height: 200px;
+    margin-right: 1%;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover {
+    bottom: 305.5px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover.on {
+    bottom: 205px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover span {
+    font: normal 15px/75px "Dongle";
+    letter-spacing: 1.2px;
+    padding-right: 15px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a {
+    left: 175px;
+  }
+  #main_sub .aboutPic .inner .wrap .content h3 {
+    font: normal 40px/1 "Dongle";
+  }
+  #main_sub .info .inner .warp article h2 {
+    font: normal 12px/1 "Montserrat";
+  }
+  #main_sub .info .inner .warp article h2::after {
+    width: 47px;
+  }
+  #main_sub .info .inner .warp article ul li {
+    margin-top: 0px;
+    font: normal 10px/1 "Montserrat";
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li input[type=text] {
+    width: 130px;
+    left: 0px;
+    bottom: 0px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li i {
+    bottom: 0px;
+    right: 5px;
+  }
+}
+@media screen and (max-width: 779px) {
+  #main_sub .about .inner h2 {
+    font: normal 50px/1 "Dongle";
+    width: 100%;
+    text-align: center;
+  }
+  #main_sub .about .inner h2 span::after {
+    right: 23%;
+  }
+  #main_sub .about .inner .warp {
+    padding-top: 50px;
+  }
+  #main_sub .about .inner .warp b {
+    font: normal 15px/1 "Dongle";
+  }
+  #main_sub .about .inner .warp p {
+    font: normal 14px/1 "Dongle";
+  }
+  #main_sub .about .inner .warp span {
+    font: normal 18px/1 "Dongle";
+  }
+  #main_sub .about .inner .warp strong {
+    font: normal 35px/1 "Comforter Brush";
+  }
+  #main_sub .member .inner {
+    min-height: 900px;
+  }
+  #main_sub .member .inner .warp .slider ul {
+    width: 100%;
+  }
+  #main_sub .member .inner .warp .slider ul li {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  #main_sub .member .inner .warp .slider ul li .content {
+    height: 450px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2 {
+    font: normal 65px/40px "Dongle";
+    margin-bottom: 30px;
+    text-align: left;
+    width: 70%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2::after {
+    content: "";
+    display: block;
+    width: 65%;
+    height: 2.5px;
+    background: #a37b3b;
+    position: absolute;
+    bottom: -7.5px;
+    left: 0%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content b {
+    font: normal 15px/1 "Dongle";
+    width: 70%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 70%;
+    font: normal 14px/1 "Dongle";
+  }
+  #main_sub .member .inner .warp .slider ul li .content strong {
+    font: normal 20px/1 "Dongle";
+    width: 70%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content span {
+    font: normal 15px/1 "Dongle";
+    width: 70%;
+  }
+  #main_sub .member .inner .warp .slider ul li .pic {
+    width: 100%;
+    height: 450px;
+  }
+  #main_sub .member .inner .warp .slider ul li .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #main_sub .member .inner .warp .prev {
+    background: none;
+    left: 10px;
+    bottom: 225px;
+    transform: rotateZ(90deg);
+  }
+  #main_sub .member .inner .warp .prev i {
+    font-size: 30px;
+    color: #ddd;
+  }
+  #main_sub .member .inner .warp .prev i:hover {
+    color: rgba(241, 195, 121, 0.849);
+  }
+  #main_sub .member .inner .warp .next {
+    background: none;
+    left: 10px;
+    bottom: 180px;
+    transform: rotateZ(90deg);
+  }
+  #main_sub .member .inner .warp .next i {
+    font-size: 30px;
+    color: #ddd;
+  }
+  #main_sub .member .inner .warp .next i:hover {
+    color: rgba(241, 195, 121, 0.849);
+  }
+  #main_sub .aboutPic {
+    padding: 0px 50px;
+  }
+  #main_sub .aboutPic .inner h2 {
+    font: bold 60px/1 "Dongle";
+    width: 80%;
+    margin-top: 100px;
+  }
+  #main_sub .aboutPic .inner h2 strong {
+    margin-right: 10px;
+  }
+  #main_sub .aboutPic .inner h2 strong::after {
+    width: 35%;
+    left: 6px;
+  }
+  #main_sub .aboutPic .inner .wrap {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 130px 0px 200px;
+  }
+  #main_sub .aboutPic .inner .wrap article {
+    width: 100%;
+    height: 400px;
+    margin-right: 0%;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-child(2) {
+    top: 40px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-child(3) {
+    position: relative;
+    top: 80px;
+    margin-bottom: 150px;
+  }
+  #main_sub .aboutPic .inner .wrap article .pic img {
+    height: 400px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover {
+    bottom: 0px;
+    height: 120px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover.on {
+    display: block;
+    opacity: 0.7;
+    transition: 0.3s;
+    bottom: 112.5px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover {
+    height: 120px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover.on {
+    display: block;
+    opacity: 0.7;
+    transition: 0.3s;
+    bottom: 112.5px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover span {
+    font: normal 35px/125px "Dongle";
+    letter-spacing: 1.5px;
+    color: #fff;
+    opacity: 0.8;
+    margin-right: 30px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a {
+    width: 30px;
+    height: 30px;
+    background: rgba(241, 195, 121, 0.849);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 350px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a i {
+    font-size: 27.5px;
+    color: #fff;
+  }
+  #main_sub .aboutPic .inner .wrap .content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10px;
+  }
+  #main_sub .aboutPic .inner .wrap .content h3 {
+    font: bold 55px/1 "Dongle";
+    width: 110%;
+    margin-left: 0px;
+    position: relative;
+    bottom: 100px;
+    padding-bottom: 10px;
+  }
+  #main_sub .aboutPic .inner .wrap .content h3::after {
+    width: 370px;
+    height: 3px;
+    left: 0%;
+    top: 110%;
+    transform: translateY(0%);
+    opacity: 0.8;
+  }
+  #main_sub .aboutPic .inner .wrap .content div {
+    width: 88%;
+    padding-top: 30px;
+    position: absolute;
+  }
+  #main_sub .aboutPic .inner .wrap .content div p {
+    font: normal 19px/1 "Dongle";
+    position: absolute;
+  }
+  #main_sub .aboutPic .inner .wrap .content div span {
+    width: 50%;
+    font: normal 17px/1 "Dongle";
+    position: absolute;
+    top: 85px;
+    left: 180px;
+  }
+  #main_sub .aboutPic .inner .wrap .content div a {
+    top: 62.5px;
+    left: 325px;
+  }
+  #main_sub .info .inner {
+    padding: 150px 0px 120px;
+  }
+  #main_sub .info .inner .warp article {
+    flex-wrap: wrap;
+  }
+  #main_sub .info .inner .warp article div:nth-child(1) {
+    margin-bottom: 75px;
+  }
+  #main_sub .info .inner .warp article div:nth-child(2) {
+    margin-bottom: 75px;
+  }
+  #main_sub .info .inner .warp article h2 {
+    font: bold 20px/1 "Montserrat";
+    margin-bottom: 50px;
+  }
+  #main_sub .info .inner .warp article ul {
+    flex-wrap: wrap;
+  }
+  #main_sub .info .inner .warp article ul li {
+    margin-top: 10px;
+    font: normal 12px/1 "Montserrat";
+    margin-bottom: 10px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li input[type=text] {
+    width: 175px;
+    height: 40px;
+    bottom: -10px;
+    line-height: 40px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li i {
+    width: 40px;
+    bottom: -10px;
+    font-size: 20px;
+    line-height: 40.5px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #main_sub .about .inner h2 {
+    font: bold 35px/1 "Dongle";
+    top: 20%;
+  }
+  #main_sub .about .inner h2 span::after {
+    right: 12.5%;
+  }
+  #main_sub .about .inner .warp {
+    padding-top: 30px;
+  }
+  #main_sub .about .inner .warp strong {
+    font: normal 30px/1 "Comforter Brush";
+    margin-top: 25px;
+  }
+  #main_sub .member .inner {
+    min-height: 750px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content {
+    height: 300px;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2 {
+    font: normal 40px/40px "Dongle";
+    margin-bottom: 20px;
+    text-align: left;
+    width: 85%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content h2::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 2.5px;
+    background: #a37b3b;
+    position: absolute;
+    bottom: -7.5px;
+    left: 0%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content b {
+    font: normal 16px/1 "Dongle";
+    width: 85%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content p {
+    display: none;
+  }
+  #main_sub .member .inner .warp .slider ul li .content strong {
+    font: normal 16px/1 "Dongle";
+    width: 85%;
+  }
+  #main_sub .member .inner .warp .slider ul li .content span {
+    font: normal 13px/1 "Dongle";
+    width: 85%;
+  }
+  #main_sub .member .inner .warp .slider ul li .pic {
+    width: 100%;
+    height: 450px;
+  }
+  #main_sub .member .inner .warp .slider ul li .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #main_sub .member .inner .warp .prev {
+    left: 5px;
+    bottom: 150px;
+  }
+  #main_sub .member .inner .warp .prev i {
+    font-size: 25px;
+  }
+  #main_sub .member .inner .warp .next {
+    left: 5px;
+    bottom: 100px;
+  }
+  #main_sub .member .inner .warp .next i {
+    font-size: 25px;
+  }
+  #main_sub .aboutPic {
+    padding: 0px 25px;
+  }
+  #main_sub .aboutPic .inner {
+    padding-bottom: 0;
+  }
+  #main_sub .aboutPic .inner h2 {
+    font: bold 34px/1 "Dongle";
+    margin-top: 80px;
+  }
+  #main_sub .aboutPic .inner h2 strong::after {
+    width: 32%;
+    left: 14px;
+  }
+  #main_sub .aboutPic .inner .wrap {
+    padding: 50px 0px 0px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-child(2) {
+    top: -80px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-child(3) {
+    position: relative;
+    top: -160px;
+    margin-bottom: 50px;
+  }
+  #main_sub .aboutPic .inner .wrap article .pic {
+    height: 275px;
+  }
+  #main_sub .aboutPic .inner .wrap article .pic img {
+    height: 275px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover {
+    height: 100px;
+  }
+  #main_sub .aboutPic .inner .wrap article:nth-of-type(2) .hover.on {
+    bottom: 85.5px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover {
+    height: 100px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover.on {
+    bottom: 85.5px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover span {
+    font: normal 22.5px/125px "Dongle";
+    letter-spacing: 1.5px;
+    color: #fff;
+    opacity: 0.8;
+    margin-right: 10px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a {
+    width: 20px;
+    height: 20px;
+    top: 60%;
+    left: 240px;
+  }
+  #main_sub .aboutPic .inner .wrap article .hover a i {
+    font-size: 20px;
+  }
+  #main_sub .aboutPic .inner .wrap .content {
+    bottom: 0px;
+    padding: 30px 10px;
+    height: 300px;
+  }
+  #main_sub .aboutPic .inner .wrap .content h3 {
+    font: bold 30px/1 "Dongle";
+  }
+  #main_sub .aboutPic .inner .wrap .content div {
+    margin-bottom: 70px;
+  }
+  #main_sub .aboutPic .inner .wrap .content div p {
+    font: normal 18px/1 "Dongle";
+  }
+  #main_sub .aboutPic .inner .wrap .content div span {
+    width: 60%;
+    font: normal 16px/1 "Dongle";
+    position: absolute;
+    top: 115px;
+    left: 0px;
+  }
+  #main_sub .aboutPic .inner .wrap .content div a {
+    top: 95px;
+    left: 135px;
+    display: none;
+  }
+  #main_sub .info {
+    padding: 0px 10px;
+  }
+  #main_sub .info .inner {
+    padding: 100px 0px 100px;
+  }
+  #main_sub .info .inner .warp article {
+    flex-wrap: wrap;
+  }
+  #main_sub .info .inner .warp article div:nth-child(1) {
+    margin-bottom: 40px;
+  }
+  #main_sub .info .inner .warp article div:nth-child(2) {
+    margin-bottom: 40px;
+  }
+  #main_sub .info .inner .warp article div:nth-child(3) {
+    margin-bottom: 40px;
+  }
+  #main_sub .info .inner .warp article h2 {
+    font: bold 20px/1 "Montserrat";
+    margin-bottom: 30px;
+  }
+  #main_sub .info .inner .warp article ul {
+    flex-wrap: wrap;
+  }
+  #main_sub .info .inner .warp article ul li {
+    margin-top: 10px;
+    font: normal 10px/1 "Montserrat";
+    margin-bottom: 10px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li input[type=text] {
+    width: 175px;
+    height: 40px;
+    bottom: -10px;
+    line-height: 40px;
+  }
+  #main_sub .info .inner .warp article .Letter ul li i {
+    right: -10px;
+    width: 40px;
+    bottom: -10px;
+    font-size: 20px;
+    line-height: 40.5px;
+  }
+}
 #main_sub {
   width: 100%;
 }
@@ -774,9 +1490,58 @@ table {
   min-height: 1000px;
   border: 1px solid red;
   margin: 0 auto;
+  padding: 100px 0px;
+}
+#main_sub .Notice .inner h2 {
+  font: bold 50px/1 "Montserrat";
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 #main_sub .Notice .inner .wrap {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#main_sub .Notice .inner .wrap article table {
+  border-collapse: collapse;
+}
+#main_sub .Notice .inner .wrap article table thead tr {
+  background: rgba(55, 55, 55, 0.855);
+}
+#main_sub .Notice .inner .wrap article table thead tr th {
+  font: bold 15px/1 "Montserrat";
+  letter-spacing: 1.2px;
+  color: #222;
+  padding: 20px 15px;
+  color: #fff;
+}
+#main_sub .Notice .inner .wrap article table tbody tr {
+  border-bottom: 1px solid #ccc;
+  background: #eee;
+}
+#main_sub .Notice .inner .wrap article table tbody tr td {
+  font: normal 12px/1 "Montserrat";
+  letter-spacing: 0.8px;
+  color: #333;
+  padding: 20px 10px;
+}
+#main_sub .Notice .inner .wrap article .pages {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid red;
+}
+#main_sub .Notice .inner .wrap article .pages > a {
+  border: 1px solid blue;
+}
+#main_sub .Notice .inner .wrap article .pages .numbers {
+  border: 1px solid red;
+}
+#main_sub .Notice .inner .wrap article .pages .numbers a {
+  margin: 10px;
 }
 #main_sub .QA {
   width: 100%;
@@ -800,54 +1565,145 @@ table {
 }
 #main_sub .gallery {
   width: 100%;
+  background: rgba(250, 250, 250, 0.972);
 }
 #main_sub .gallery .inner {
   width: 1180px;
   min-height: 1000px;
   margin: 0 auto;
   position: relative;
-  padding: 75px 0px;
+}
+#main_sub .gallery .inner .box1, #main_sub .gallery .inner .box2 {
+  width: 20%;
+  height: 50px;
+  background: rgba(250, 250, 250, 0.972);
+  color: #555;
+  border: 4px solid #ddd;
+  font: bold 13px/42px "Montserrat";
+  letter-spacing: 1.4px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 80px;
+  text-align: center;
+}
+#main_sub .gallery .inner .box1::before, #main_sub .gallery .inner .box2::before {
+  content: "";
+  display: block;
+  width: 204%;
+  height: 4px;
+  background: #ddd;
+  position: absolute;
+  right: 230px;
+  bottom: -4px;
+}
+#main_sub .gallery .inner .box1::after, #main_sub .gallery .inner .box2::after {
+  content: "";
+  display: block;
+  width: 204%;
+  height: 4px;
+  background: #ddd;
+  position: absolute;
+  left: 230px;
+}
+#main_sub .gallery .inner .box2 {
+  top: 500px;
+}
+#main_sub .gallery .inner .line1 {
+  width: 99%;
+  border-right: 4px solid #ddd;
+  border-left: 4px solid #ddd;
+  height: 50px;
+  position: absolute;
+  top: 126px;
+  left: 0.5%;
+}
+#main_sub .gallery .inner .line2 {
+  width: 99%;
+  border-right: 4px solid #ddd;
+  border-left: 4px solid #ddd;
+  height: 50px;
+  position: absolute;
+  top: 546px;
+  left: 0.5%;
 }
 #main_sub .gallery .inner > ul {
+  width: 100%;
+  height: 120px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  float: left;
-  margin-bottom: 30px;
+  margin-bottom: 300px;
+  position: relative;
+  top: 170px;
 }
 #main_sub .gallery .inner > ul li {
+  width: calc((100% - 5px) / 4);
   padding: 20px;
+  height: 100%;
+  transition: 1s;
+}
+#main_sub .gallery .inner > ul li:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+#main_sub .gallery .inner > ul li:hover i, #main_sub .gallery .inner > ul li:hover a {
+  color: #a37b3b;
+}
+#main_sub .gallery .inner > ul li > i {
+  position: relative;
+  font-size: 25px;
+  color: #222;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
 }
 #main_sub .gallery .inner > ul li a {
   display: block;
+  width: 100%;
+  height: 100%;
   padding: 10px;
-  font: normal 12px/1 "Montserrat";
-  color: #fff;
-  letter-spacing: 3px;
-  background: #a5a5a5;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px rgba(167, 167, 167, 0.96);
-  transition: 1s;
+  font: bold 17px/90px "Montserrat";
+  color: #333;
+  letter-spacing: 2.7px;
+  background: rgba(250, 250, 250, 0.972);
+  text-align: center;
+  border: 4px solid #ddd;
 }
-#main_sub .gallery .inner > ul li a:hover {
-  transform: scale(1.15);
-  transition: 1s;
-  font-weight: bold;
+#main_sub .gallery .inner > ul li > div {
+  width: 100%;
+  height: 140px;
+  border-right: 4px solid #ddd;
+  border-left: 4px solid #ddd;
+  border-bottom: 4px solid #ddd;
+  text-align: center;
+  padding: 15px 5px;
+  font: normal 13px/20px "Montserrat";
+  color: #777;
+  font-style: italic;
 }
 #main_sub .gallery .inner input[type=text] {
   width: 200px;
   height: 30px;
-  float: right;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  border-style: none;
+  border: 1px solid #111;
 }
 #main_sub .gallery .inner .btnSearch {
   position: absolute;
-  right: 0;
+  right: 32px;
+  top: 27px;
+  width: 25px;
+  height: 25px;
+  border-style: none;
+  cursor: pointer;
 }
 #main_sub .gallery .inner .wrap {
   width: 100%;
   overflow: hidden;
-  padding-top: 115px;
-  border-top: 2px solid rgba(214, 214, 214, 0.739);
+  padding-top: 200px;
 }
 #main_sub .gallery .inner .wrap #list::after {
   content: "";
@@ -855,47 +1711,249 @@ table {
   clear: both;
 }
 #main_sub .gallery .inner .wrap #list .item {
-  width: 20%;
+  width: 25%;
   float: left;
   padding: 10px;
 }
 #main_sub .gallery .inner .wrap #list .item div {
   width: 100%;
-  border: 1px solid #555;
+  border: 4px solid #ddd;
   padding: 20px;
   background: #fff;
-  border-radius: 5px;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.97);
 }
 #main_sub .gallery .inner .wrap #list .item div a {
   display: block;
   width: 100%;
   height: 100%;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #ddd;
+  overflow: hidden;
 }
 #main_sub .gallery .inner .wrap #list .item div a img {
   width: 100%;
   object-fit: cover;
   margin-bottom: 20px;
+  transition: 0.5s;
+}
+#main_sub .gallery .inner .wrap #list .item div a img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #main_sub .gallery .inner .wrap #list .item div p {
-  font: normal 10px/16px "Montserrat";
-  color: #000;
+  font: bold 15px/20px "Montserrat";
+  color: #111;
   letter-spacing: 1.1px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#main_sub .gallery .inner .wrap #list .item div span {
+  font: normal 11px/16px "Montserrat";
+  color: #666;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+  width: 70%;
+  display: block;
+}
+#main_sub .gallery .inner .wrap #list .item div strong {
+  font: normal 12px/16px "Montserrat";
+  color: #444;
+  letter-spacing: 1.1;
 }
 
 #main_sub {
   width: 100%;
 }
+#main_sub .connect {
+  width: 100%;
+  background: rgba(7, 7, 7, 0.945);
+  color: #fff;
+}
+#main_sub .connect .inner {
+  width: 1180px;
+  min-height: 1000px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+#main_sub .connect .inner h3 {
+  font: normal 25px/1px "Montserrat";
+  letter-spacing: 1.4px;
+  color: #fcbf5d;
+  opacity: 0.75;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#main_sub .connect .inner .wrap {
+  width: 100%;
+}
+#main_sub .connect .inner .wrap article {
+  width: 100%;
+}
+#main_sub .connect .inner .wrap article .info2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
+}
+#main_sub .connect .inner .wrap article .info2 li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+#main_sub .connect .inner .wrap article .info2 li:nth-child(2)::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 100%;
+  background: #fcbf5d;
+  opacity: 0.75;
+  position: absolute;
+  left: -30%;
+}
+#main_sub .connect .inner .wrap article .info2 li:nth-child(2)::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 100%;
+  background: #fcbf5d;
+  opacity: 0.75;
+  position: absolute;
+  right: -30%;
+}
+#main_sub .connect .inner .wrap article .info2 li i {
+  font-size: 35px;
+  color: #fcbf5d;
+  opacity: 0.8;
+  padding-top: 10px;
+}
+#main_sub .connect .inner .wrap article .info2 li strong {
+  font: bold 20px/50px "Montserrat";
+  letter-spacing: 1.8px;
+  color: #fcbf5d;
+  opacity: 0.8;
+}
+#main_sub .connect .inner .wrap article .info2 li span {
+  font: normal 14px/1 "Montserrat";
+  margin-bottom: 10px;
+  letter-spacing: 1.1px;
+}
+#main_sub .connect .inner .wrap article p {
+  font: bold 15px/1.75 "Montserrat";
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+#main_sub .connect .inner .wrap article p:nth-child(3) {
+  margin-bottom: 50px;
+}
+#main_sub .connect .inner .wrap article form {
+  width: 100%;
+}
+#main_sub .connect .inner .wrap article form table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#main_sub .connect .inner .wrap article form table tbody tr input[type=text] {
+  width: 700px;
+  height: 50px;
+  margin-bottom: 20px;
+  background: rgba(59, 59, 59, 0.883);
+  border: none;
+  color: #fff;
+  padding-left: 10px;
+  font-family: "Montserrat";
+}
+#main_sub .connect .inner .wrap article form table tbody tr input[name=message] {
+  height: 300px;
+}
+#main_sub .connect .inner .wrap article .contactBtn {
+  display: block;
+  width: 150px;
+  height: 40px;
+  color: #222;
+  font: bold 13px/40px "Montserrat";
+  letter-spacing: 1.3px;
+  background: #fcbf5d;
+  opacity: 0.7;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  margin-bottom: 50px;
+}
+#main_sub .connect .inner .wrap article .sns {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+#main_sub .connect .inner .wrap article .sns li {
+  width: 50px;
+  height: 50px;
+  background: rgba(241, 183, 89, 0.945);
+  opacity: 0.8;
+  border-radius: 10px;
+  text-align: center;
+}
+#main_sub .connect .inner .wrap article .sns li i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #222;
+}
 #main_sub .location {
   width: 100%;
+  background: rgba(243, 243, 243, 0.952);
 }
 #main_sub .location .inner {
   width: 1180px;
-  min-height: 1000px;
-  border: 1px solid red;
+  position: relative;
   margin: 0 auto;
+  padding: 100px 0px;
 }
 #main_sub .location .inner .wrap {
   width: 100%;
+  padding: 50px 0px;
+}
+#main_sub .location .inner .wrap #map {
+  margin: 0 auto;
+  width: 70%;
+  height: 500px;
+  border: 10px solid black;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+#main_sub .location .inner .wrap .branch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_sub .location .inner .wrap .branch li {
+  margin-right: 50px;
+}
+#main_sub .location .inner .wrap .branch li:nth-child(2) {
+  margin-right: 0;
+}
+#main_sub .location .inner .wrap .branch li:nth-child(2) a {
+  background: #fff;
+}
+#main_sub .location .inner .wrap .branch li a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  color: #222;
+  font: bold 15px/50px "Montserrat";
+  letter-spacing: 1.3px;
+  background: #fcbf5d;
+  text-align: center;
+  border: 1px solid #333;
 }
 
 #header_sub {
@@ -942,9 +2000,10 @@ table {
   color: #fff;
 }
 #header_sub .inner .menuMo .util {
+  width: 150px;
   position: absolute;
-  left: 59.6%;
-  top: 15%;
+  left: 59.5%;
+  top: 10px;
 }
 #header_sub .inner .menuMo .util::after {
   content: "";
@@ -1062,6 +2121,186 @@ table {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 1179px) {
+  #header_sub {
+    padding: 0px 10px;
+  }
+  #header_sub .inner {
+    width: 100%;
+  }
+  #header_sub .inner .menuMo {
+    width: 1300px;
+    left: -100px;
+  }
+  #header_sub .inner .menuMo .gnb {
+    transform: translate(0%, 0%);
+    top: 70%;
+    left: 26%;
+  }
+  #header_sub .inner .menuMo .gnb li {
+    margin-left: 50px;
+  }
+  #header_sub .inner .menuMo .gnb li a {
+    font: normal 27px/1 "Dongle";
+  }
+  #header_sub .inner .menuMo .util {
+    left: 86%;
+  }
+
+  #figure_sub {
+    overflow: hidden;
+  }
+  #figure_sub .inner {
+    width: 100%;
+  }
+
+  #footer_sub .inner {
+    width: 100%;
+  }
+  #footer_sub .inner .wrap {
+    justify-content: space-around;
+  }
+  #footer_sub .inner .wrap p {
+    font: normal 13px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap a {
+    font: bold 13px/1.3 "Montserrat";
+  }
+}
+@media screen and (max-width: 959px) {
+  #header_sub .inner h1 {
+    font: bold 50px/1 "Dongle";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #header_sub .inner .menuMo {
+    width: 150%;
+  }
+  #header_sub .inner .menuMo .gnb {
+    top: 75%;
+    left: 17%;
+  }
+  #header_sub .inner .menuMo .gnb li {
+    margin-left: 50px;
+  }
+  #header_sub .inner .menuMo .gnb li a {
+    font: normal 25px/1 "Dongle";
+  }
+  #header_sub .inner .menuMo .util {
+    left: 65%;
+  }
+
+  #footer_sub .inner .wrap p {
+    font: normal 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap a {
+    font: bold 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap ul li {
+    margin-left: 15px;
+    padding-top: 5px;
+  }
+  #footer_sub .inner .wrap ul li i {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 779px) {
+  #header_sub .inner h1 {
+    font: normal 45px/1 "Dongle";
+  }
+  #header_sub .inner .menuMo .gnb {
+    top: 75%;
+    left: 17%;
+  }
+  #header_sub .inner .menuMo .gnb li {
+    margin-left: 40px;
+  }
+  #header_sub .inner .menuMo .gnb li a {
+    font: normal 23px/1 "Dongle";
+  }
+  #header_sub .inner .menuMo .util {
+    left: 65%;
+  }
+
+  #footer_sub .inner .wrap p {
+    font: normal 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap a {
+    font: normal 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap ul li {
+    margin-left: 17px;
+    padding-top: 5px;
+  }
+  #footer_sub .inner .wrap ul li:nth-child(1) {
+    margin-left: 0px;
+  }
+  #footer_sub .inner .wrap ul li i {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #header_sub .inner h1 {
+    font: normal 50px/1 "Dongle";
+    top: 60%;
+  }
+  #header_sub .inner .menuMo {
+    width: 200%;
+  }
+  #header_sub .inner .menuMo .gnb {
+    top: 82.5%;
+    left: 74%;
+    display: none;
+  }
+  #header_sub .inner .menuMo .gnb li {
+    margin-left: 40px;
+  }
+  #header_sub .inner .menuMo .gnb li a {
+    font: normal 20px/1 "Dongle";
+  }
+  #header_sub .inner .menuMo .util {
+    left: 49%;
+  }
+  #header_sub .inner .menuMo .util li {
+    margin-left: 25px;
+  }
+  #header_sub .inner .menuMo .util li a {
+    font: normal 20px/1 "Dongle";
+  }
+
+  #figure_sub .sub_visual .inner {
+    width: 100%;
+  }
+  #figure_sub .sub_visual .inner h2 {
+    font: normal 40px/1 "Montserrat";
+  }
+  #figure_sub .sub_visual .inner ul li {
+    font: normal 10px/1 "Montserrat";
+  }
+
+  #footer_sub .inner .wrap {
+    flex-direction: column;
+  }
+  #footer_sub .inner .wrap p {
+    font: normal 13px/1.3 "Montserrat";
+    margin-bottom: 30px;
+  }
+  #footer_sub .inner .wrap a {
+    display: none;
+  }
+  #footer_sub .inner .wrap ul {
+    width: 65%;
+  }
+  #footer_sub .inner .wrap ul li {
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+  #footer_sub .inner .wrap ul li i {
+    font-size: 16px;
+  }
+}
 #main_sub {
   width: 100%;
 }
@@ -1071,11 +2310,179 @@ table {
 #main_sub .youtube .inner {
   width: 1180px;
   min-height: 1000px;
-  border: 1px solid red;
   margin: 0 auto;
+  padding: 100px 0px 50px;
+}
+#main_sub .youtube .inner:hover .wrap .titles i {
+  color: red;
 }
 #main_sub .youtube .inner .wrap {
   width: 100%;
+}
+#main_sub .youtube .inner .wrap .titles {
+  border: 1px solid rgba(248, 248, 248, 0.95);
+  padding-top: 25px;
+  background: rgba(248, 248, 248, 0.95);
+}
+#main_sub .youtube .inner .wrap .titles i {
+  font-size: 75px;
+  text-align: center;
+  color: #333;
+  display: block;
+  margin-bottom: 20px;
+}
+#main_sub .youtube .inner .wrap .titles h2 {
+  font: bold 25px/1px "Montserrat";
+  color: #111;
+  letter-spacing: 1.2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#main_sub .youtube .inner .wrap .titles p {
+  font: normal 11px/1px "Montserrat";
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#main_sub .youtube .inner .wrap .video {
+  padding-top: 100px;
+}
+#main_sub .youtube .inner .wrap .video article {
+  display: flex;
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+  filter: contrast(108%);
+  padding: 50px 50px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1)::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 50%;
+  background: rgba(46, 46, 46, 0.897);
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 30px 0px;
+  position: relative;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content > p {
+  display: block;
+  width: 85%;
+  font: bold 11px/17px "Montserrat";
+  color: #555;
+  letter-spacing: 0.5px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content hr {
+  position: absolute;
+  background: rgba(167, 166, 166, 0.931);
+  border: none;
+  width: 85%;
+  height: 3px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content hr:nth-of-type(1) {
+  top: 65%;
+  right: 35px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content hr:nth-of-type(2) {
+  width: 50%;
+  bottom: 28.5%;
+  right: 35px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content span {
+  position: absolute;
+  bottom: 12.5%;
+  left: 15px;
+  font: bold 11px/17px "Montserrat";
+  color: #333;
+  margin-left: 50px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n)::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 50%;
+  background: rgba(46, 46, 46, 0.897);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.8s;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) .content {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 30px 0px;
+  position: relative;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) .content > p {
+  display: block;
+  width: 85%;
+  font: bold 11px/17px "Montserrat";
+  color: #555;
+  letter-spacing: 0.5px;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) .content hr {
+  position: absolute;
+  background: rgba(167, 166, 166, 0.931);
+  border: none;
+  width: 85%;
+  height: 3px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) .content hr:nth-of-type(1) {
+  top: 65%;
+  left: 35px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) .content hr:nth-of-type(2) {
+  width: 50%;
+  bottom: 28.5%;
+  left: 35px;
+}
+#main_sub .youtube .inner .wrap .video article:nth-child(2n) .content span {
+  position: absolute;
+  bottom: 12.5%;
+  right: 15px;
+  font: bold 11px/17px "Montserrat";
+  color: #333;
+  margin-right: 50px;
+}
+#main_sub .youtube .inner .wrap .video article a {
+  display: block;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+#main_sub .youtube .inner .wrap .video article a img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+#main_sub .youtube .inner .wrap .video article h3 {
+  font: bold 15px/1px "Montserrat";
+  color: #111;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 20px;
 }
 
 #main_sub {
@@ -1165,10 +2572,10 @@ table {
   top: -100%;
   left: -700px;
   opacity: 0;
-  transition: all 10s;
+  transition: all 2s;
 }
 #header .inner .menuMo.on {
-  animation: MenuMo 3s;
+  animation: MenuMo 1.7s;
   animation-fill-mode: forwards;
   opacity: 1;
 }
@@ -2024,20 +3431,20 @@ table {
   #main .Provide .inner {
     width: 100%;
   }
-  #main .Provide .inner .wrap article .content li {
-    width: 23.75%;
-    height: 230px;
-    padding-left: 2.5vw;
+  #main .Provide .inner .wrap article .content .contentGroup {
+    width: 240px;
+    height: 240px;
+    margin-right: 20px;
   }
-  #main .Provide .inner .wrap article .content li i {
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront i {
     font-size: 2.5vw;
     margin-bottom: 1.5vh;
   }
-  #main .Provide .inner .wrap article .content li span {
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront span {
     font-size: 1.6vw;
     margin-bottom: 1.5vh;
   }
-  #main .Provide .inner .wrap article .content li p {
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront p {
     font-size: 1.5vw;
   }
   #main .Projects .inner article .pic li {
@@ -2075,6 +3482,9 @@ table {
     font: normal 10px/1.7 "Montserrat";
   }
   #main .Blog .inner .wrap .btnMore {
+    bottom: -110px;
+  }
+  #main .Blog .inner .wrap .btnMore:hover {
     bottom: -110px;
   }
   #main .Contact .inner {
@@ -2226,37 +3636,23 @@ table {
     margin-bottom: 15px;
   }
   #main .Provide .inner .wrap article .content {
-    display: block;
+    flex-wrap: wrap;
   }
-  #main .Provide .inner .wrap article .content::after {
-    content: "";
-    display: block;
-    clear: both;
+  #main .Provide .inner .wrap article .content .contentGroup {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 90px;
   }
-  #main .Provide .inner .wrap article .content li {
-    width: 45%;
-    height: 330px;
-    float: left;
-    margin-right: 10%;
-    padding-left: 8.5%;
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront i {
+    font-size: 6.5vw;
+    margin-bottom: 2vh;
   }
-  #main .Provide .inner .wrap article .content li:nth-child(1), #main .Provide .inner .wrap article .content li:nth-child(2) {
-    margin-bottom: 10%;
-  }
-  #main .Provide .inner .wrap article .content li:nth-child(2), #main .Provide .inner .wrap article .content li:nth-child(4) {
-    margin-right: 0%;
-  }
-  #main .Provide .inner .wrap article .content li i {
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront span {
     font-size: 4.5vw;
-    margin-bottom: 2vh;
+    margin-bottom: 1.7vh;
   }
-  #main .Provide .inner .wrap article .content li span {
-    font-size: 3vw;
-    margin-bottom: 2vh;
-  }
-  #main .Provide .inner .wrap article .content li p {
-    width: 80%;
-    font-size: 2.5vw;
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront p {
+    font-size: 2vw;
   }
   #main .Projects .inner article .pic {
     display: block;
@@ -2288,6 +3684,9 @@ table {
     width: 100%;
   }
   #main .Blog .inner .wrap .btnMore {
+    bottom: -135px;
+  }
+  #main .Blog .inner .wrap .btnMore:hover {
     bottom: -135px;
   }
   #main .Contact .inner .wrap .contactBtn {
@@ -2418,32 +3817,21 @@ table {
   #main .Provide .inner .wrap article h2 {
     width: 100%;
   }
-  #main .Provide .inner .wrap article .content li {
-    width: 47%;
-    height: 230px;
-    padding-left: 9%;
-    margin-right: 6%;
+  #main .Provide .inner .wrap article .content .contentGroup {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 25px;
   }
-  #main .Provide .inner .wrap article .content li span {
-    font-size: 22px;
-    line-height: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    width: 80%;
-    margin-top: 5px;
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront i {
+    font-size: 6.5vw;
+    margin-bottom: 2vh;
   }
-  #main .Provide .inner .wrap article .content li p {
-    font-size: 20px;
-    line-height: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    width: 80%;
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront span {
+    font-size: 4.5vw;
+    margin-bottom: 1.7vh;
+  }
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront p {
+    font-size: 2.2vw;
   }
   #main .Projects .inner article .pic {
     display: block;
@@ -2496,6 +3884,9 @@ table {
     font: normal 10.5px/1.7 "Montserrat";
   }
   #main .Blog .inner .wrap .btnMore {
+    bottom: -110px;
+  }
+  #main .Blog .inner .wrap .btnMore:hover {
     bottom: -110px;
   }
 
@@ -2611,27 +4002,21 @@ table {
     position: absolute;
     top: 760px;
   }
-  #main .Provide .inner .wrap article .content li {
-    width: 100%;
-    height: 300px;
-    padding-left: 14%;
-    margin-right: 0;
+  #main .Provide .inner .wrap article .content .contentGroup {
+    width: 295px;
+    height: 295px;
+    margin-bottom: 25px;
   }
-  #main .Provide .inner .wrap article .content li:nth-child(1), #main .Provide .inner .wrap article .content li:nth-child(2), #main .Provide .inner .wrap article .content li:nth-child(3) {
-    margin-bottom: 5%;
-  }
-  #main .Provide .inner .wrap article .content li i {
-    font-size: 10vw;
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront i {
+    font-size: 18vw;
     margin-bottom: 2vh;
   }
-  #main .Provide .inner .wrap article .content li span {
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront span {
     font-size: 10vw;
-    margin-bottom: 2vh;
-    line-height: 30px;
+    margin-bottom: 1.7vh;
   }
-  #main .Provide .inner .wrap article .content li p {
-    width: 80%;
-    font-size: 6vw;
+  #main .Provide .inner .wrap article .content .contentGroup .contentFront p {
+    font-size: 5vw;
   }
   #main .Projects .inner article .pic li {
     width: 100%;
@@ -2668,6 +4053,9 @@ table {
     margin-bottom: 1.5vh;
   }
   #main .Blog .inner .wrap .btnMore {
+    bottom: -30px;
+  }
+  #main .Blog .inner .wrap .btnMore:hover {
     bottom: -30px;
   }
   #main .Contact {

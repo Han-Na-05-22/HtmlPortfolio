@@ -57,6 +57,8 @@ function createList(items){
                                 <img class="thumb" src=${imgSrc}>
                             </a>
                             <p>${data.title}</p>
+                            <span>Lorem ipsum dolor sit amet</span>
+                            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iste nulla necessitatibus ipsa nesciunt laudantium.</strong>
                         </div>
                     </li>
                     `;  
