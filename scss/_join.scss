@@ -1,34 +1,1009 @@
-#main_sub{
+#header_join{
     width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,.7);
+    position: relative;
+    z-index: 3;
+
+    .inner{
+        width: 1180px;
+        position: relative;
+        margin: 0 auto;
+        padding: 60px 0px;
+
+        h1{
+            font:bold 35px/1 'Dongle';
+            letter-spacing: 2.3px;
+            color:#fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .menuMo{
+            position: relative;
+
+            >h2{
+                display: none;
+            }
+
+            >p{
+                display: none;
+            }
+
+            .gnb{
+                display: flex;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                li{
+                    margin-left: 50px;
+
+                    &:nth-child(1){
+                        margin-left: 0px;
+                    }
+
+                    a{
+                        font:normal 30px/1 'Dongle';
+                        color:#fff;
+                    }
+                }
+            }
+
+            .close{
+                display: none;
+            }
+        }
+    }
+}
+
+#main_join{
+    width: 100%;
+    margin-top: -120px;
 
     .join{
         width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            min-height: 1220px;
+            object-fit: cover;
+            filter:blur(0px) saturate(70%) ;
+            // filter:saturate(50%);
+        }
+
 
         .inner{
             width: 1180px;
-            min-height: 1000px;
-            border:1px solid red;
             margin: 0 auto;
+            position: absolute;
+            margin-top: 205px;
+            top: 50%;
+            left: 50%;
+            transform: translate( -50%,-50%);
+            background: rgba(255,255,255,.01);
+            // background: rgba(0,0,0,.75);
+            box-shadow: 10px 10px 50px rgba(0,0,0,.7);
+            // box-shadow: 10px 10px 50px rgba(255,255,255,.35);
 
             .wrap{
                 width: 100%;
+                display: flex;
+
+                .moveLogin{
+                    width: 50%;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding:0px 20px;
+                    background: rgba(0,0,0,.7);
+
+                    h2{
+                        font:bold 50px/1 'Montserrat';
+                        letter-spacing: 3px;
+                        margin-bottom: 30px;
+                        font-style: italic;
+                        color:#fff;
+                    }
+
+                    p{
+                        font:normal 12px/18px 'Montserrat';
+                        letter-spacing: 1.4px;
+                        margin-bottom: 75px;
+                        color:#fff;
+                        width: 80%;
+                    }
+
+                    span{
+                        font:bold 13px/1 'Montserrat';
+                        letter-spacing: 1.4px;
+                        margin-bottom: 20px;
+                        color:#fff;
+                    }
+
+                    a{
+                        display: block;
+                        width: 150px;
+                        height: 40px;
+                        color:#fff;
+                        border:1px solid #fff;
+                        font:bold 14px/37px 'Montserrat';
+                        letter-spacing: 1.4px;
+                        transition: 0.5s;
+
+                        &:hover{
+                            background: rgb(163, 123, 59);
+                            color:#eee;
+                            border:1px solid rgb(163, 123, 59);
+                            transition: 0.5;
+                        }
+                    }
+                }
+
+                .signUp{
+                    width: 50%;
+                    background: #fff;
+                    padding: 20px;
+
+                    form{
+
+                        h3{
+                            font:bold 20px/1 'Montserrat';
+                            letter-spacing: 3px;
+                            text-align: left;
+                            margin-bottom: 15px;
+                        }
+    
+                        h4{
+                            font:normal 12px/1 'Montserrat';
+                            letter-spacing: 1px;
+                            text-align: left;
+                            margin-bottom:15px;
+                        }
+    
+                        #terms{
+                            width:100%;
+                            margin-bottom: 15px;
+                            padding:10px;
+                            height: 100px;
+                            resize: none;
+                            background: rgb(250, 250, 250);
+                            font:normal 10px/15px 'Montserrat';
+                        }
+    
+                        .agreement{
+                            margin-bottom: 30px;
+    
+                            label[for="agree"]{
+                                font:normal 11px/15px 'Montserrat';
+                                letter-spacing: 0.3px;
+                                text-align: left;
+                            }
+                        }
+    
+                        table{
+                            width: 100%;
+                            padding-top:20px;
+    
+                            tr{
+                                width:80%;
+                                height: 30px;
+                                border-bottom: 0.5px solid rgba(163, 123, 59,.4);
+                                line-height: 30px;
+    
+                                &:nth-child(1){
+                                    border-top:2px solid rgba(163, 123, 59,.7);
+                                }
+
+                                &:nth-child(8){
+                                    border-bottom:2px solid rgba(163, 123, 59,.5);
+                                }
+                                
+                                th{
+                                    width: 30%;
+                                    height: inherit;
+                                    text-align:left;
+                                    padding: 10px;
+                                    font:bold 12px/1 'Montserrat';
+                                    letter-spacing: 1px;
+                                    line-height: 30px;
+                                    background: rgba(163, 123, 59,.3);
+                                    color:#333;
+    
+                                    label[for="comments"]{
+                                        line-height: 150px;
+                                    }
+    
+                                }
+                    
+                                td{
+                                    width: 70%;
+                                    padding:10px;
+                                    height: inherit;
+                                    line-height: inherit;
+    
+                                    input{
+                                        height: 100%;
+                                        font:normal 12px/1 'Montserrat';
+                                        letter-spacing: 1px;
+                                    }
+
+                                    input[type=text], input[type=password]{
+                                        width: 100%;
+                                    }
+    
+                                     label[for="male"], label[for="female"]{
+                                        font:normal 12px/30px 'Montserrat';
+                                        letter-spacing:2px;
+                                        margin-right: 15px;
+                                    }
+    
+                                    input#email{
+                                        width: 45%;
+                                        font:normal 12px/1 'Montserrat';
+                                        letter-spacing: 1px;
+                                        margin-right: 10px;
+                                    }
+    
+                                    label[for="company"]{
+                                        font:bold 12px/30px 'Montserrat';
+                                        letter-spacing:2px;
+                                        margin-right: 0;
+                                    }
+    
+                                    select#company{
+                                        width: 45%;
+                                        font:bold 12px/1 'Montserrat';
+                                        letter-spacing: 1px;
+                                        padding-left: 10px;
+                                        padding-right:10px;
+                                        height: 100%;
+                                    }
+
+                                    textarea#comments{
+                                        width: 100%;
+                                        height: 150px;
+                                        resize: none;
+                                    }
+                                }
+    
+                                .click{
+                                    text-align: center;
+                                    border-right:none;
+                                    border-bottom: none;
+                                    background: #fff;
+                                    
+                                    input{
+                                        font:normal 15px/10px 'Montserrat';
+                                        letter-spacing: 1.3px;
+                                        width:20%;
+                                        height:30px;
+                                        border:none;
+                                        margin-right: 50px;
+                                        cursor: pointer;
+                                        padding: 5px;
+                                        background: rgb(163, 123, 59);
+                                        color:#eee;
+                                        border:1px solid rgb(163, 123, 59);
+                                        transition: 1s;
+    
+                                        &:hover{
+                                            background: #111;
+                                            color:#eee;
+                                            border:1px solid #111;
+                                            transition: 1s;
+                                        }
+    
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 @media screen and(max-width:1179px){
+    #header_join{
+    
+        .inner{
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            padding: 60px 10px;
+    
+            h1{
+            }
+    
+            .menuMo{
+    
+                .gnb{
+                    top: 20px;
+    
+                    li{
+    
+                        a{
+                            font:normal 27px/1 'Dongle';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #main_join{
+    
+        .join{
+    
+            img{
+                min-height: 1000px;
+            }
+    
+            .inner{
+                width: 90%;
+                margin-top: 95px;
+    
+                .wrap{
+    
+                    .moveLogin{
+    
+                        h2{
+                            font:bold 45px/1 'Montserrat';
+                        }
+    
+                        p{
+                            font:normal 11px/18px 'Montserrat';
+                        }
+    
+                        span{
+                            font:bold 12px/1 'Montserrat';
+                        }
+    
+                        a{
+                            width: 140px;
+                            height: 35px;
+                            font:bold 14px/32px 'Montserrat';
+                        }
+                    }
+    
+                    .signUp{
+                        padding: 20px;
+    
+                        form{
+    
+                            h3{
+                                font:bold 14px/1 'Montserrat';
+                            }
+        
+                            h4{
+                                display: none;
+                            }
+        
+                            #terms{
+                                margin-bottom: 5px;
+                                height: 70px;
+                            }
+        
+                            .agreement{
+                                margin-bottom: 20px;
+                            }
+        
+                            table{
+                                padding-top:0px;
+        
+                                tr{
+                                    height: 20px;
+                                    line-height: 20px;
+                                    
+                                    th{
+                                        width: 40%;
+                                        text-align:center;
+                                        padding: 10px;
+                                        font:bold 11px/1 'Montserrat';
+                                        line-height: 20px;
 
+                                        label[for="gender"],label[for="email"]{
+                                            line-height: 25px;
+                                        }
+        
+                                        label[for="comments"]{
+                                            line-height: 121px;
+                                        }
+        
+                                    }
+                        
+                                    td{
+                                        width: 60%;
+                                        padding:7.5px;
+        
+                                        input{
+                                            font:normal 11px/1 'Montserrat';
+                                        }
+        
+                                         label[for="male"], label[for="female"]{
+                                            font:normal 10px/30px 'Montserrat';
+                                        }
+        
+                                        input#email{
+                                            width: 43%;
+                                            font:normal 11px/1 'Montserrat';
+                                        }
+        
+                                        label[for="company"]{
+                                            font:bold 12px/30px 'Montserrat';
+                                        }
+        
+                                        select#company{
+                                            width: 43%;
+                                            font:bold 10px/1 'Montserrat';
+                                            padding-left: 0px;
+                                            padding-right:0px;
+                                        }
+    
+                                        textarea#comments{
+                                            height: 125px;
+                                        }
+                                    }
+        
+                                    .click{
+                                        
+                                        input{
+                                            font:normal 12px/1 'Montserrat';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and(max-width:959px){
-
+    #header_join{
+    
+        .inner{
+    
+            h1{
+                font:normal 45px/1 'Dongle';
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+    
+            .menuMo{
+    
+                .gnb{
+                    top: 25px;
+    
+                    li{
+    
+                        a{
+                            font:normal 28.5px/1 'Dongle';
+                            letter-spacing: 1.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #main_join{
+    
+        .join{
+    
+            img{
+            }
+    
+            .inner{
+    
+                .wrap{
+    
+                    .moveLogin{
+    
+                        h2{
+                            font:bold 40px/1 'Montserrat';
+                        }
+                    }
+    
+                    .signUp{
+    
+                        form{
+    
+                            h3{
+                                font:bold 14px/1 'Montserrat';
+                            }
+        
+                            h4{
+                                display: none;
+                            }
+        
+                            #terms{
+                                padding: 5px;
+                                margin-bottom: 7.5px;
+                                height: 70px;
+                            }
+        
+                            .agreement{
+                            }
+        
+                            table{
+                                padding-top:0px;
+        
+                                tr{
+                                    
+                                    th{
+                                        line-height: 25px;
+                                    }
+                        
+                                    td{
+        
+                                        input#email{
+                                            width: 100%;
+                                            height: 30px;
+                                        }
+        
+                                        label[for="company"]{
+                                            display: none;
+                                        }
+        
+                                        select#company{
+                                            display: none;
+                                        }
+                                    }
+        
+                                    .click{
+                                        
+                                        input{
+                                            font:normal 11px/10px 'Montserrat';
+                                            width:25%;
+                                            height:25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and(max-width:779px){
+    #header_join{
+    
+        .inner{
+    
+            h1{
+                font:normal 25px/1 'Montserrat';
+                top: 40%;
+            }
+    
+            .menuMo{
+    
+                .gnb{
+                    top: 30px;
+    
+                    li{
+                        margin-left: 40px;
+                        a{
+                            font:normal 14px/1 'Montserrat';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #main_join{
+    
+        .join{
+    
+            img{
+                min-height: 1300px;
+            }
+    
+            .inner{
+                width: 90%;
+                margin-top: 235px;
 
+                .wrap{
+                    flex-direction: column;
+                    height: 100%;
+
+                    .moveLogin{
+                        width: 100%;
+                        padding:30px 0px;
+
+                        h2{
+                            font:bold 35px/1 'Montserrat';
+                            margin-bottom: 15px;
+                        }
+
+                        p{
+                            font:normal 10px/18px 'Montserrat';
+                            margin-bottom: 30px;
+                        }
+    
+                        span{
+                            font:bold 11px/1 'Montserrat';
+                            margin-bottom: 15px;
+                        }
+    
+                        a{
+                            width: 135px;
+                            height: 30px;
+                            font:bold 13px/27px 'Montserrat';
+                        }
+                    }
+    
+                    .signUp{
+                        width: 100%;
+
+                        form{
+    
+                            h3{
+                                font:bold 17px/1 'Montserrat';
+                            }
+        
+                            h4{
+                                display: none;
+                            }
+        
+                            #terms{
+                                padding: 5px;
+                                margin-bottom: 10px;
+                                height: 100px;
+                            }
+        
+                            .agreement{
+                                margin-bottom: 30px;
+                            }
+        
+                            table{
+                                padding-top:0px;
+        
+                                tr{
+        
+                                    .click{
+
+                                        input{
+                                            font:normal 13px/10px 'Montserrat';
+                                            width:20%;
+                                            height:25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and(max-width:539px){
+
+    #header_join{
     
+        .inner{
+    
+            h1{
+                font:normal 50px/1 'Dongle';
+                top:50%;
+                transition: all 2s;
+
+                &.on{
+                    opacity: 0;
+                    // animation: headerLogo2 5s;
+                    // animation-fill-mode: forwards;
+                }
+            }
+
+            .btnCall{
+                display: block;
+                position: absolute;
+                right: 15px;
+                top:22.5px;
+                cursor: pointer;
+                border-top:2px solid #fff;
+                border-bottom:2px solid #fff;
+                width: 25px;
+                height: 20px;
+                transition: all 2s;
+    
+                &.on{
+                    opacity: 0;
+                    // animation: headerLogo2 5s;
+                    // animation-fill-mode: forwards;
+                }
+    
+                div{
+                    width: 25px;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                }
+            }
+    
+            .menuMo{
+                width: 75%;
+                height:calc(100vh + 35px);
+                background: rgba(0,0,0,.9);
+                top: -35px;
+                left: -100%;
+                opacity: 0;
+                transition: all 2s;
+                position: fixed;
+                
+                &.on{
+                    animation: none;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                    left: -5%;
+                    position: fixed;
+                }
+
+                .logo2{
+                    font:normal 35px/1 'Dongle';
+                    letter-spacing: 2.3px;
+                    color:#fff;
+                    display: block;
+                    position: absolute;
+                    top: 10vh;
+                    left: 10vw;
+                }
+    
+                >p{
+                    font:normal 18px/1 'Dongle';
+                    letter-spacing: 1.4px;
+                    color:#bbb;
+                    display: block;
+                    position: absolute;
+                    top: 13.5vh;
+                    left: 10vw;
+                }
+
+                .gnb{
+                    display: flex;
+                    flex-direction: column;
+                    left: 10vw;
+                    top: 45vh;
+                    transform: translateY(-50%);
+                    width: 55vw;
+                    
+                    li{
+                        margin-left: 0px;
+                        border-bottom: 0.5px solid rgba(255,255,255,.3);
+                        width: 100%;
+                        margin-bottom: 30px;
+                        margin-top:30px;
+
+
+                        &:hover{
+                            background: #eee;
+                            transition: 0.5s;
+
+                            a{
+                                color:#111;
+                                transition: 0.5s;
+                            }
+
+                        }
+
+                        a{
+                            font:normal 30px/1 'Dongle';
+                            color:#ccc;
+
+                            &::after{
+                                content: '';
+                                display: none;
+                                height: 0;
+                            }
+    
+                            &:hover{
+    
+                                &::after{
+                                    content: '';
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .util{
+                    right: 5vw;
+                    height: 95%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    bottom: 300px;
+
+                    li{
+                        a{
+                            font:normal 20px/1 'Dongle';
+                            color:#ccc;
+
+                            &:hover{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .close{
+                    display: block;
+                    position: absolute;
+                    top: 7.5vh;
+                    right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+    
+    #main_join{
+    
+        .join{
+    
+            img{
+                min-height: 1000px;
+            }
+    
+            .inner{
+                width: 90%;
+                margin-top: 90px;
+
+                .wrap{
+                    height: 100%;
+                    .moveLogin{
+
+                        h2{
+                            font:bold 30px/1 'Montserrat';
+                            margin-bottom: 30px;
+                        }
+
+                        p{
+                            display: none;
+                        }
+    
+                        span{
+                            font:bold 10px/1 'Montserrat';
+                        }
+                    }
+    
+                    .signUp{
+                        width: 100%;
+
+                        form{
+    
+                            h3{
+                                font:bold 15px/1 'Montserrat';
+                                letter-spacing: 2px;
+                            }
+        
+                            h4{
+                                display: none;
+                            }
+        
+                            #terms{
+                                height: 80px;
+                            }
+        
+                            .agreement{
+                                margin-bottom: 30px;
+                            }
+
+                            table{
+                                width: 100%;
+                                padding-top:0px;
+        
+                                tr{
+                                    width:100%;
+                                    height: 100%;
+                                    border:none;
+                                    line-height: 0px;
+                                    display: flex;
+                                    flex-direction: column;
+        
+                                    &:nth-child(1){
+                                        border:none;
+                                    }
+    
+                                    &:nth-child(8){
+                                        border:none;
+                                    }
+
+                                    &:nth-child(7){
+                                        display: none;
+                                    }
+
+                                    &:nth-child(5){
+                                        display: none;
+                                    }
+                                    
+                                    th{
+                                        width: 100%;
+                                        height: inherit;
+                                        text-align:left;
+                                        padding: 0px;
+                                        padding-bottom:5px;
+                                        font:bold 12px/1 'Montserrat';
+                                        letter-spacing: 1px;
+                                        line-height: 15px;
+                                        background: none;
+                                        color:#333;
+
+                                        label[for="gender"],label[for="email"]{
+                                            line-height: 15px;
+                                        }
+                                    }
+                        
+                                    td{
+                                        width: 100%;
+                                        padding:0px;
+                                        margin-bottom: 15px;
+                                        height: 30px;
+                                        line-height: inherit;
+        
+                                        input{
+                                            height: 100%;
+                                            font:normal 12px/1 'Montserrat';
+                                            letter-spacing: 1px;
+                                        }
+    
+                                        input[type=text], input[type=password]{
+                                            width: 100%;
+                                        }
+        
+                                         label[for="male"], label[for="female"]{
+                                            font:normal 12px/30px 'Montserrat';
+                                            letter-spacing:2px;
+                                            margin-right: 15px;
+                                        }
+        
+                                        input#email{
+                                            width: 100%;
+                                            margin-right: 0;
+                                        }
+                                    }
+        
+                                    .click{
+                                        
+                                        input{
+                                            font:normal 12px/10px 'Montserrat';
+                                            width:30%;
+                                            height:30px;
+                                            margin-right: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

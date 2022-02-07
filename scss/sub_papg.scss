@@ -2,13 +2,16 @@
 #header_sub{
     width: 100%;
     overflow: hidden;
+    background: rgba(0,0,0,.7);
+    position: relative;
+    z-index:3;
+
 
     .inner{
         width: 1180px;
-        position: relative;
         margin: 0 auto;
         padding: 60px 0px;
-        z-index:2;
+        // border:1px solid red;
 
         h1{
             font:bold 35px/1 'Dongle';
@@ -17,24 +20,29 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 3;
+        }
+
+        .btnCall{
+            display: none;
         }
 
         .menuMo{
-            position: absolute;
-            width: 250%;
-            height:100% ;
-            background: rgb(17, 17, 17);
-            top: 0%;
-            left:-700px;
-            opacity: 1;
+            position: relative;
+
+            .logo2{
+                display: none;
+            }
+
+            >p{
+                display: none;
+            }
 
             .gnb{
                 display: flex;
                 position: absolute;
-                top: 70%;
-                left: 45%;
-                transform: translate(-50%, -50%);
+                top:15px;
+                left: 50%;
+                transform: translateX(-50%);
 
                 li{
                     margin-left: 50px;
@@ -43,14 +51,17 @@
                         font:normal 30px/1 'Dongle';
                         color:#fff;
                     }
+
+                    &:nth-child(1){
+                        margin-left: 0px;
+                    }
                 }
             }
 
             .util{
-                width: 150px;
                 position: absolute;
-                left: 59.5%;
-                top:10px;
+                bottom:30px;
+                right: 0;
 
                 &::after{
                     content: '';
@@ -69,12 +80,19 @@
                     }
                 }
             }
+
+            .close{
+                // display: none;
+                position: absolute;
+                top: -999px;
+            }
         }
     }
 }
 
 #figure_sub{
     width: 100%;
+    margin-top: -120px;
 
     .sub_visual{
         width: 100%;
@@ -83,7 +101,7 @@
         
         .pic{
             width: inherit;
-            height: 350px;
+            height: 500px;
             background-image: url(../img/ABOUT01.jpg);
             background-repeat: no-repeat;
             background-position: center;
@@ -106,9 +124,17 @@
                 letter-spacing: 5px;
                 color:#fff;
                 position: absolute;
-                top: 45%;
+                top: calc(50% + 180px);
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translateX(-50%) translateY(calc(-50% - 120px));
+            }
+
+            >p{
+                display: none;
+            }
+
+            >a{
+                display: none;
             }
 
             ul{
@@ -197,32 +223,23 @@
     #header_sub{
         padding:0px 10px;
     
+    
         .inner{
             width: 100%;
-
-            h1{
-            }
     
             .menuMo{
-                width: 1300px;
-                left:-100px;
-
+    
                 .gnb{
-                    transform: translate(0%, 0%);
-                    top: 70%;
-                    left:26%;
+                    top:25px;
     
                     li{
-                        margin-left: 50px;
+
     
                         a{
-                            font:normal 27px/1 'Dongle';
+                            font:normal 28px/1 'Dongle';
                         }
+
                     }
-                }
-    
-                .util{
-                    left:86%;
                 }
             }
         }
@@ -260,6 +277,7 @@
 
     #header_sub{
     
+    
         .inner{
 
             h1{
@@ -271,22 +289,16 @@
             }
     
             .menuMo{
-                width: 150%;
+                width: 100%;
+
                 .gnb{
-                    top: 75%;
-                    left: 17%;
-    
+                    top: 30px;
+
                     li{
-                        margin-left: 50px;
-    
                         a{
-                            font:normal 25px/1 'Dongle';
+                            font:normal 26px/1 'Dongle';
                         }
                     }
-                }
-    
-                .util{
-                    left: 65%;
                 }
             }
         }
@@ -328,27 +340,35 @@
 
     #header_sub{
     
+    
         .inner{
 
             h1{
-                font:normal 45px/1 'Dongle';
+                font:normal 25px/1 'Montserrat';
+                top: 40%;
             }
     
             .menuMo{
+
                 .gnb{
-                    top: 75%;
-                    left: 17%;
-    
+                    top: 30px;
+
                     li{
                         margin-left: 40px;
                         a{
-                            font:normal 23px/1 'Dongle';
+                            font:normal 14px/1 'Montserrat';
+                            letter-spacing: 1.5px;
                         }
                     }
                 }
-    
+
                 .util{
-                    left: 65%;
+                    
+                    li{
+                        a{
+                            font:normal 11px/1 'Montserrat';
+                        }
+                    }
                 }
             }
         }
@@ -394,56 +414,230 @@
 @media screen and(max-width:539px){
 
     #header_sub{
-    
+        // border:1px solid red;
+        // background: rgba(0,0,0,.5);
+        height:80vh;
+        background:none;
+
+
+
         .inner{
+            padding:35px 0px;
 
             h1{
-                font:normal 50px/1 'Dongle';
-                top: 60%;
+                font:bold 35px/1 'Dongle';
+                letter-spacing: 2.3px;
+                color:#fff;
+                top:  35px;
+                left: 80px;
+                transition: all 2s;
+
+                &.on{
+                    // animation: headerLogo 1.5s;
+                    opacity: 0;
+                    // animation: headerLogo2 5s;
+                    // animation-fill-mode: forwards;
+                    // display: none;
+                }
+
+            }
+
+            .btnCall{
+                display: block;
+                position: absolute;
+                right: 15px;
+                top:22.5px;
+                cursor: pointer;
+                border-top:2px solid #fff;
+                border-bottom:2px solid #fff;
+                width: 25px;
+                height: 20px;
+                transition: all 2s;
+    
+                &.on{
+                    opacity: 0;
+                    // animation: headerLogo2 5s;
+                    // animation-fill-mode: forwards;
+                }
+    
+                div{
+                    width: 25px;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                }
             }
     
             .menuMo{
-                width: 200%;
+                width: 75%;
+                height:calc(100vh + 35px);
+                background: rgba(0,0,0,.9);
+                top: -35px;
+                left: -100%;
+                opacity: 0;
+                transition: all 2s;
+                position: fixed;
+                
+                &.on{
+                    animation: none;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                    left: -5%;
+                    position: fixed;
+                }
+
+                .logo2{
+                    font:normal 35px/1 'Dongle';
+                    letter-spacing: 2.3px;
+                    color:#fff;
+                    display: block;
+                    position: absolute;
+                    top: 10vh;
+                    left: 10vw;
+                }
+    
+                >p{
+                    font:normal 18px/1 'Dongle';
+                    letter-spacing: 1.4px;
+                    color:#bbb;
+                    display: block;
+                    position: absolute;
+                    top: 13.5vh;
+                    left: 10vw;
+                }
 
                 .gnb{
-                    top: 82.5%;
-                    left: 74%;
-                    display: none;
-    
+                    display: flex;
+                    flex-direction: column;
+                    left: 10vw;
+                    top: 45vh;
+                    transform: translateY(-50%);
+                    width: 55vw;
+                    
                     li{
-                        margin-left: 40px;
+                        margin-left: 0px;
+                        border-bottom: 0.5px solid rgba(255,255,255,.3);
+                        width: 100%;
+                        margin-bottom: 30px;
+                        margin-top:30px;
+
+
+                        &:hover{
+                            background: #eee;
+                            transition: 0.5s;
+
+                            a{
+                                color:#111;
+                                transition: 0.5s;
+                            }
+
+                        }
+
                         a{
-                            font:normal 20px/1 'Dongle';
+                            font:normal 30px/1 'Dongle';
+                            color:#ccc;
+
+                            &::after{
+                                content: '';
+                                display: none;
+                                height: 0;
+                            }
+    
+                            &:hover{
+    
+                                &::after{
+                                    content: '';
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }
-    
+
                 .util{
-                    left: 49%;
+                    right: 5vw;
+                    height: 95%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    bottom: 300px;
 
                     li{
-                        margin-left: 25px;
-    
                         a{
                             font:normal 20px/1 'Dongle';
+                            color:#ccc;
+
+                            &:hover{
+                                font-weight: bold;
+                            }
                         }
                     }
+                }
+
+                .close{
+                    position: absolute;
+                    top: 7.5vh;
+                    right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+
                 }
             }
         }
     }
 
     #figure_sub{
+        margin-top: -100vh;
 
-    
         .sub_visual{
             
-            
+            .pic{
+                height: 100vh;
+                // background-position: center bottom;
+                // background-image: url(../img/about_pic01.jpg);
+                // background-position:center bottom;
+                // background-size: cover;
+            }
+
             .inner{
                 width: 100%;
 
                 h2{
-                    font:normal 40px/1 'Montserrat';
+                    top: 65%;
+                    font:normal 45px/1 'Montserrat';
+                    letter-spacing: 2px;
+                }
+
+                >p{
+                    display: block;
+                    font:normal 11px/15px 'Montserrat';
+                    color:#ccc;
+                    letter-spacing: 1.3px;
+                    position: absolute;
+                    top:57.5%;
+                    width: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                }
+
+                >a{
+                    display: block;
+                    width: 70%;
+                    height: 30px;
+                    background: rgba(0,0,0,.7);
+                    position: absolute;
+                    letter-spacing: 1.3px;
+                    top:65%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color:#eee;
+                    text-align: center;
+                    font:normal 10px/30px 'Montserrat';
                 }
     
                 ul{
@@ -489,3 +683,17 @@
         }
     }
 }
+
+
+@keyframes headerLogo{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes MenuMo{
+    0%{transform: translateY(0%);}
+    100%{transform: translateY(100%);}
+}
+
+
+

@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>youtube</title>
+    <title>login</title>
     <script src="https://kit.fontawesome.com/d1d2824d3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script defer src="../js/anime.js"></script>
-    <script defer src="../js/youtube.js"></script>
     <script defer src="../js/main.js"></script>
 </head>
 <body>
-    <header id="header_sub">
+    <header id="header_login">
         <div class="inner">
             <h1 class="logo"><a href="../index.html">PORTFOLIO<span class="hidden">로고</span></a></h1>
             <div class="btnCall">
@@ -20,6 +18,8 @@
                 <span class="hidden">메뉴호출</span>
             </div>
             <nav class="menuMo">
+                <h2 class="logo2"><a href="../index.html">PORTFOLIO</a></h2>
+                <p>Lorem ipsum dolor sit amet</p>
                 <ul class="gnb">
                     <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="./youtube.html">YOUTUBE</a></li>
@@ -27,52 +27,52 @@
                     <li><a href="./gallery.html">GALLERY</a></li>
                     <li><a href="./location.html">LOCATION</a></li>
                 </ul>
-                <ul class="util">
-                    <li><a href="./login.html">LOGIN</a></li>
-                    <li><a href="./join.html">JOIN</a></li>
-                </ul>
                 <button class="close">
                     <i class="fas fa-times"></i> 
                 </button>
             </nav>
-
         </div>
     </header>
 
-    <figure id="figure_sub">
-        <section class="sub_visual">
-            <div class="pic youtube_pic"></div>
-            <div class="inner">
-                <h2>YOUTUBE</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quaerat?</p>
-                <a href="#">Lorem, ipsum dolor.</a>
-            </div>
-        </section>
-    </figure>
-
-    <main id="main_sub">
-        <section class="youtube">
+    <main id="main_login">
+        <section class="login">
+            <img src="../img/figure00.png" alt="">
             <div class="inner">
                 <div class="wrap">
-                    <div class="titles">
-                        <i class="fab fa-youtube"></i>
-                        <h2>Click and watch the video</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, commodi? Odio vitae totam ducimus obcaecati!</p>
-                    </div>
-                    <div class="video">
-
-                    </div>
+                    <article class="type">
+                        <form action="">
+                            <fieldset>
+                                <legend class="hidden">로그인</legend>
+                                <i class="fas fa-globe-americas"></i>
+                                <h2>SIGN IN</h2>
+                                <div class="userid">
+                                    <i class="fas fa-user"></i>
+                                    <label for="userid">USER ID</label>
+                                    <input type="text" name="userid" id="userid">
+                                </div>
+                                <div class="pwd">
+                                    <i class="fas fas fa-lock"></i>
+                                    <label for="pwd">PASSWORD</label>
+                                    <input type="password" id="pwd" name="pwd">
+                                </div>
+                                <div class="submitBtn">
+                                    <input type="submit" value="LOGIN">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet? <a href="#"><strong>Find</strong></a></p>
+                                <p>Lorem ipsum dolor? <a href="./join.html"><strong>Sign up</strong></a></p>
+                            </fieldset>
+                        </form>
+                    </article>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer id="footer_sub">
         <div class="inner">
             <div class="wrap">
                 <p>2020.Designed by robirurk.</p>
-                <a href="#header">GO TO TOP</a>
+                <a href="#header_login">GO TO TOP</a>
                 <ul>
                     <li><i class="fab fa-facebook-f"></i></li>
                     <li><i class="fab fa-twitter"></i></li>

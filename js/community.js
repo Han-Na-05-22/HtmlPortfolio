@@ -1,8 +1,8 @@
 const sections = document.querySelectorAll("#main_sub section");
 
-const lis = document.querySelectorAll("#figure_sub ul .communityList");
+const lis3 = document.querySelectorAll("#figure_sub ul .communityList");
 
-lis.forEach((btn,index)=>{
+lis3.forEach((btn,index)=>{
     btn.addEventListener("click",e=>{
         e.preventDefault();
 

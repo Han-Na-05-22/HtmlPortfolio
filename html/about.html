@@ -7,15 +7,24 @@
     <title>about</title>
     <script src="https://kit.fontawesome.com/d1d2824d3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script defer src="../js/about.js"></script>
     <script defer src="../js/anime.js"></script>
+    <script defer src="../js/about.js"></script>
     <script defer src="../js/member.js"></script>
+    <script defer src="../js/main.js"></script>
 </head>
 <body>
     <header id="header_sub">
         <div class="inner">
             <h1 class="logo"><a href="../index.html">PORTFOLIO<span class="hidden">로고</span></a></h1>
+
+            <div class="btnCall">
+                <div></div>
+                <span class="hidden">메뉴호출</span>
+            </div>
+
             <nav class="menuMo">
+                <h2 class="logo2"><a href="../index.html">PORTFOLIO</a></h2>
+                <p>Lorem ipsum dolor sit amet.</p>
                 <ul class="gnb">
                     <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="./youtube.html">YOUTUBE</a></li>
@@ -24,9 +33,12 @@
                     <li><a href="./location.html">LOCATION</a></li>
                 </ul>
                 <ul class="util">
-                    <li><a href="./loing.html">LOING</a></li>
+                    <li><a href="./login.html">LOGIN</a></li>
                     <li><a href="./join.html">JOIN</a></li>
                 </ul>
+                <button class="close">
+                    <i class="fas fa-times"></i> 
+                </button>
             </nav>
 
         </div>
@@ -37,13 +49,15 @@
             <div class="pic"></div>
             <div class="inner">
                 <h2>ABOUT</h2>
-                <ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quaerat?</p>
+                <a href="#">Lorem, ipsum dolor.</a>
+                <!-- <ul>
                     <li class="about"><a href="#">About</a></li>
                     <li>　/　</li>
                     <li class="member"><a href="#">Member</a></li>
                     <li>　/　</li>
                     <li class="services"><a href="#">Services</a></li>
-                </ul>
+                </ul> -->
             </div>
         </section>
     </figure>
@@ -66,7 +80,7 @@
                 <div class="warp">
                     <article class="slider">
                         <ul>
-                            <li data-index="1">
+                            <li data-index="1" id="dd">
                                 <div class="content">
                                     <h2>CEO</h2>
                                       <b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium quibusdam facilis veritatis commodi tempora voluptas repellendus delectus, error tenetur vero. Magnam fugit at nemo?</b>

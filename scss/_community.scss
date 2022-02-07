@@ -1,3 +1,13 @@
+#figure_sub{
+    .sub_visual{
+        .pic.community_pic{
+            background-image: url(../img/services01.jpg);
+            // background-position: center  bottom;
+            // background-position: top center;
+        }
+    }
+}
+
 #main_sub{
     width: 100%;
 
@@ -116,6 +126,10 @@
                             }
                         }
                     }
+
+                    >a{
+                        display: none;
+                    }
                 }
 
                 .NewSide{
@@ -151,6 +165,7 @@
                                     width: 100%;
                                     height: 100%;
                                     object-fit: cover;
+                                    position: relative;
                                 }
                             }
 
@@ -168,7 +183,7 @@
                                 font:normal 12px/1 'Montserrat';
                                 color:#666;
                                 bottom: 0;
-                                left: 104px;
+                                left: calc(25% + 15px);
                             }
                         }
                     }
@@ -299,85 +314,202 @@
         }
     }
 
-    .Notice{
-        width: 100%;
-        display: none;
+    // .Notice{
+    //     width: 100%;
+    //     display: none;
 
-        &.on{
-            display: block;
-        }
+    //     &.on{
+    //         display: block;
+    //     }
 
-        .inner{
-            width: 1180px;
-            min-height: 1000px;
-            border:1px solid red;
-            margin: 0 auto;
-            padding:100px 0px;
+    //     .inner{
+    //         width: 1180px;
+    //         min-height: 1000px;
+    //         border:1px solid red;
+    //         margin: 0 auto;
+    //         padding:100px 0px;
 
-            h2{
-                font:bold 50px/1 'Montserrat';
-                letter-spacing: 3px;
-                text-align: center;
-                margin-bottom: 100px;
-            }
+    //         h2{
+    //             font:bold 50px/1 'Montserrat';
+    //             letter-spacing: 3px;
+    //             text-align: center;
+    //             margin-bottom: 100px;
+    //         }
 
-            .wrap{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
+    //         .wrap{
+    //             width: 100%;
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+    //             text-align: center;
 
-                article{
-                    table{
-                        border-collapse:collapse; 
+    //             article{
+    //                 table{
+    //                     border-collapse:collapse; 
 
-                        thead{
-                            tr{
-                                background: rgba(55, 55, 55, 0.855);
+    //                     thead{
+    //                         tr{
+    //                             background: rgba(55, 55, 55, 0.855);
                                 
-                                th{                                 
-                                    font:bold 15px/1 'Montserrat';
-                                    letter-spacing: 1.2px;
-                                    color:#222;
-                                    padding:20px 15px;
-                                    color:#fff;
-                                }
-                            }
-                        }
+    //                             th{                                 
+    //                                 font:bold 15px/1 'Montserrat';
+    //                                 letter-spacing: 1.2px;
+    //                                 color:#222;
+    //                                 padding:20px 15px;
+    //                                 color:#fff;
+    //                             }
+    //                         }
+    //                     }
 
-                        tbody{
-                            tr{
-                                border-bottom: 1px solid #ccc;
-                                background: #eee;
+    //                     tbody{
+    //                         tr{
+    //                             border-bottom: 1px solid #ccc;
+    //                             background: #eee;
 
-                                td{
-                                    font:normal 12px/1 'Montserrat';
-                                    letter-spacing: 0.8px;
-                                    color:#333;
-                                    padding: 20px 10px;
+    //                             td{
+    //                                 font:normal 12px/1 'Montserrat';
+    //                                 letter-spacing: 0.8px;
+    //                                 color:#333;
+    //                                 padding: 20px 10px;
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+
+    //                 .pages{
+    //                     margin-top: 30px;
+    //                     display: flex;
+    //                     justify-content: space-evenly;
+    //                     border:1px solid red;
+    //                     >a{
+    //                         border:1px solid blue;
+    //                         i{
+
+    //                         }
+    //                     }
+
+    //                     .numbers{
+    //                         border:1px solid red;
+
+    //                         a{
+    //                             margin: 10px;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+
+    // .QA{
+    //     width: 100%;
+    //     display: none;
+
+    //     &.on{
+    //         display: block;
+    //     }
+
+    //     .inner{
+    //         width: 1180px;
+    //         min-height: 1000px;
+    //         border:1px solid red;
+    //         margin: 0 auto;
+
+    //         .wrap{
+    //             width: 100%;
+    //         }
+    //     }
+    // }
+}
+
+@media screen and(max-width:1179px){
+
+    #main_sub{
+
+    
+        .News{
+    
+            .inner{
+                width: 100%;
+                padding:100px 15px;
+    
+                .wrap{
+
+                    .NewsList{
+                        width: 70%;
+                        padding-right: 20px;
+    
+                        ul{
+    
+                            li{
+    
+                                .content{
+                                    padding: 20px;
+                                    background: #fff;
+    
+                                    h3{
+                                        font:normal 27px/1 'Montserrat';
+                                    }
+    
+                                    span{
+                                        font:bold 11px/1 'Montserrat';
+                                    }
+    
+                                    p{
+                                        font:normal 10px/1.7 'Montserrat';
+                                    }
+    
+                                    a{
+                                        height: 30px;
+                                        font:normal 20px/30px 'Dongle';
+                                    }
                                 }
                             }
                         }
                     }
-
-                    .pages{
-                        margin-top: 30px;
-                        display: flex;
-                        justify-content: space-evenly;
-                        border:1px solid red;
-                        >a{
-                            border:1px solid blue;
-                            i{
-
+    
+                    .NewSide{
+                        width: 30%;
+                        
+                        h4{
+                            font:normal 20px/1 'Montserrat';
+                            margin-bottom: 15px;
+                        }
+    
+                        ul{
+                            
+                            li{
+                                height: 55px;
+    
+                                a{
+                                    
+                                }
+    
+                                p{
+                                    padding-top: 10px;
+                                    font:normal 11px/1 'Montserrat';
+                                    margin-bottom: 10px;
+                                    width: 70%;
+                                    height: 50%;
+                                }
+    
+                                span{
+                                    padding-bottom: 15px;
+                                    font:normal 10px/1 'Montserrat';
+                                    bottom: -10px;
+                                }
                             }
                         }
 
-                        .numbers{
-                            border:1px solid red;
-
-                            a{
-                                margin: 10px;
+                        .letter{
+    
+                            input[type=text]{
+                                width: 87.5%;
+                            }
+    
+                            >a{
+                                margin-right: 0px;
                             }
                         }
                     }
@@ -385,41 +517,484 @@
             }
         }
     }
+}
 
+@media screen and(max-width:959px){
 
-    .QA{
-        width: 100%;
-        display: none;
+    #main_sub{
 
-        &.on{
-            display: block;
-        }
+        .News{
+    
+            .inner{
+    
+                .wrap{
 
-        .inner{
-            width: 1180px;
-            min-height: 1000px;
-            border:1px solid red;
-            margin: 0 auto;
+                    .NewsList{
+                        padding-right: 15px;
+    
+                        ul{
+    
+                            li{
 
-            .wrap{
-                width: 100%;
+                                .pic{
+                                    height: 350px;
+                                }
+
+                                .content{
+                                    padding: 20px;
+                                    background: #fff;
+    
+                                    h3{
+                                        font:normal 25px/1 'Montserrat';
+                                    }
+
+                                    a{
+                                        height: 30px;
+                                        font:normal 18px/30px 'Dongle';
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .NewSide{
+                        
+                        h4{
+                            font:normal 17px/1 'Montserrat';
+                        }
+    
+                        ul{
+                            
+                            li{
+                                height: 55px;
+    
+                                a{
+                                    
+                                }
+    
+                                p{
+                                    padding-top: 10px;
+                                }
+    
+                                span{
+                                    padding-bottom: 15px;
+                                }
+                            }
+                        }
+
+                        .letter{
+
+                            input[type=text]{
+                                width: 84%;
+                                height: 30px;
+                            }
+    
+                            a{
+                                width: 15%;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-@media screen and(max-width:1179px){
-
-}
-
-@media screen and(max-width:959px){
-
-}
-
 @media screen and(max-width:779px){
+    #main_sub{
 
+        .News{
+    
+            .inner{
+                padding:100px 15px 50px;
+                .wrap{
+                    flex-direction: column;
+
+                    .NewsList{
+                        width: 100%;
+                        padding-right: 0px;
+
+                        >a{
+                            display: block;
+                            position: relative;
+                            width: 25%;
+                            height: 25px;
+                            background: #ccc;
+                            color:#333;
+                            font:normal 17px/28px 'Dongle';
+                            text-align: center;
+                            letter-spacing: 1.3px;
+                            margin-bottom:50px;
+                            left: 50%;
+                            transform: translateX(-50%);
+
+                            &::before{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 140%;
+                                height: 0.1px;
+                                background: rgba(0,0,0,0.7);
+                                left:-150%;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 140%;
+                                height: 0.1px;
+                                background: rgba(0,0,0,0.7);
+                                right:-150%;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+    
+                    .NewSide{
+                        width: 100%;
+                        display: inline-flex;
+                        flex-wrap: wrap;
+                        position: relative;
+                        
+                        h4{
+                            font:normal 20px/1 'Montserrat';
+                            margin-bottom: 15px;
+                            width: 0%;
+                            position: absolute;
+
+                            &:nth-child(1){
+                                left: 0%;
+                                top: 75px;
+                                width:50%;
+                            }
+
+                            &:nth-of-type(2){
+                                right:0%;
+                                width:50%;
+                                top: 75px;
+                            }
+
+                            &:nth-of-type(3){
+                                left:0%;
+                                top: 535px;
+                                width:50%;
+                            }
+
+                            &:nth-of-type(4){
+                                right:0%;
+                                // left: 0;
+                                top: 425px;
+                                width:50%;
+                            }
+                        }
+    
+                        ul{
+                            width:48%;
+                            display: flex;
+                            flex-direction: column;
+                            ;
+                            margin-bottom: 30px;
+                            margin-right: 2%;
+                            margin-top: 130px;
+                            
+                            li{
+                                width: 100%;
+                                height: 75px;
+                                display:flex;
+                                margin-bottom: 20px;
+                                position: relative;
+                            
+    
+                                a{
+                                    display: block;
+                                    width: 25%;
+                                    height: 100%;
+                                    margin-right: 15px;
+    
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+    
+                                p{
+                                    padding-top: 15px;
+                                    font:normal 12px/1 'Montserrat';
+                                    margin-bottom: 15px;
+                                    width: 70%;
+                                    height: 50%;
+                                }
+    
+                                span{
+                                    padding-bottom: 15px;
+                                    position: absolute;
+                                    font:normal 12px/1 'Montserrat';
+                                    color:#666;
+                                    bottom: 0;
+                                }
+                            }
+                        }
+    
+                        ol{
+                            width:50%;
+                            margin-bottom: 30px;
+                            margin-top: 130px;
+    
+                            li{
+                                width: 100%;
+                                height: 15%;
+                                margin-bottom: 10px;
+                                border-bottom: 1px solid #ccc;
+                                padding-bottom: 0px;
+                                position: relative;
+    
+                                i{
+                                    font-size: 12px;
+                                    color:#555;
+                                    position: absolute;
+                                    top: 35%;
+                                    transform: translateY(-50%);
+                                }
+    
+                                span{
+                                    position: absolute;
+                                    top: 35%;
+                                    left: 20px;
+                                    transform: translateY(-50%);
+                                    font:normal 13px/1 'Montserrat';
+                                }
+                            }
+                        }
+    
+                        .tags{
+                            width:100%;
+                            margin-bottom: 40px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            position: relative;
+                            bottom: -40px;
+    
+                            a{
+                                display: inline-block;
+                                height: 30px;
+                                padding: 10px;
+                                background: #fff;
+                                color:#000;
+                                margin-bottom: 10px;
+                                font:normal 11px/10px 'Montserrat';
+                                text-align: center;
+                                margin-right: 10px;
+                            }
+                        }
+    
+                        .searchBox{
+                            width:100%;
+                            margin-bottom: 35px;
+                            position: absolute;
+                            top: 0;
+    
+                            input[type=text]{
+                                width: 100%;
+                                height: 35px;
+                                padding-left: 10px;
+                                font:normal 11px/10px 'Montserrat';
+                            }
+    
+                            .btnSearch{
+                                width: 29px;
+                                height: 29px;
+                                background: none;
+                                border:none;
+                                cursor: pointer;
+                                position: absolute;
+                                right:0%;
+                                bottom: 0;
+    
+                                i{
+                                    font-size: 15px;
+                                    line-height: 10px;
+                                    color:#ccc;
+                                }
+                            }
+                        }
+    
+                        .letter{
+                            width:50%;
+                            position: absolute;
+                            right:0%;
+                            top: 460px;
+
+                            input[type=text]{
+                                width: 84%;
+                                height: 30px;
+                            }
+    
+                            a{
+                                width: 15%;
+                                height: 30px;
+                            }
+                        }
+                    }
+
+                    >a{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and(max-width:539px){
+    #main_sub{
+
+        .News{
     
+            .inner{
+                padding:100px 15px 350px;
+
+                h2{
+                    font:bold 45px/1 'Montserrat';
+                }
+
+                .wrap{
+
+                    .NewsList{
+
+                        ul{
+    
+                            li{
+    
+                                .pic{
+                                    width: 100%;
+                                    height: 250px;
+                                    
+                                    a{
+                                        width: 80px;
+                                        height: 20px;
+                                        font:normal 15px/23px 'Dongle';
+                                    }
+                                }
+    
+                                .content{
+                                    height: 200px;
+                                    padding: 15px;
+    
+                                    h3{
+                                        font:bold 14px/1 'Montserrat';
+                                        margin-bottom: 10px;
+                                    }
+    
+                                    span{
+                                        font:bold 10px/1 'Montserrat';
+                                        margin-bottom: 10px;
+                                    }
+    
+                                    p{
+                                        font:normal 10px/1.7 'Montserrat';
+                                        margin-bottom: 10px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;   
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 5; 
+                                        -webkit-box-orient: vertical;
+                                    }
+    
+                                    a{
+                                        width: 100px;
+                                        height: 30px;
+                                        font:normal 15px/30px 'Dongle';
+                                    }
+                                }
+                            }
+                        }
+
+                        >a{
+                            font:normal 14px/28px 'Dongle';
+                        }
+                    }
+    
+                    .NewSide{
+                        width: 100%;
+                        
+                        h4{
+                            font:normal 20px/1 'Montserrat';
+                            margin-bottom: 15px;
+                            width:100%;
+                            position: absolute;
+
+                            &:nth-child(1){
+                                left: 0%;
+                                top: 85px;
+                                width:100%;
+                            }
+
+                            &:nth-of-type(2){
+                                right:0%;
+                                width:100%;
+                                top: 535px;
+                            }
+
+                            &:nth-of-type(3){
+                                left:0%;
+                                top: 825px;
+                                width:100%;
+                            }
+
+                            &:nth-of-type(4){
+                                right:0%;
+                                top: 125%;
+                                width:100%;
+             
+                            }
+                        }
+    
+                        ul{
+                            width:100%; 
+                            li{                
+    
+                                span{
+                                    font:normal 12px/1 'Montserrat';
+                                }
+                            }
+                        }
+    
+                        ol{
+                            width:100%;
+                            margin-bottom: 30px;
+                            margin-top: 40px;
+    
+                            li{
+                                width: 100%;
+                                height:100%;
+                            }
+                        }
+    
+                        .tags{
+                            width:100%;
+                            margin-bottom: 40px;
+                            bottom: -215px;
+                        }
+    
+                        .searchBox{
+                            width:100%;
+                            margin-bottom: 35px;
+                            top: 0;
+                        }
+    
+                        .letter{
+                            width:100%;
+                            top: 130%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

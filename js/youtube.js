@@ -35,3 +35,32 @@ fetch(url)
 
     video.innerHTML = result;
 });
+
+main.addEventListener("click",e=>{
+    e.preventDefault();
+
+    if(!e.target.closest("a")) return;
+
+    const vidId = e.target.closest("a").getAttribute("href");
+
+    let pop = document.createElement("section");
+    pop.classList.add("pop");
+    pop.innerHTML = `
+                            <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen></iframe>
+                            <i class="fas fa-times close"></i>
+                            `;
+
+    main.append(pop);
+});
+
+
+main.addEventListener("click",e=>{
+    const pop = main.querySelector(".pop");
+    if(pop != null){
+        const close = pop.querySelector("i");
+
+        if(e.target == close){
+            e.target.closest(".pop").remove();
+        }
+    }
+});

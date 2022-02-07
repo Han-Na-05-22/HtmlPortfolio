@@ -1,0 +1,509 @@
+#header_login{
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,.7);
+    position: relative;
+    z-index: 3;
+
+    .inner{
+        width: 1180px;
+        position: relative;
+        margin: 0 auto;
+        padding: 60px 0px;
+
+        h1{
+            font:bold 35px/1 'Dongle';
+            letter-spacing: 2.3px;
+            color:#fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+
+        .menuMo{
+            position: relative;
+
+            >h2{
+                display: none;
+            }
+
+            >p{
+                display: none;
+            }
+
+            .gnb{
+                display: flex;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                li{
+                    margin-left: 50px;
+                    
+                    &:nth-child(1){
+                        margin-left: 0px;
+                    }
+
+                    a{
+                        font:normal 30px/1 'Dongle';
+                        color:#fff;
+                    }
+                }
+            }
+
+            .close{
+                display: none;
+            }
+        }
+    }
+}
+
+#main_login{
+    width: 100%;
+    margin-top: -120px;
+
+    .login{
+        width: 100%;
+        position: relative;
+
+        img{
+            width: 100%;
+            min-height: 1220px;
+            object-fit: cover;
+            // opacity: 0.8;
+            // filter:saturate(0%);
+            filter:blur(0px) ;
+            // filter:saturate(80%);
+        }
+
+        .inner{
+            width: 1180px;
+            min-height: 700px;
+            margin: 0 auto;
+            position: absolute;
+            top: 55.5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            // background: rgba(255,255,255,.01);
+            background: rgba(0,0,0,.75);
+            // box-shadow: 10px 10px 50px rgba(0,0,0,.7);
+            box-shadow: 10px 10px 50px rgba(255,255,255,.35);
+            // filter:blur(2px);
+
+            .wrap{
+                width: 100%;
+                height: 100%;
+
+
+                .type{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+                    // background: rgba(0,0,0,.3);
+                    padding: 50px;
+
+                    form{
+                        width: 100%;
+
+                        .fa-globe-americas{
+                            font-size: 70px;
+                            color:rgba(255,255,255,.9);
+                        }
+
+                        h2{
+                            font:bold 30px/40px 'Montserrat';
+                            letter-spacing: 3px;
+                            color:rgba(255,255,255,.9);
+                            position: relative;
+                            margin-bottom: 30px;
+                            margin-top: 30px;
+                            
+                            &::after{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 100%;
+                                background: #fff;
+                                height: 2px;
+                                bottom: -10px;
+                            }
+                        }
+
+                        .userid{
+                            position: relative;
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 80%;
+                                background: #fff;
+                                height: 2px;
+                                top:-15px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            
+                        }
+
+                        i{
+                            font-size: 20px;
+                            color:rgba(255,255,255,.9);
+                            line-height: 30px;
+                        }
+
+
+                        label[for=userid], label[for=pwd]{
+                            font:normal 15px/30px 'Montserrat';
+                            letter-spacing: 1.5px;
+                            color:rgba(255,255,255,.9);
+                        }
+
+                        input[type=text], input[type=password]{
+                            width: 80%;
+                            height: 30px;
+                            margin-bottom: 20px;
+                            border-radius: 5px;
+                            border: none;
+                            background:rgba(255,255,255,.4);
+                        }
+
+                        input[type=submit]{
+                            border:1px solid black;
+                            font:normal 17px/30px 'Montserrat';
+                            letter-spacing: 1px;
+                            color:rgba(255,255,255,.9);
+                            width: 50%;
+                            background: rgba(0,0,0,.8);
+                            padding:5px;
+                            cursor: pointer;
+                            margin-bottom: 10px;
+                        }
+
+                        p{
+                            font:normal 12px/20px 'Montserrat';
+                            color:rgba(255,255,255,.7);
+
+                            strong{
+                                font:bold 13px/20px 'Montserrat';
+                                color:rgba(255,255,255,.9);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1179px){
+    #header_login{
+
+        .inner{
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            padding: 60px 10px;
+    
+            h1{
+            }
+    
+            .menuMo{
+    
+                .gnb{
+                    top: 20px;
+    
+                    li{
+    
+                        a{
+                            font:normal 27px/1 'Dongle';
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #main_login{
+    
+        .login{
+    
+            img{
+                min-height: 1000px;
+            }
+    
+            .inner{
+                width: 90%;
+                top: 56%;
+                left: 50%;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:959px){
+    #header_login{
+
+        .inner{
+    
+            h1{
+                font:normal 45px/1 'Dongle';
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+    
+            .menuMo{
+    
+                .gnb{
+                    top: 25px;
+    
+                    li{
+    
+                        a{
+                            font:normal 28.5px/1 'Dongle';
+                            letter-spacing: 1.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:779px){
+    #header_login{
+
+        .inner{
+    
+            h1{
+                font:normal 25px/1 'Montserrat';
+                top: 40%;
+            }
+    
+            .menuMo{
+    
+                .gnb{
+                    top: 30px;
+    
+                    li{
+                        margin-left: 40px;
+                        a{
+                            font:normal 14px/1 'Montserrat';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #main_login{
+    
+        .login{
+    
+            img{
+            }
+    
+            .inner{
+
+                .wrap{
+
+                    .type{
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:539px){
+    #header_login{
+
+        .inner{
+    
+            h1{
+                font:normal 50px/1 'Dongle';
+                top:50%;
+                transition: all 2s;
+
+                &.on{
+                    opacity: 0;
+                    // animation: headerLogo2 5s;
+                    // animation-fill-mode: forwards;
+                }
+            }
+
+            .btnCall{
+                display: block;
+                position: absolute;
+                right: 15px;
+                top:22.5px;
+                cursor: pointer;
+                border-top:2px solid #fff;
+                border-bottom:2px solid #fff;
+                width: 25px;
+                height: 20px;
+                transition: all 2s;
+    
+                &.on{
+                    opacity: 0;
+                    // animation: headerLogo2 5s;
+                    // animation-fill-mode: forwards;
+                }
+    
+                div{
+                    width: 25px;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                }
+            }
+    
+            .menuMo{
+                width: 75%;
+                height:calc(100vh + 35px);
+                background: rgba(0,0,0,.9);
+                top: -35px;
+                left: -100%;
+                opacity: 0;
+                transition: all 2s;
+                position: fixed;
+                
+                &.on{
+                    animation: none;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                    left: -5%;
+                    position: fixed;
+                }
+
+                .logo2{
+                    font:normal 35px/1 'Dongle';
+                    letter-spacing: 2.3px;
+                    color:#fff;
+                    display: block;
+                    position: absolute;
+                    top: 10vh;
+                    left: 10vw;
+                }
+    
+                >p{
+                    font:normal 18px/1 'Dongle';
+                    letter-spacing: 1.4px;
+                    color:#bbb;
+                    display: block;
+                    position: absolute;
+                    top: 13.5vh;
+                    left: 10vw;
+                }
+
+                .gnb{
+                    display: flex;
+                    flex-direction: column;
+                    left: 10vw;
+                    top: 45vh;
+                    transform: translateY(-50%);
+                    width: 55vw;
+                    
+                    li{
+                        margin-left: 0px;
+                        border-bottom: 0.5px solid rgba(255,255,255,.3);
+                        width: 100%;
+                        margin-bottom: 30px;
+                        margin-top:30px;
+
+
+                        &:hover{
+                            background: #eee;
+                            transition: 0.5s;
+
+                            a{
+                                color:#111;
+                                transition: 0.5s;
+                            }
+
+                        }
+
+                        a{
+                            font:normal 30px/1 'Dongle';
+                            color:#ccc;
+
+                            &::after{
+                                content: '';
+                                display: none;
+                                height: 0;
+                            }
+    
+                            &:hover{
+    
+                                &::after{
+                                    content: '';
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .util{
+                    right: 5vw;
+                    height: 95%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    bottom: 300px;
+
+                    li{
+                        a{
+                            font:normal 20px/1 'Dongle';
+                            color:#ccc;
+
+                            &:hover{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .close{
+                    display: block;
+                    position: absolute;
+                    top: 7.5vh;
+                    right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+
+    #main_login{
+    
+        .login{
+    
+            img{
+            }
+    
+            .inner{
+
+                .wrap{
+
+                    .type{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@
 @import "sub_papg.scss";
 @import "youtube.scss";
 @import "join.scss";
-@import "loing.scss";
+@import "login.scss";
 
 .inner{
     // border:1px solid red;
@@ -18,6 +18,8 @@
 #header{
     width: 100%;
     overflow: hidden;
+    position: relative;
+    z-index:3;
 
     .inner{
         width: 1180px;
@@ -72,7 +74,7 @@
             position: absolute;
             width: 250%;
             height:100% ;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,.5);
             top: -100%;
             left:-700px;
             opacity: 0;
@@ -82,6 +84,10 @@
                 animation: MenuMo 1.7s;
                 animation-fill-mode: forwards;
                 opacity: 1;
+            }
+
+            >p{
+                display: none;
             }
 
             h1{
@@ -107,6 +113,33 @@
                     a{
                         font:normal 30px/1 'Dongle';
                         color:#fff;
+                        position: relative;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            height: 2px;
+                            width: 0;
+                            background: #fff;
+                            left: 0;
+                            animation: MenuHoverLeave 0.5s;
+
+                        }
+
+                        &:hover{
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                height: 2px;
+                                background: #fff;
+                                left: 0;
+                                animation: MenuHover 0.5s;
+                                animation-fill-mode: forwards;
+                            }
+                        }
                     }
                 }
             }
@@ -240,7 +273,6 @@
                         position: absolute;
                         right:30px;
                         top:50%;
-                        
                     }
                 }
             }
@@ -487,7 +519,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                cursor: pointer;
+                                // cursor: pointer;
 
                                 &:hover i{
                                     transform: scale(1.3);
@@ -1025,6 +1057,16 @@
     100%{transform: translateY(100%);}
 }
 
+@keyframes MenuHover{
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+@keyframes MenuHoverLeave{
+    0%{width: 100%;}
+    100%{width: 0%;}
+}
+
 
 @keyframes ProvideAni{
     0%{transform: scale(1.5)  rotate(360deg)}
@@ -1038,11 +1080,143 @@
 
 @media screen and(max-width:1179px) {
     #header{
-        padding:0px 5vw;
-
         .inner{
             width: 100%;
 
+            h1{
+                font:bold 35px/1 'Dongle';
+                letter-spacing: 2.3px;
+                color:#fff;
+                position: absolute;
+                top: 50%;
+                left: 5vw;
+                transform: translateY(-50%);
+    
+                &.on{
+                    animation: headerLogo 1.5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+    
+            .btnCall{
+                position: absolute;
+                right: 5vw;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                border-top:2px solid #fff;
+                border-bottom:2px solid #fff;
+                width: 25px;
+                height: 20px;
+    
+                &.on{
+                    animation: headerLogo 1.5s;
+                    animation-fill-mode: forwards;
+                }
+    
+                div{
+                    width: 25px;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                }
+    
+            }
+    
+            .menuMo{
+                position: absolute;
+                width: 100%;
+                height:100% ;
+                background: rgba(0,0,0,.35);
+                top: -100%;
+                left: 0;
+                opacity: 0;
+                transition: all 2s;
+    
+                &.on{
+                    animation: MenuMo 1.7s;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                }
+    
+                h1{
+                    font:bold 35px/1 'Dongle';
+                    letter-spacing: 2.3px;
+                    color:#fff;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 5vw;
+                }
+    
+                .gnb{
+                    display: flex;
+                    position: absolute;
+                    top: 85%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+    
+                    li{
+                        margin-left: 50px;
+
+                        &:nth-child(1){
+                            margin-left: 0px;
+                        }
+    
+                        a{
+                            font:normal 25px/1 'Dongle';
+                            color:#fff;
+                        }
+                    }
+                }
+    
+                .util{
+                    position: absolute;
+                    right: 10vw;
+                    top:20px;
+                    display: flex;
+                    justify-content: flex-end;
+
+    
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    
+                    li{
+                        float: left;
+                        margin-left: 30px;
+                        text-align: center;
+    
+                        a{
+                            font:normal 20px/1 'Dongle';
+                            color:#fff;
+                        }
+                    }
+                }
+    
+                .close{
+                    position: absolute;
+                    right:5vw;
+                    top: 20px;
+                    width: 10px;
+                    height: 10px;
+                    padding:7.5px;
+                    cursor: pointer;
+                    border:none;
+    
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
         }
     }
     
@@ -1099,9 +1273,14 @@
                         .content{
 
                             .contentGroup{
-                                width: 240px;
-                                height: 240px;
-                                margin-right: 20px;
+                                width: 200px;
+                                height: 200px;
+                                margin-right: 15px;
+                                justify-content: space-around;
+
+                                &:nth-child(4){
+                                    margin-right: 0;
+                                }
 
                                 .contentBack{
                                     i{
@@ -1111,17 +1290,17 @@
 
                                 .contentFront{
                                     i{
-                                        font-size: 2.5vw;
+                                        font-size: 25px;
                                         margin-bottom: 1.5vh;
                                     }
         
                                     span{
-                                        font-size:1.6vw;
-                                        margin-bottom: 1.5vh;
+                                        font-size:20px;
+                                        margin-bottom: 10px;
                                     }
         
                                     p{
-                                        font-size:1.5vw;
+                                        font-size:13px;
                                     }
                                 }
                             }
@@ -1263,73 +1442,50 @@
 }
 
 @media screen and(max-width:959px) {
+
     #header{
-        
-        .menuMo{
-            &.on{
 
-                height: 55vh;
+        .inner{
+    
+            .menuMo{
+                position: absolute;
+                width: 100%;
+                height:100% ;
+                background: rgba(0,0,0,.35);
+                top: -100%;
+                left: 0;
+                opacity: 0;
+                transition: all 2s;
+    
+                &.on{
+                    animation: MenuMo 1.7s;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                }
+    
+                h1{
 
+                }
+    
                 .gnb{
+                    top: 90%;
+                    transform: translate(-50%, -50%);
     
                     li{
-                        margin-bottom: 35px;
-
                         a{
-                            font:normal 30px/1 'Dongle';
+                            font:normal 23px/1 'Dongle';
                         }
                     }
                 }
     
                 .util{
-                    
+
                     li{
-                        margin-left: 15px;
-    
                         a{
-                            font:normal 20px/1 'Dongle';
+                            font:normal 19px/1 'Dongle';
                         }
                     }
                 }
-    
-                .info{
-                    top: 53%;
-
-    
-                    address{
-                        margin-bottom: 60px;
-    
-                        strong{
-                            font:normal 30px/1 'Dongle';
-                        }
-    
-                        p{
-                            font:normal 25px/1 'Dongle';
-                        }
-                    }
-    
-                    .contact{
-    
-                        strong{
-                            font:normal 30px/1 'Dongle';
-                        }
-    
-                        span{
-                            font:normal 25px/1 'Dongle';
-                        }
-    
-                        b{
-                            font:normal 25px/1 'Dongle';
-                        }
-                    }
-                }
-    
-                .close{
-                    right: 15px;
-                    top: 15px;
-                    font:normal 17px/1 'Dongle';
-                }
-
             }
         }
     }
@@ -1564,71 +1720,55 @@
 @media screen and(max-width:779px) {
 
     #header{
-        
-        .menuMo{
-            &.on{
-                height: 65vh;
 
+        .inner{
+    
+            .menuMo{
+                position: absolute;
+                width: 100%;
+                height:100% ;
+                background: rgba(0,0,0,.35);
+                top: -100%;
+                left: 0;
+                opacity: 0;
+                transition: all 2s;
+    
+                &.on{
+                    animation: MenuMo 1.7s;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                }
+    
+                h1{
+
+                }
+    
                 .gnb{
+                    top: 90%;
+                    transform: translate(-50%, -50%);
     
                     li{
-                        margin-bottom: 50px;
+                        margin-left: 35px;
 
                         a{
-                            font:normal 35px/1 'Dongle';
+                            font:normal 22px/1 'Dongle';
                         }
                     }
                 }
     
                 .util{
-                        bottom: 12%;
+                    right: 12.5vw;
+
                     li{
-    
                         a{
-                            font:normal 25px/1 'Dongle';
+                            font:normal 18px/1 'Dongle';
                         }
                     }
                 }
-    
-                .info{
-                    top:51%;
-
-                    address{
-    
-                        strong{
-                            font:normal 35px/1 'Dongle';
-                        }
-    
-                        p{
-                            font:normal 27px/1 'Dongle';
-                        }
-                    }
-    
-                    .contact{
-    
-                        strong{
-                            font:normal 35px/1 'Dongle';
-                        }
-    
-                        span{
-                            font:normal 27px/1 'Dongle';
-                        }
-    
-                        b{
-                            font:normal 27px/1 'Dongle';
-                        }
-                    }
-                }
-    
-                .close{
-                    right: 20px;
-                    top: 20px;
-                    font:normal 18px/1 'Dongle';
-                }
-
             }
         }
     }
+
 
     #figure{
         height: 80vh;
@@ -1898,85 +2038,114 @@
 @media screen and(max-width:539px) {
 
     #header{
-        
-        .menuMo{
-            &.on{
-                top: 80%;
+        height: 80vh;
+
+        .inner{
+    
+            .menuMo{
+                position: absolute;
+                width: 71%;
+                height: 80vh;
+                background: rgba(0,0,0,.9);
+                top: 0;
+                left: -100%;
+                opacity: 0;
+                transition: all 2s;
+    
+                &.on{
+                    animation: none;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                    top: 0;
+                    left: -1%;
+                }
+
+                >p{
+                    display: block;
+                    font:normal 20px/1 'Dongle';
+                    color:#ccc;
+                    top:9vh;
+                    left: 5vw;
+                    position: absolute;
+                    width: 55vw;
+                }
+    
+                h1{
+                    top:6.5vh;
+                }
+    
                 .gnb{
-                    left: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    left: 5vw;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 55vw;
+                    // padding:0px 5vw;
     
                     li{
-                        margin-bottom: 50px;
-                        text-align: left;
+                        margin-left: 0px;
+                        border-bottom: 0.5px solid rgba(255,255,255,.3);
+                        width: 100%;
+                        margin-bottom: 30px;
+                        margin-top:30px;
+
+                        &:hover{
+                            background: #eee;
+                            transition: 0.5s;
+
+                            a{
+                                color:#111;
+                                transition: 0.5s;
+                            }
+
+                        }
 
                         a{
                             font:normal 30px/1 'Dongle';
+                            color:#ccc;
+
+                            &::after{
+                                content: '';
+                                display: none;
+                                height: 0;
+                            }
+    
+                            &:hover{
+    
+                                &::after{
+                                    content: '';
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }
     
                 .util{
-                    left: 1%;
-                    bottom: 15%;
+                    right: 5vw;
+                    height: 95%;
+                    align-items: flex-end;
 
                     li{
-    
                         a{
                             font:normal 20px/1 'Dongle';
+                            color:#ccc;
+
+                            &:hover{
+                                font-weight: bold;
+                            }
                         }
                     }
                 }
-    
-                .info{
-                    top:51%;
-                    left: 50%;
-
-                    address{
-    
-                        strong{
-                            font:normal 25px/1 'Dongle';
-                        }
-    
-                        p{
-                            font:normal 17px/1 'Dongle';
-                        }
-                    }
-    
-                    .contact{
-    
-                        strong{
-                            font:normal 25px/1 'Dongle';
-                        }
-    
-                        span{
-                            font:normal 17px/1 'Dongle';
-                        }
-    
-                        b{
-                            font:normal 17px/1 'Dongle';
-                        }
-                    }
-                }
-
-                .sns{
-
-                    li{
-                        margin-right: 10px;
-                    }
-                }
-    
-                .close{
-                    right: 10px;
-                    top: 10px;
-                    font:normal 13px/1 'Dongle';
-                }
-
             }
         }
     }
 
-    #figure{
 
+    #figure{
+        
+        margin-top: -80vh;
         .inner{
 
             .content{
@@ -2212,7 +2381,7 @@
 
                 p{
                     position: absolute;
-                    bottom: 10%;
+                    bottom: 15%;
                     left: 50%;
                     transform: translateX(-50%);
                     width: 60%;
@@ -2221,14 +2390,14 @@
                     text-align: center;
                 }
     
-                span{  
+                >a{  
                     display: none;
                 }
                 
                 ul{
                     position: absolute;
                     left: 50%;
-                    top: 10%;
+                    top: 15%;
                     transform: translateX(-50%);
     
                     li{

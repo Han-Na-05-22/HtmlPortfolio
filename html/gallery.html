@@ -9,11 +9,18 @@
     <script src="https://kit.fontawesome.com/d1d2824d3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <script defer src="../js/gallery.js"></script>
+    <script defer src="../js/main.js"></script>
 </head>
 <body>
     <header id="header_sub">
         <div class="inner">
             <h1 class="logo"><a href="../index.html">PORTFOLIO<span class="hidden">로고</span></a></h1>
+
+            <div class="btnCall">
+                <div></div>
+                <span class="hidden">메뉴호출</span>
+            </div>
+
             <nav class="menuMo">
                 <ul class="gnb">
                     <li><a href="./about.html">ABOUT</a></li>
@@ -23,9 +30,12 @@
                     <li><a href="./location.html">LOCATION</a></li>
                 </ul>
                 <ul class="util">
-                    <li><a href="./loing.html">LOING</a></li>
+                    <li><a href="./login.html">LOGIN</a></li>
                     <li><a href="./join.html">JOIN</a></li>
                 </ul>
+                <button class="close">
+                    <i class="fas fa-times"></i> 
+                </button>
             </nav>
 
         </div>
@@ -33,9 +43,11 @@
 
     <figure id="figure_sub">
         <section class="sub_visual">
-            <div class="pic"></div>
+            <div class="pic gallery_pic"></div>
             <div class="inner">
                 <h2>GALLERY</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quaerat?</p>
+                <a href="#">Lorem, ipsum dolor.</a>
             </div>
         </section>
     </figure>
@@ -49,7 +61,7 @@
                 <div class="box1">Choose what you want</div>
                 <div class="line1"></div>
 
-                <ul>
+                <ul class="clickEvent">
                     <li class="on">
                         <i class="fas fa-font"></i>
                         <a href="*">ALL</a>
@@ -57,17 +69,17 @@
                     </li>
                     <li>
                         <i class="fas fa-place-of-worship"></i>
-                        <a href="*">ARCHITECTURE</a>
+                        <a href=".architecture">ARCHITECTURE</a>
                         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facilis, similique ullam molestiae magnam sit voluptate itaque maxime minus blanditiis?</div>
                     </li>
                     <li>
                         <i class="fas fa-dice-d20"></i>
-                        <a href="*">INTERIOR</a>
+                        <a href=".interior">INTERIOR</a>
                         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facilis, similique ullam molestiae magnam sit voluptate itaque maxime minus blanditiis?</div>
                     </li>
                     <li>
                         <i class="fas fa-chair"></i>
-                        <a href="*">FURNITURE</a>
+                        <a href=".furniture">FURNITURE</a>
                         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facilis, similique ullam molestiae magnam sit voluptate itaque maxime minus blanditiis?</div>
                     </li>
                 </ul>
@@ -80,6 +92,12 @@
 
                 <div class="wrap">
                     <ul id="list">
+
+                    </ul>
+                    <ul id="list2">
+
+                    </ul>
+                    <ul id="list3">
 
                     </ul>
                 </div>
