@@ -12,8 +12,8 @@
         padding: 60px 0px;
 
         h1{
-            font:bold 35px/1 'Dongle';
-            letter-spacing: 2.3px;
+            font:bold 22.5px/1 'Montserrat';
+            letter-spacing: 1.5px;
             color:#fff;
             position: absolute;
             top: 50%;
@@ -48,6 +48,33 @@
                     a{
                         font:normal 30px/1 'Dongle';
                         color:#fff;
+                        position: relative;
+
+                        &::after{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            height: 2px;
+                            width: 0;
+                            background: #fff;
+                            left: 0;
+                            animation: MenuHoverLeave 0.5s;
+
+                        }
+
+                        &:hover{
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                height: 2px;
+                                background: #fff;
+                                left: 0;
+                                animation: MenuHover 0.5s;
+                                animation-fill-mode: forwards;
+                            }
+                        }
                     }
                 }
             }
@@ -333,7 +360,8 @@
                     li{
     
                         a{
-                            font:normal 27px/1 'Dongle';
+                            font:normal 25px/1 'Dongle';
+                            letter-spacing: 1.5px;
                         }
                     }
                 }
@@ -477,7 +505,8 @@
         .inner{
     
             h1{
-                font:normal 45px/1 'Dongle';
+                font:bold 25px/1 'Montserrat';
+                letter-spacing: 1.5px;
                 top: 40%;
                 left: 50%;
                 transform: translate(-50%,-50%);
@@ -491,8 +520,8 @@
                     li{
     
                         a{
-                            font:normal 28.5px/1 'Dongle';
-                            letter-spacing: 1.5px;
+                            font:normal 23px/1 'Dongle';
+                            letter-spacing: 1.4px;
                         }
                     }
                 }
@@ -600,7 +629,7 @@
                     li{
                         margin-left: 40px;
                         a{
-                            font:normal 14px/1 'Montserrat';
+                            font:normal 13px/1 'Montserrat';
                         }
                     }
                 }
@@ -703,7 +732,8 @@
         .inner{
     
             h1{
-                font:normal 50px/1 'Dongle';
+                font:bold 25px/1 'Montserrat';
+                letter-spacing: 1.5px;
                 top:50%;
                 transition: all 2s;
 
@@ -762,8 +792,8 @@
                 }
 
                 .logo2{
-                    font:normal 35px/1 'Dongle';
-                    letter-spacing: 2.3px;
+                    font:bold 22.5px/1 'Montserrat';
+                    letter-spacing: 1.5px;
                     color:#fff;
                     display: block;
                     position: absolute;
@@ -1006,4 +1036,14 @@
             }
         }
     }
+}
+
+@keyframes MenuHover{
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+@keyframes MenuHoverLeave{
+    0%{width: 100%;}
+    100%{width: 0%;}
 }

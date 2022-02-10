@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const main = document.querySelector("#main_sub");
+const loading = document.querySelector(".loading");
 
 const frame = document.querySelector("#list");
 const frame2 = document.querySelector("#list2");
@@ -9,8 +10,10 @@ const lis01 = frame.querySelector("#list li");
 const lis02 = frame2.querySelector("#list2 li");
 const lis03 = frame3.querySelector("#list3 li");
 
-const input = document.querySelector("#search");
-const btn = document.querySelector(".btnSearch");
+const galleryInput = document.querySelector("#search");
+const gallerySearch = document.querySelector(".btnSearch");
+
+const gallerybtn = document.querySelectorAll(".clickEvent li");
 
 const base = "https://www.flickr.com/services/rest/?";
 const method1 = "flickr.interestingness.getList";
@@ -22,10 +25,6 @@ const format = "json";
 let tag ="ARCHITECTURE";
 let tag1 ="INTERIOR";
 let tag2 ="FURNITURE";
-
-// const url = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1`;
-
-// const url1 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag1}&privacy_filter=1`;
 
 
 // ------------------------- 갤러리사진 
@@ -43,11 +42,126 @@ const url2 =  `${base}method=${method3}&api_key=${key}&per_page=${per_page}&form
 const gallery3 = "72157720420915660";
 const url3 =  `${base}method=${method3}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${username}&gallery_id=${gallery3}`; 
 
+
 callData(url);
 callData2(url2);
 callData3(url3);
 
+gallerySearch.addEventListener("click",e=>{
+    
+    let tag = galleryInput.value;
+
+    const urls = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+
+    callData(urls);
+    frame2.classList.add("hidden");
+    frame3.classList.add("hidden");
+})
+
+galleryInput.addEventListener("keypress",e=>{
+    if(e.keyCode == 13){
+
+        let tag = galleryInput.value;
+
+        const urls = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+    
+        callData(urls);
+        frame2.classList.add("hidden");
+        frame3.classList.add("hidden");
+    }
+})
+
+
+frame.addEventListener("click",e=>{
+    e.preventDefault();
+
+    if(e.target == frame) return;
+
+    let target = e.target.closest(".architecture").querySelector(".thumb");
+
+    if(e.target == target){
+    let imgSrc = target.parentElement.getAttribute("href");
+
+    let popUp = document.createElement("aside");
+    popUp.classList.add("popup");
+    let pops = `
+                    <img src=${imgSrc}">
+                    <span class="closePop">close</span>
+                    `;
+
+    popUp.innerHTML = pops;
+    main.append(popUp);
+    }else{
+        return;
+    }
+});
+
+frame2.addEventListener("click",e=>{
+    e.preventDefault();
+
+    if(e.target == frame) return;
+
+    let target = e.target.closest(".interior").querySelector(".thumb");
+
+    if(e.target == target){
+    let imgSrc = target.parentElement.getAttribute("href");
+
+    let popUp = document.createElement("aside");
+    popUp.classList.add("popup");
+    let pops = `
+                    <img src=${imgSrc}">
+                    <span class="closePop">close</span>
+                    `;
+
+    popUp.innerHTML = pops;
+    main.append(popUp);
+    }else{
+        return;
+    }
+});
+
+frame3.addEventListener("click",e=>{
+    e.preventDefault();
+
+    if(e.target == frame) return;
+
+    let target = e.target.closest(".furniture").querySelector(".thumb");
+
+    if(e.target == target){
+    let imgSrc = target.parentElement.getAttribute("href");
+
+    let popUp = document.createElement("aside");
+    popUp.classList.add("popup");
+    let pops = `
+                    <img src=${imgSrc}">
+                    <span class="closePop">close</span>
+                    `;
+
+    popUp.innerHTML = pops;
+    main.append(popUp);
+    }else{
+        return;
+    }
+});
+
+
+body.addEventListener("click",e=>{
+
+    let popUp = body.querySelector(".popup");
+
+    if(popUp != null){
+        let close = popUp.querySelector(".closePop");
+        if(e.target == close) popUp.remove();
+    }
+
+})
+
+
 function callData(url){
+
+    frame.innerHTML = "";
+    loading.classList.remove("off");
+    frame.classList.remove("on");
 
     fetch(url)
     .then(data=>{
@@ -60,18 +174,16 @@ function callData(url){
     
         createList(items);
     
-        if(items.length>0){
-            createList(items);
-            isoLayout();
-            // delayLoading();
-    
-        }else{
-            alert("검색하신 이미지의 데이터가 없습니다.");
-        }
+        delayLoading();
+
     })
 }
 
 function callData2(url2){
+
+    frame.innerHTML = "";
+    loading.classList.remove("off");
+    frame2.classList.remove("on");
 
     fetch(url2)
     .then(data=>{
@@ -83,19 +195,17 @@ function callData2(url2){
         let items2 = json.photos.photo;
     
         createList2(items2);
-    
-        if(items2.length>0){
-            createList2(items2);
-            isoLayout2();
-            // delayLoading();
-    
-        }else{
-            alert("검색하신 이미지의 데이터가 없습니다.");
-        }
+
+        delayLoading2();
+
     })
 }
 
 function callData3(url3){
+
+    frame.innerHTML = "";
+    loading.classList.remove("off");
+    frame3.classList.remove("on");
 
     fetch(url3)
     .then(data=>{
@@ -107,15 +217,8 @@ function callData3(url3){
         let items3 = json.photos.photo;
     
         createList3(items3);
-    
-        if(items3.length>0){
-            createList3(items3);
-            isoLayout3();
-            // delayLoading();
-    
-        }else{
-            alert("검색하신 이미지의 데이터가 없습니다.");
-        }
+
+        delayLoading3();
     })
 }
 
@@ -202,49 +305,165 @@ function createList3(items){
 }
 
 
-// function delayLoading(){
-//     const imgs = document.querySelectorAll("img");
-//     const len = imgs.length;
-//     let count = 0;
-    
-//     for(let el of imgs){
-//         el.onload=()=>{
-//             count++;
-    
-//             if(count==len)
-//             isoLayout();
-//         }
-//     }
-// }
+function delayLoading(){
+
+    const imgs = frame.querySelectorAll("img");
+    const len = imgs.length;
+    let count = 0;
+
+    console.dir(imgs[0]);
+
+    for(let el of imgs){
+        el.onload=()=>{
+            count++;
+
+            if(count == len) isoLayout();
+        }
+    }
+}
+
+function delayLoading2(){
+
+    const imgs = frame2.querySelectorAll("img");
+    const len = imgs.length;
+    let count = 0;
+
+    console.dir(imgs[0]);
+
+
+    for(let el of imgs){
+
+        el.onload=()=>{
+            count++;
+
+            if(count == len) isoLayout2();
+        }
+    }
+}
+
+function delayLoading3(){
+
+    const imgs = frame3.querySelectorAll("img");
+    const len = imgs.length;
+    let count = 0;
+
+    console.dir(imgs[0]);
+
+
+    for(let el of imgs){
+   
+        el.onload=()=>{
+            count++;
+
+            if(count == len) isoLayout3();
+        }
+    }
+}
+
 
 function isoLayout(){
+
+    loading.classList.add("off");
     frame.classList.add("on");
 
-    new Isotope("#list",{
+    const grid = new Isotope("#list",{
         itemSelector : ".architecture",
         columnWidth : ".architecture",
         transitionDuration : "0.5s"
     })
+
+    for(let el of gallerybtn){
+
+        // sort 버튼 클릭했을 때
+        el.addEventListener("click", e=>{
+            e.preventDefault();
+
+            // 클릭한 버튼의 a태그에서 href 속성값을 변수로 저장
+            const sort = e.currentTarget.querySelector("a").getAttribute("href");
+
+            // sort에 따라 재정렬하기
+            grid.arrange({
+                filter : sort
+            });
+
+            // 버튼 활성화
+            // 모든 버튼을 순간적으로 비활성화하고
+            // 클릭한 버튼만 활성화
+            for(let el of gallerybtn){
+                el.classList.remove("on");
+            }
+            e.currentTarget.classList.add("on");
+        })
+     }
 }
 
 function isoLayout2(){
+    loading.classList.add("off");
     frame2.classList.add("on");
 
-    new Isotope("#list2",{
+    const grid2 = new Isotope("#list2",{
         itemSelector : ".interior",
         columnWidth : ".interior",
         transitionDuration : "0.5s"
     })
+
+    for(let el of gallerybtn){
+
+        // sort 버튼 클릭했을 때
+        el.addEventListener("click", e=>{
+            e.preventDefault();
+
+            // 클릭한 버튼의 a태그에서 href 속성값을 변수로 저장
+            const sort = e.currentTarget.querySelector("a").getAttribute("href");
+
+            // sort에 따라 재정렬하기
+            grid2.arrange({
+                filter : sort
+            });
+
+            // 버튼 활성화
+            // 모든 버튼을 순간적으로 비활성화하고
+            // 클릭한 버튼만 활성화
+            for(let el of gallerybtn){
+                el.classList.remove("on");
+            }
+            e.currentTarget.classList.add("on");
+        })
+     }
 }
 
-
 function isoLayout3(){
+    loading.classList.add("off");
     frame3.classList.add("on");
 
-    new Isotope("#list3",{
+    const grid3 = new Isotope("#list3",{
         itemSelector : ".furniture",
         columnWidth : ".furniture",
         transitionDuration : "0.5s"
     })
+
+    for(let el of gallerybtn){
+
+        // sort 버튼 클릭했을 때
+        el.addEventListener("click", e=>{
+            e.preventDefault();
+
+            // 클릭한 버튼의 a태그에서 href 속성값을 변수로 저장
+            const sort = e.currentTarget.querySelector("a").getAttribute("href");
+
+            // sort에 따라 재정렬하기
+            grid3.arrange({
+                filter : sort
+            });
+
+            // 버튼 활성화
+            // 모든 버튼을 순간적으로 비활성화하고
+            // 클릭한 버튼만 활성화
+            for(let el of gallerybtn){
+                el.classList.remove("on");
+            }
+            e.currentTarget.classList.add("on");
+        })
+     }
 }
 

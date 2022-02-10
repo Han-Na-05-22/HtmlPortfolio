@@ -11,8 +11,41 @@
 #main_sub{
     width: 100%;
 
+    &:hover .youtube .inner .wrap{
+        .video{
+            article{
+
+                &:nth-child(1){
+                    animation: youtubeAni 2s;
+                    animation-fill-mode: forwards;
+                }                   
+
+                &:nth-child(2){
+                    animation: youtubeAn2 2s 0.5s;
+                    animation-fill-mode: forwards;
+                }                    
+
+                &:nth-child(3){
+                    animation: youtubeAni 2s 1s;
+                    animation-fill-mode: forwards;
+                }                        
+
+                &:nth-child(4){
+                    animation: youtubeAn2 2s 1.5s;
+                    animation-fill-mode: forwards;
+                }                        
+
+                &:nth-child(5){
+                    animation: youtubeAni 2s 2s;
+                    animation-fill-mode: forwards;
+                }                        
+            }
+        }
+    }
+
     .youtube{
         width: 100%;
+        background: rgba(248, 248, 248, 0.95);
 
         .inner{
             width: 1180px;
@@ -23,12 +56,11 @@
             &:hover .wrap .titles i{
                 color:red;
             }
-            
             .wrap{
                 width: 100%;
 
                 .titles{
-                    border:1px solid rgba(248, 248, 248, 0.95);
+                    border:1.5px solid #111;
                     padding-top: 25px;
                     background: rgba(248, 248, 248, 0.95);
 
@@ -73,6 +105,8 @@
                         }
 
                         &:nth-child(2n+1){
+                            transform: translateX(-100%);
+                            opacity: 0;
 
                             &::before{
                                 content: '';
@@ -98,7 +132,7 @@
                                     width: 85%;
                                     // border:1px solid red;
                                     font:bold 11px/17px 'Montserrat';
-                                    color:#555;
+                                    color:#999;
                                     letter-spacing: 0.5px;
                                     text-align: right;
                                     position: absolute;
@@ -131,7 +165,7 @@
                                     bottom: 12.5%;
                                     left:15px;
                                     font:bold 11px/17px 'Montserrat';
-                                    color:#333;
+                                    color:rgb(163, 123, 59);
                                     margin-left: 50px;
                                 }
                             }
@@ -141,6 +175,8 @@
 
                         &:nth-child(2n){
                             flex-direction: row-reverse;
+                            transform: translateX(100%);
+                            opacity: 0;
 
                             &::after{
                                 content: '';
@@ -212,10 +248,19 @@
                             border-bottom:2px solid rgb(0, 0, 0);
                             position: relative;
 
+                            &:hover{
+
+                                img{
+                                    filter:brightness(100%);
+                                    transition: 1s;
+                                }
+                            }
+
                             img{
                                 width: 500px;
-                                height: 300px;
+                                height: 100%;
                                 object-fit: cover;
+                                filter:brightness(40%);
                             }
                         }
 
@@ -266,6 +311,20 @@
         }
     }
 }
+
+
+@keyframes youtubeAni{
+    0%{transform: translateX(-100%); opacity: 0;}
+    100%{transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes youtubeAn2{
+    0%{transform: translateX(100%); opacity: 0;}
+    100%{transform: translateX(0%); opacity: 1;}
+}
+
+
+
 
 @media screen and(max-width:1179px){
 

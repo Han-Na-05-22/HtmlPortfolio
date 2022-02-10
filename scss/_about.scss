@@ -20,9 +20,9 @@
                 left: 50%;
                 top: 25%;
                 transform: translate(-50%,-50%);
-                font:bold 50px/1 'Dongle';
-                letter-spacing: 2.3px;
-                color:#ddd;
+                font:bold 25px/1 'Montserrat';
+                letter-spacing: 1.5px;
+                color:#fff;
 
                 span{
                     color:rgb(252, 191, 93);
@@ -31,11 +31,11 @@
                     &::after{
                         content: '';
                         display: block;
-                        width: 100px;
+                        width: 125px;
                         height: 2px;
                         background: rgb(163, 123, 59);
                         position: absolute;
-                        right: 10%;
+                        right:0%;
                     }
                 }
             }
@@ -49,8 +49,8 @@
                 text-align: center;
 
                 b{
-                    font:bold 20px/1 'Dongle';
-                    letter-spacing: 2.3px;
+                    font:bold 10px/1 'Montserrat';
+                    letter-spacing: 2px;
                     color:#ccc;
 
                 }
@@ -66,7 +66,7 @@
                 }
 
                 span{
-                    font:bold 20px/1 'Dongle';
+                    font:bold 11px/1 'Montserrat';
                     letter-spacing: 3px;
                     color:#fff;
                 }
@@ -129,7 +129,7 @@
 
 
                                 h2{
-                                    font:bold 50px/1 'Dongle';
+                                    font:bold 25px/1 'Montserrat';
                                     letter-spacing: 3px;
                                     color:#fff;
                                     margin-bottom: 50px;
@@ -167,15 +167,16 @@
                                 }
 
                                 strong{
-                                    font:bold 30px/1 'Dongle';
+                                    font:bold 13px/1 'Montserrat';
                                     letter-spacing: 2.3px;
                                     color:#fff;
                                     width: 60%;
+                                    margin-bottom: 10px;
                                 }
 
                                 span{
-                                    font:bold 18px/1 'Dongle';
-                                    letter-spacing: 2.3px;
+                                    font:bold 12px/1 'Montserrat';
+                                    letter-spacing: 1.3px;
                                     color:rgb(163, 123, 59);
                                     width: 60%;
                                 }
@@ -245,7 +246,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                font:bold 50px/1 'Dongle';
+                font:bold 27px/35px 'Montserrat';
                 letter-spacing: 3.5px;
                 color: #fff;
                 text-align: right;
@@ -260,11 +261,11 @@
                     &::after{
                     content: '';
                     display: block;
-                    width:29%;
+                    width:30%;
                     height: 2.5px;
                     background: rgb(163, 123, 59);
                     position: absolute;
-                    left: 77.5px;
+                    left: 72.5px;
                     }
                 }
             }
@@ -348,7 +349,7 @@
                         }
 
                         span{
-                            font:bold 20px/75px 'Dongle';
+                            font:bold 10px/75px 'Montserrat';
                             letter-spacing: 1.3px;
                             color: #fff;
                             
@@ -364,7 +365,7 @@
                             position: absolute;
                             top: 50%;
                             transform: translateY(-50%);
-                            left:275px;
+                            left:265px;
 
                             i{
                                 font-size: 20px;
@@ -385,7 +386,7 @@
                     padding: 50px 100px;
 
                     h3{
-                        font:bold 45px/1 'Dongle';
+                        font:bold 22.5px/35px 'Montserrat';
                         letter-spacing: 3.5px;
                         color: #fff;
                         text-align: left;
@@ -415,7 +416,7 @@
                         padding-top:25px;
 
                         p{
-                            font:bold 19px/1 'Dongle';
+                            font:bold 10px/15px 'Montserrat';
                             color:#eee;
                         }
 
@@ -423,7 +424,7 @@
                             display: block;
                             position: relative;
                             left:280px;
-                            font:bold 20px/1 'Dongle';
+                            font:bold 11px/1 'Montserrat';
                             color:rgb(163, 123, 59);
                         }
 
@@ -436,7 +437,7 @@
                             background: rgba(241, 195, 121, 0.849);
                             position: relative;
                             left: 450px;
-                            bottom:20px;
+                            bottom:15px;
 
                             i{
                                 font-size: 20px;
@@ -924,7 +925,7 @@
                             li{
                                 .content{
                                     h2{
-                                        font:normal 40px/1 'Dongle';
+                                        font:normal 20px/1 'Montserrat';
                                         margin-bottom: 30px;
     
                                         &::after{
@@ -943,11 +944,11 @@
                                     }
     
                                     strong{
-                                        font:normal 22px/1 'Dongle';
+                                        font:normal 12px/1 'Montserrat';
                                     }
     
                                     span{
-                                        font:normal 17px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                         letter-spacing: 2px;
                                     }
                                 }
@@ -1017,9 +1018,10 @@
                                 height: 15px;
                                 top: 49.5%;
                                 left:215px;
+                                display: none;
     
                                 i{
-                                    font-size: 15px;
+                                    display: none;
                                 }
                             }
                         }
@@ -1053,6 +1055,7 @@
                             }
     
                             a{
+                                bottom: 20px;
                                 left: 405px;
                             }
                         }
@@ -1124,15 +1127,14 @@
             .inner{
 
                 h2{
-                    font:normal 45px/1 'Dongle';
+                    font:normal 25px/1 'Montserrat';
 
                     span{
                         color:rgb(252, 191, 93);
                         opacity: 0.4;
 
                         &::after{
-                            width: 80px;
-                            right: 13%;
+                            width: 125px;
                         }
                     }
                 }
@@ -1140,11 +1142,11 @@
                 .warp{
     
                     b{
-                        font:normal 19px/1 'Dongle';
+                        font:normal 10px/1 'Montserrat';
                     }
     
                     span{
-                        font:normal 18px/1 'Dongle';
+                        font:normal 12px/1 'Montserrat';
                     }
     
                     strong{
@@ -1170,7 +1172,7 @@
                                 .content{
                                     padding-right: 70px;
                                     h2{
-                                        font:normal 37px/1 'Dongle';
+                                        font:normal 20px/25px 'Montserrat';
                                         margin-bottom: 20px;
                                     }
     
@@ -1194,11 +1196,11 @@
                                     }
     
                                     strong{
-                                        font:normal 18px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                     }
     
                                     span{
-                                        font:normal 15px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                     }
                                 }
                             }
@@ -1225,13 +1227,13 @@
                 h2{
                     right: 25px;
                     top: 0;
-                    font:normal 40px/1 'Dongle';
+                    font:normal 25px/35px 'Montserrat';
                     width: 35%;
     
                     strong{
     
                         &::after{
-                        left: 40px;
+                        left: 8.5px;
                         }
                     }
                 }
@@ -1255,13 +1257,8 @@
                         .hover{
     
                             span{
-                                font:normal 15px/75px 'Dongle';
-                                letter-spacing: 1.2px;      
-                                padding-right: 15px;                   
-                            }
-    
-                            a{
-                                left:175px;
+                                font:bold 10px/75px 'Montserrat';
+                                letter-spacing: 0.5px;              
                             }
                         }
                     }
@@ -1269,7 +1266,18 @@
                     .content{
 
                         h3{
-                            font:normal 40px/1 'Dongle';
+                            font:normal 20px/30px 'Montserrat';
+                        }
+        
+                        div{
+    
+                            span{
+                                left:170px;
+                            }
+    
+                            a{
+                                left: 325px;
+                            }
                         }
                     }
                 }
@@ -1337,7 +1345,7 @@
             .inner{
 
                 h2{
-                    font:normal 50px/1 'Dongle';
+                    font:normal 30px/1 'Montserrat';
                     width: 100%;
                     text-align: center;
 
@@ -1345,7 +1353,8 @@
 
 
                         &::after{
-                            right: 23%;
+                            bottom: -5px;
+                            right: 14%;
                         }
                     }
                 }
@@ -1354,7 +1363,7 @@
                     padding-top: 50px;
 
                     b{
-                        font:normal 15px/1 'Dongle';
+                        font:normal 10px/1 'Montserrat';
                     }
 
                     p{
@@ -1362,7 +1371,7 @@
                     }
     
                     span{
-                        font:normal 18px/1 'Dongle';
+                        font:normal 11px/1 'Montserrat';
                     }
     
                     strong{
@@ -1396,7 +1405,7 @@
                                     padding-left: 20px;
 
                                     h2{
-                                        font:normal 65px/40px 'Dongle';
+                                        font:normal 35px/40px 'Montserrat';
                                         margin-bottom:30px;
                                         text-align: left;
                                         width: 70%;
@@ -1426,12 +1435,12 @@
                                     }
     
                                     strong{
-                                        font:normal 20px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                         width: 70%;
                                     }
     
                                     span{
-                                        font:normal 15px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                         width: 70%;
                                     }
 
@@ -1494,7 +1503,7 @@
             .inner{
     
                 h2{
-                    font:bold 60px/1 'Dongle';
+                    font:bold 30px/50px 'Montserrat';
                     width: 80%;
                     margin-top: 100px;
     
@@ -1503,7 +1512,7 @@
 
                         &::after{
                         width:35%;
-                        left:6px;
+                        left:20px;
                         }
                     }
                 }
@@ -1560,25 +1569,10 @@
                             }
     
                             span{
-                                font:normal 35px/125px 'Dongle';
+                                font:bold 18px/120px 'Montserrat';
                                 letter-spacing: 1.5px;
                                 color: #fff;
                                 opacity: 0.8;
-                                margin-right: 30px;
-                            }
-    
-                            a{
-                                width: 30px;
-                                height: 30px;
-                                background: rgba(241, 195, 121, 0.849);
-                                top: 50%;
-                                transform: translateY(-50%);
-                                left:350px;
-    
-                                i{
-                                    font-size: 27.5px;
-                                    color:#fff;
-                                }
                             }
                         }
                     }
@@ -1594,7 +1588,7 @@
                         padding: 50px 10px;
     
                         h3{
-                            font:bold 55px/1 'Dongle';
+                            font:bold 30px/40px 'Montserrat';
                             width: 110%;
                             margin-left: 0px;
                             position: relative;
@@ -1617,21 +1611,21 @@
                             position: absolute;
     
                             p{
-                                font:normal 19px/1 'Dongle';
+                                font:normal 11px/15px 'Montserrat';
                                 position: absolute;
                             }
     
                             span{
                                 width: 50%;
-                                font:normal 17px/1 'Dongle';
+                                font:normal 11px/1 'Montserrat';
                                 position: absolute;
-                                top: 85px;
-                                left: 180px;
+                                top: 90px;
+                                left: 170px;
                             }
     
                             a{
-                                top: 62.5px;
-                                left: 325px;
+                                top: 64.5px;
+                                left: 335px;
                             }
                         }
                     }
@@ -1713,14 +1707,14 @@
             .inner{
 
                 h2{
-                    font:bold 35px/1 'Dongle';
+                    font:bold 20px/1 'Montserrat';
                     top: 20%;
 
                     span{
 
 
                         &::after{
-                            right: 12.5%;
+                            width: 80px;
                         }
                     }
                 }
@@ -1753,7 +1747,7 @@
                                     height: 300px;
 
                                     h2{
-                                        font:normal 40px/40px 'Dongle';
+                                        font:normal 20px/40px 'Montserrat';
                                         margin-bottom:20px;
                                         text-align: left;
                                         width: 85%;
@@ -1780,12 +1774,12 @@
                                     }
     
                                     strong{
-                                        font:normal 16px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                         width: 85%;
                                     }
     
                                     span{
-                                        font:normal 13px/1 'Dongle';
+                                        font:normal 10px/1 'Montserrat';
                                         width: 85%;
                                     }
 
@@ -1833,14 +1827,14 @@
                 padding-bottom: 0;
     
                 h2{
-                    font:bold 34px/1 'Dongle';
+                    font:bold 19px/30px 'Montserrat';
                     margin-top: 80px;
     
                     strong{
 
                         &::after{
-                        width:32%;
-                        left:14px;
+                        width:36%;
+                        left:4px;
                         }
                     }
                 }
@@ -1869,37 +1863,22 @@
                         }
     
                         &:nth-of-type(2) .hover{                 
-                            height: 100px;
+                            height: 80px;
     
                             &.on{
-                                bottom:85.5px;
+                                bottom:80px;
                             }
                         }
     
                         .hover{
-                            height: 100px;
+                            height: 80px;
     
                             &.on{
-                                bottom:85.5px;
+                                bottom:80px;
                             }
     
                             span{
-                                font:normal 22.5px/125px 'Dongle';
-                                letter-spacing: 1.5px;
-                                color: #fff;
-                                opacity: 0.8;
-                                margin-right: 10px;
-                            }
-    
-                            a{
-                                width: 20px;
-                                height: 20px;
-                                top: 60%;
-                                left:240px;
-    
-                                i{
-                                    font-size: 20px;
-                                }
+                                font:bold 11px/80px 'Montserrat';
                             }
                         }
                     }
@@ -1910,7 +1889,7 @@
                         height: 300px;
     
                         h3{
-                            font:bold 30px/1 'Dongle';
+                            font:bold 17px/25px 'Montserrat';
 
                         }
     
@@ -1918,12 +1897,12 @@
                             margin-bottom: 70px;
     
                             p{
-                                font:normal 18px/1 'Dongle';
+                                font:normal 10px/15px 'Montserrat';
                             }
     
                             span{
                                 width: 60%;
-                                font:normal 16px/1 'Dongle';
+                                font:normal 10px/1 'Montserrat';
                                 position: absolute;
                                 top: 115px;
                                 left: 0px;
@@ -1990,6 +1969,7 @@
                                         height: 40px;
                                         bottom: -10px;
                                         line-height: 40px;
+                                        padding-right: 15px;
                                     }
     
                                     i{
