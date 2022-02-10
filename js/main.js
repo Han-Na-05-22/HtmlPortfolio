@@ -59,7 +59,7 @@ window.addEventListener("scroll",e=>{
     
     let scroll = window.scrollY || window.pageY0ffset;
 
-    if(scroll >= posArr[1] + baseNum){
+    if(scroll >= posArr[1]){
         Introduction.classList.remove("on");
     }else{
         Introduction.classList.add("on");

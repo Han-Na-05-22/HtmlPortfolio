@@ -1,5 +1,4 @@
 var mapContainer = document.getElementById('map'); 
-
 const branch_btns = document.querySelectorAll(".branch li");
 
 let zoom = true;

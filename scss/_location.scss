@@ -158,6 +158,12 @@
                         transform: translateX(-50%);
                         top: 10px;
                         margin-bottom: 50px;
+                        transition: 1s;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+
                     }
 
                     .sns{
@@ -174,11 +180,22 @@
                             opacity: 0.8;
                             border-radius: 10px;
                             text-align: center;
+                            transition: 0.5s;
+
+                            &:hover{
+                                transform: scale(1.1);
+                                opacity: 1;
+                                
+                                i{
+                                    color:#fff;
+                                }
+                            }
 
                             i{
                                 font-size: 30px;
                                 line-height: 50px;
                                 color:#222;
+                                transition: 0.5s;
                             }
                         }
                     }
