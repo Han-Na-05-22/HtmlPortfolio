@@ -7,7 +7,7 @@
     <title>join</title>
     <script src="https://kit.fontawesome.com/d1d2824d3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script defer src="../js/main.js"></script>
+    <script defer src="../js/header.js"></script>
     <script defer src="../js/join.js"></script>
 </head>
 <body>
@@ -69,22 +69,22 @@
                                 
                                     <tr>
                                         <th scope="row"><label for="name">USER NAME</label></th>
-                                        <td><input type="text" name="name" id="name" required></td>
+                                        <td><input type="text" name="name" id="name" required placeholder="이름을 입력하세요."></td>
                                     </tr>
 
                                     <tr>
                                         <th scope="row"><label for="id">USER ID</label></th>
-                                        <td><input type="text" name="id" id="id" required></td>
+                                        <td><input type="text" name="id" id="id" required placeholder="아이디를 입력하세요."></td>
                                     </tr>
 
                                     <tr>
                                         <th scope="row"><label for="pw">PASSWORD</label></th>
-                                        <td><input type="password" name="pw" id="pw" required></td>
+                                        <td><input type="password" name="pw" id="pw" required placeholder="비밀번호를 입력하세요."></td>
                                     </tr>
 
                                     <tr>
                                         <th scope="row"><label for="pw2">RE PASSWORD</label></th>
-                                        <td><input type="password" name="pw2" id="pw2" required></td>
+                                        <td><input type="password" name="pw2" id="pw2" required placeholder="비밀번호를 재입력하세요."></td>
                                     </tr>
 
                                     <tr>
@@ -103,20 +103,18 @@
 
                                     <tr>
                                         <th scope="row"><label for="email">E-MAIL</label></th>
-                                        <td>
-                                            <input type="text" name="email" id="email" required>
-                                        </td>
+                                        <td><input type="text" name="email" id="email" required placeholder="이메일 주소를 입력하세요."></td>
                                     </tr>
 
                                     <tr>
                                         <th scope="row"><label for="comments">COMMENTS</label></th>
                                         <td>
-                                        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                                        <textarea name="comments" id="comments" placeholder="글을 입력하세요."></textarea>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <th colspan="2" class="click">
+                                        <th colspan="2">
                                             <input type="reset" value="CANCEL">
                                             <input type="submit" value="SUBMIT">
                                         </th>
