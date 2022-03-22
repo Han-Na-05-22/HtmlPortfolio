@@ -119,18 +119,7 @@ body{
                         letter-spacing: 1.2px;
                         color:#fff;
                         position: relative;
-
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            height: 2px;
-                            width: 0;
-                            background: #fff;
-                            left: 0;
-                            animation: MenuHoverLeave 0.5s;
-
-                        }
+                        transition: 1s;
 
                         &:hover{
 
@@ -1486,32 +1475,6 @@ body{
                     }
                 }
     
-                .util{
-                    position: absolute;
-                    right: 10vw;
-                    top:20px;
-                    display: flex;
-                    justify-content: flex-end;
-
-    
-                    &::after{
-                        content: '';
-                        display: block;
-                        clear: both;
-                    }
-                    
-                    li{
-                        float: left;
-                        margin-left: 30px;
-                        text-align: center;
-    
-                        a{
-                            font:normal 20px/1 'Dongle';
-                            color:#fff;
-                        }
-                    }
-                }
-    
                 .close{
                     position: absolute;
                     right:5vw;
@@ -1790,15 +1753,6 @@ body{
                         }
                     }
                 }
-    
-                .util{
-
-                    li{
-                        a{
-                            font:normal 19px/1 'Dongle';
-                        }
-                    }
-                }
             }
         }
     }
@@ -2073,16 +2027,6 @@ body{
 
                         a{
                             font:normal 22px/1 'Dongle';
-                        }
-                    }
-                }
-    
-                .util{
-                    right: 12.5vw;
-
-                    li{
-                        a{
-                            font:normal 18px/1 'Dongle';
                         }
                     }
                 }
@@ -2387,9 +2331,9 @@ body{
         .inner{
     
             .menuMo{
-                position: absolute;
-                width: 71%;
-                height: 80vh;
+                position: fixed;
+                width: 60%;
+                height: 100vh;
                 background: rgba(0,0,0,.9);
                 top: 0;
                 left: -100%;
@@ -2425,7 +2369,6 @@ body{
                     top: 50%;
                     transform: translateY(-50%);
                     width: 55vw;
-                    // padding:0px 5vw;
     
                     li{
                         margin-left: 0px;
@@ -2433,17 +2376,6 @@ body{
                         width: 100%;
                         margin-bottom: 30px;
                         margin-top:30px;
-
-                        &:hover{
-                            background: #eee;
-                            transition: 0.5s;
-
-                            a{
-                                color:#111;
-                                transition: 0.5s;
-                            }
-
-                        }
 
                         a{
                             font:normal 30px/1 'Dongle';
@@ -2461,23 +2393,6 @@ body{
                                     content: '';
                                     display: none;
                                 }
-                            }
-                        }
-                    }
-                }
-    
-                .util{
-                    right: 5vw;
-                    height: 95%;
-                    align-items: flex-end;
-
-                    li{
-                        a{
-                            font:normal 20px/1 'Dongle';
-                            color:#ccc;
-
-                            &:hover{
-                                font-weight: bold;
                             }
                         }
                     }

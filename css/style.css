@@ -36,18 +36,21 @@ table {
 }
 #main_sub .about .inner {
   width: 1180px;
-  min-height: 500px;
+  min-height: 700px;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 100px;
 }
 #main_sub .about .inner h2 {
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -50%);
-  font: bold 25px/1 "Montserrat";
+  font: bold 50px/1 "Montserrat";
   letter-spacing: 1.5px;
   color: #fff;
+  margin-bottom: 50px;
+  position: relative;
 }
 #main_sub .about .inner h2 span {
   color: #fcbf5d;
@@ -62,30 +65,38 @@ table {
   position: absolute;
   right: 0%;
 }
+#main_sub .about .inner > img {
+  width: 550px;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 50px;
+  filter: saturate(10%);
+  transition: 1s;
+}
+#main_sub .about .inner > img:hover {
+  filter: saturate(100%);
+}
 #main_sub .about .inner .warp {
   width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  padding: 0px 100px;
 }
 #main_sub .about .inner .warp b {
-  font: bold 10px/1 "Montserrat";
+  font: bold 12px/1 "Montserrat";
   letter-spacing: 2px;
   color: #ccc;
 }
 #main_sub .about .inner .warp p {
   margin: 0 auto;
   width: 90%;
-  font: normal 16px/1 "Dongle";
+  font: normal 20px/1 "Dongle";
   letter-spacing: 2.3px;
   color: #bbb;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 #main_sub .about .inner .warp span {
-  font: bold 11px/1 "Montserrat";
+  font: bold 13px/1 "Montserrat";
   letter-spacing: 3px;
   color: #fff;
 }
@@ -2838,14 +2849,15 @@ table {
 #header_sub {
   width: 100%;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 3;
+  margin-top: 0px;
 }
 #header_sub .inner {
   width: 1180px;
   margin: 0 auto;
-  padding: 60px 0px;
+  padding: 50px 0px 60px;
 }
 #header_sub .inner h1 {
   font: bold 22.5px/1 "Montserrat";
@@ -2882,47 +2894,8 @@ table {
   color: #fff;
   position: relative;
 }
-#header_sub .inner .menuMo .gnb li a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 0;
-  background: #fff;
-  left: 0;
-  animation: MenuHoverLeave 0.5s;
-}
-#header_sub .inner .menuMo .gnb li a:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  background: #fff;
-  left: 0;
-  animation: MenuHover 0.5s;
-  animation-fill-mode: forwards;
-}
 #header_sub .inner .menuMo .gnb li:nth-child(1) {
   margin-left: 0px;
-}
-#header_sub .inner .menuMo .util {
-  position: absolute;
-  bottom: 30px;
-  right: 0;
-}
-#header_sub .inner .menuMo .util::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#header_sub .inner .menuMo .util li {
-  float: left;
-  margin-left: 30px;
-  text-align: center;
-}
-#header_sub .inner .menuMo .util li a {
-  font: normal 20px/1 "Dongle";
-  color: #fff;
 }
 #header_sub .inner .menuMo .close {
   position: absolute;
@@ -3313,7 +3286,7 @@ table {
     display: flex;
     flex-direction: column;
     left: 10vw;
-    top: 45vh;
+    top: 50vh;
     transform: translateY(-50%);
     width: 55vw;
   }
@@ -3323,14 +3296,6 @@ table {
     width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
-  }
-  #header_sub .inner .menuMo .gnb li:hover {
-    background: #eee;
-    transition: 0.5s;
-  }
-  #header_sub .inner .menuMo .gnb li:hover a {
-    color: #111;
-    transition: 0.5s;
   }
   #header_sub .inner .menuMo .gnb li a {
     font: normal 30px/1 "Dongle";
@@ -3344,21 +3309,6 @@ table {
   #header_sub .inner .menuMo .gnb li a:hover::after {
     content: "";
     display: none;
-  }
-  #header_sub .inner .menuMo .util {
-    right: 5vw;
-    height: 95%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    bottom: 300px;
-  }
-  #header_sub .inner .menuMo .util li a {
-    font: normal 20px/1 "Dongle";
-    color: #ccc;
-  }
-  #header_sub .inner .menuMo .util li a:hover {
-    font-weight: bold;
   }
   #header_sub .inner .menuMo .close {
     position: absolute;
@@ -5447,16 +5397,7 @@ body {
   letter-spacing: 1.2px;
   color: #fff;
   position: relative;
-}
-#header .inner .menuMo .gnb li a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 0;
-  background: #fff;
-  left: 0;
-  animation: MenuHoverLeave 0.5s;
+  transition: 1s;
 }
 #header .inner .menuMo .gnb li a:hover::after {
   content: "";
@@ -6647,27 +6588,6 @@ body {
     font: normal 25px/1 "Dongle";
     color: #fff;
   }
-  #header .inner .menuMo .util {
-    position: absolute;
-    right: 10vw;
-    top: 20px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  #header .inner .menuMo .util::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  #header .inner .menuMo .util li {
-    float: left;
-    margin-left: 30px;
-    text-align: center;
-  }
-  #header .inner .menuMo .util li a {
-    font: normal 20px/1 "Dongle";
-    color: #fff;
-  }
   #header .inner .menuMo .close {
     position: absolute;
     right: 5vw;
@@ -6834,9 +6754,6 @@ body {
   #header .inner .menuMo .gnb li a {
     font: normal 23px/1 "Dongle";
   }
-  #header .inner .menuMo .util li a {
-    font: normal 19px/1 "Dongle";
-  }
 
   #figure {
     height: 70vh;
@@ -6999,12 +6916,6 @@ body {
   }
   #header .inner .menuMo .gnb li a {
     font: normal 22px/1 "Dongle";
-  }
-  #header .inner .menuMo .util {
-    right: 12.5vw;
-  }
-  #header .inner .menuMo .util li a {
-    font: normal 18px/1 "Dongle";
   }
 
   #figure {
@@ -7194,9 +7105,9 @@ body {
     height: 80vh;
   }
   #header .inner .menuMo {
-    position: absolute;
-    width: 71%;
-    height: 80vh;
+    position: fixed;
+    width: 60%;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.9);
     top: 0;
     left: -100%;
@@ -7237,14 +7148,6 @@ body {
     margin-bottom: 30px;
     margin-top: 30px;
   }
-  #header .inner .menuMo .gnb li:hover {
-    background: #eee;
-    transition: 0.5s;
-  }
-  #header .inner .menuMo .gnb li:hover a {
-    color: #111;
-    transition: 0.5s;
-  }
   #header .inner .menuMo .gnb li a {
     font: normal 30px/1 "Dongle";
     color: #ccc;
@@ -7257,18 +7160,6 @@ body {
   #header .inner .menuMo .gnb li a:hover::after {
     content: "";
     display: none;
-  }
-  #header .inner .menuMo .util {
-    right: 5vw;
-    height: 95%;
-    align-items: flex-end;
-  }
-  #header .inner .menuMo .util li a {
-    font: normal 20px/1 "Dongle";
-    color: #ccc;
-  }
-  #header .inner .menuMo .util li a:hover {
-    font-weight: bold;
   }
 
   #figure {

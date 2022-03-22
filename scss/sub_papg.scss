@@ -2,15 +2,15 @@
 #header_sub{
     width: 100%;
     overflow: hidden;
-    background: rgba(0,0,0,.35);
+    background: rgba(0,0,0,.3);
     position: relative;
     z-index:3;
-
+    margin-top: 0px;
 
     .inner{
         width: 1180px;
         margin: 0 auto;
-        padding: 60px 0px;
+        padding: 50px 0px 60px;
 
         h1{
             font:bold 22.5px/1 'Montserrat';
@@ -50,59 +50,10 @@
                         font:normal 30px/1 'Dongle';
                         color:#fff;
                         position: relative;
-
-                        &::after{
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            height: 2px;
-                            width: 0;
-                            background: #fff;
-                            left: 0;
-                            animation: MenuHoverLeave 0.5s;
-
-                        }
-
-                        &:hover{
-
-                            &::after{
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                height: 2px;
-                                background: #fff;
-                                left: 0;
-                                animation: MenuHover 0.5s;
-                                animation-fill-mode: forwards;
-                            }
-                        }
                     }
 
                     &:nth-child(1){
                         margin-left: 0px;
-                    }
-                }
-            }
-
-            .util{
-                position: absolute;
-                bottom:30px;
-                right: 0;
-
-                &::after{
-                    content: '';
-                    display: block;
-                    clear: both;
-                }
-                
-                li{
-                    float: left;
-                    margin-left: 30px;
-                    text-align: center;
-
-                    a{
-                        font:normal 20px/1 'Dongle';
-                        color:#fff;
                     }
                 }
             }
@@ -642,7 +593,7 @@
                     display: flex;
                     flex-direction: column;
                     left: 10vw;
-                    top: 45vh;
+                    top: 50vh;
                     transform: translateY(-50%);
                     width: 55vw;
                     
@@ -652,18 +603,6 @@
                         width: 100%;
                         margin-bottom: 30px;
                         margin-top:30px;
-
-
-                        &:hover{
-                            background: #eee;
-                            transition: 0.5s;
-
-                            a{
-                                color:#111;
-                                transition: 0.5s;
-                            }
-
-                        }
 
                         a{
                             font:normal 30px/1 'Dongle';
@@ -681,26 +620,6 @@
                                     content: '';
                                     display: none;
                                 }
-                            }
-                        }
-                    }
-                }
-
-                .util{
-                    right: 5vw;
-                    height: 95%;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    bottom: 300px;
-
-                    li{
-                        a{
-                            font:normal 20px/1 'Dongle';
-                            color:#ccc;
-
-                            &:hover{
-                                font-weight: bold;
                             }
                         }
                     }
