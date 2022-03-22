@@ -199,6 +199,3 @@ pic.forEach((hover,index)=>{
     })
 })
 
-
-
-

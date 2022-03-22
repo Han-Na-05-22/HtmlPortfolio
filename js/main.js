@@ -22,6 +22,7 @@ lis.forEach((btn,index)=>{
 // scroll
 const sections = document.querySelectorAll("#main section");
 const Introduction = document.querySelector("#main .Introduction");
+const Provide = document.querySelector("#main .Provide");
 // const contents = Introduction.querySelector(".content");
 let posArr = [];
 const baseNum = -300;
@@ -43,6 +44,39 @@ window.addEventListener("scroll",e=>{
         Introduction.classList.add("on");
     }
 
+
+
+    if(scroll >= posArr[2]){
+        Provide.classList.remove("on");
+    }else{
+        Provide.classList.add("on");
+    }
 })
+
+
+const Projects = document.querySelector("#main .Projects");
+const ProList = Projects.querySelectorAll(".pic li");
+const ProVid = Projects.querySelectorAll(".pic li>div");
+const ProClose = Projects.querySelector("button");
+console.log(ProClose);
+
+ProList.forEach((btn,index)=>{
+    btn.addEventListener("click",e=>{
+        e.preventDefault();
+
+        ProClose.classList.add("on");
+
+        for(let el of ProVid){
+            el.classList.remove("on");
+        }
+        ProVid[index].classList.add("on");
+    })
+
+    ProClose.addEventListener("click",()=>{
+        ProVid[index].classList.remove("on");
+        ProClose.classList.remove("on");
+    })
+})
+
 
 
