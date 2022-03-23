@@ -88,11 +88,12 @@
 
 #main_join{
     width: 100%;
+    height: 100%;
     margin-top: -120px;
 
     .join{
         width: 100%;
-        height: 100%;
+        position: relative;
 
         img{
             width: 100%;
@@ -106,12 +107,12 @@
             width: 1180px;
             margin: 0 auto;
             position: absolute;
-            margin-top: 225px;
-            top: 50%;
+            top: 55%;
             left: 50%;
             transform: translate( -50%,-50%);
             background: rgba(255,255,255,.01);
             box-shadow: 10px 10px 50px rgba(0,0,0,.7);
+            padding:100px 50px;
 
             .wrap{
                 width: 100%;
@@ -125,13 +126,13 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    padding:30px 20px;
+                    padding:20px 20px;
                     background: rgba(163, 123, 59,.5);
 
                     h2{
                         font:bold 50px/1 'Montserrat';
                         letter-spacing: 3px;
-                        margin-bottom: 30px;
+                        margin-bottom: 15px;
                         font-style: italic;
                         color:#fff;
                     }
@@ -139,16 +140,9 @@
                     p{
                         font:normal 12px/18px 'Montserrat';
                         letter-spacing: 1.4px;
-                        margin-bottom: 35px;
-                        color:#fff;
-                        width: 80%;
-                    }
-
-                    span{
-                        font:bold 13px/1 'Montserrat';
-                        letter-spacing: 1.4px;
                         margin-bottom: 20px;
                         color:#fff;
+                        width: 80%;
                     }
 
                     a{
@@ -368,19 +362,12 @@
     }
     
     #main_join{
-    
+
         .join{
-    
-            img{
-                min-height: 1220px;
-            }
-    
-    
+
             .inner{
                 width: 100%;
-                padding:0px 20px;
-                margin-top: 202.5px;
-    
+
                 .wrap{
     
                     .signUp{
@@ -411,29 +398,125 @@
 
 @media screen and(max-width:959px){
     #header_join{
-    
+
         .inner{
     
             h1{
                 font:bold 25px/1 'Montserrat';
                 letter-spacing: 1.5px;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                top: 50px;
+                left: 50px;
+
+                &.on{opacity: 0;}
+            }
+    
+            .btnCall{
+                display: block;
+                position: absolute;
+                right: 50px;
+                top:40px;
+                cursor: pointer;
+                border-top:2px solid #fff;
+                border-bottom:2px solid #fff;
+                width: 25px;
+                height: 20px;
+                transition: all 2s;
+    
+                &.on{opacity: 0;}
+    
+                div{
+                    width: 25px;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                }
             }
     
             .menuMo{
+                width: 50%;
+                height:calc(100vh + 35px);
+                background: rgba(0,0,0,.9);
+                top: -35px;
+                left: -100%;
+                opacity: 0;
+                transition: all 2s;
+                position: fixed;
+                
+                &.on{
+                    animation: none;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                    left: -5%;
+                    position: fixed;
+                }
+
+                .logo2{
+                    font:bold 22.5px/1 'Montserrat';
+                    letter-spacing: 1.5px;
+                    color:#fff;
+                    display: block;
+                    position: absolute;
+                    top: 10vh;
+                    left: 10vw;
+                }
     
+                >p{
+                    font:normal 18px/1 'Dongle';
+                    letter-spacing: 1.4px;
+                    color:#bbb;
+                    display: block;
+                    position: absolute;
+                    top: 13.5vh;
+                    left: 10vw;
+                }
+
                 .gnb{
-                    top: 25px;
-    
+                    display: flex;
+                    flex-direction: column;
+                    left: 10vw;
+                    top: 50vh;
+                    transform: translateY(-50%);
+                    width: 33vw;
+                    
                     li{
-    
+                        margin-left: 0px;
+                        border-bottom: 0.5px solid rgba(255,255,255,.3);
+                        width: 100%;
+                        margin-bottom: 30px;
+                        margin-top:30px;
+
                         a{
-                            font:normal 23px/1 'Dongle';
-                            letter-spacing: 1.4px;
+                            font:normal 30px/1 'Dongle';
+                            color:#ccc;
+
+                            &::after{
+                                content: '';
+                                display: none;
+                                height: 0;
+                            }
+    
+                            &:hover{
+    
+                                &::after{
+                                    content: '';
+                                    display: none;
+                                }
+                            }
                         }
                     }
+                }
+
+                .close{
+                    position: absolute;
+                    top: 7.5vh;
+                    right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    display: block;
                 }
             }
         }
@@ -442,16 +525,11 @@
     #main_join{
     
         .join{
-    
-            img{
-                min-height: 1220px;
-            }
-    
+
     
             .inner{
                 width: 100%;
                 padding:0px 20px;
-                margin-top: 202.5px;
     
                 .wrap{
     
@@ -565,26 +643,15 @@
 
 @media screen and(max-width:779px){
     #header_join{
-    
+
         .inner{
-    
-            h1{
-                font:normal 25px/1 'Montserrat';
-                top: 40%;
-            }
+            h1{left: 40px;}
     
             .menuMo{
-    
-                .gnb{
-                    top: 30px;
-    
-                    li{
-                        margin-left: 40px;
-                        a{
-                            font:normal 13px/1 'Montserrat';
-                        }
-                    }
-                }
+                width: 60%;
+
+
+                .gnb{width: 40vw;}
             }
         }
     }
@@ -677,168 +744,34 @@
 }
 
 @media screen and(max-width:539px){
-
     #header_join{
-    
+
         .inner{
     
             h1{
-                font:bold 25px/1 'Montserrat';
-                letter-spacing: 1.5px;
-                top:50%;
-                transition: all 2s;
+                left: 10px;
+                top:45px;
 
                 &.on{
                     opacity: 0;
-                    // animation: headerLogo2 5s;
-                    // animation-fill-mode: forwards;
                 }
             }
 
             .btnCall{
-                display: block;
-                position: absolute;
-                right: 15px;
-                top:22.5px;
-                cursor: pointer;
-                border-top:2px solid #fff;
-                border-bottom:2px solid #fff;
-                width: 25px;
-                height: 20px;
-                transition: all 2s;
-    
-                &.on{
-                    opacity: 0;
-                    // animation: headerLogo2 5s;
-                    // animation-fill-mode: forwards;
-                }
-    
-                div{
-                    width: 25px;
-                    height: 2px;
-                    background: #fff;
-                    position: absolute;
-                    top: 50%;
-                    left: 0px;
-                    transform: translateY(-50%);
-                }
+                right: 10px;
+                top:30px;
             }
     
             .menuMo{
                 width: 75%;
-                height:calc(100vh + 35px);
-                background: rgba(0,0,0,.9);
                 top: -35px;
                 left: -100%;
-                opacity: 0;
-                transition: all 2s;
-                position: fixed;
-                
-                &.on{
-                    animation: none;
-                    animation-fill-mode: forwards;
-                    opacity: 1;
-                    left: -5%;
-                    position: fixed;
-                }
-
-                .logo2{
-                    font:bold 22.5px/1 'Montserrat';
-                    letter-spacing: 1.5px;
-                    color:#fff;
-                    display: block;
-                    position: absolute;
-                    top: 10vh;
-                    left: 10vw;
-                }
-    
-                >p{
-                    font:normal 18px/1 'Dongle';
-                    letter-spacing: 1.4px;
-                    color:#bbb;
-                    display: block;
-                    position: absolute;
-                    top: 13.5vh;
-                    left: 10vw;
-                }
 
                 .gnb{
-                    display: flex;
-                    flex-direction: column;
                     left: 10vw;
-                    top: 45vh;
+                    top: 52.5vh;
                     transform: translateY(-50%);
                     width: 55vw;
-                    
-                    li{
-                        margin-left: 0px;
-                        border-bottom: 0.5px solid rgba(255,255,255,.3);
-                        width: 100%;
-                        margin-bottom: 30px;
-                        margin-top:30px;
-
-
-                        &:hover{
-                            background: #eee;
-                            transition: 0.5s;
-
-                            a{
-                                color:#111;
-                                transition: 0.5s;
-                            }
-
-                        }
-
-                        a{
-                            font:normal 30px/1 'Dongle';
-                            color:#ccc;
-
-                            &::after{
-                                content: '';
-                                display: none;
-                                height: 0;
-                            }
-    
-                            &:hover{
-    
-                                &::after{
-                                    content: '';
-                                    display: none;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .util{
-                    right: 5vw;
-                    height: 95%;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    bottom: 300px;
-
-                    li{
-                        a{
-                            font:normal 20px/1 'Dongle';
-                            color:#ccc;
-
-                            &:hover{
-                                font-weight: bold;
-                            }
-                        }
-                    }
-                }
-
-                .close{
-                    display: block;
-                    position: absolute;
-                    top: 7.5vh;
-                    right: 15px;
-                    width: 20px;
-                    height: 20px;
-                    cursor: pointer;
-
                 }
             }
         }

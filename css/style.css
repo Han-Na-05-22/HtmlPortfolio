@@ -125,7 +125,7 @@ table {
 #main_sub .member .inner .warp .slider ul {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 500%;
   height: 100%;
 }
@@ -642,8 +642,11 @@ table {
   }
 }
 @media screen and (max-width: 959px) {
+  #main_sub .about .inner {
+    padding: 100px;
+  }
   #main_sub .about .inner h2 {
-    font: normal 25px/1 "Montserrat";
+    font: normal 27.5px/1 "Montserrat";
   }
   #main_sub .about .inner h2 span {
     color: #fcbf5d;
@@ -652,8 +655,12 @@ table {
   #main_sub .about .inner h2 span::after {
     width: 125px;
   }
+  #main_sub .about .inner > img {
+    width: 440px;
+    height: 250px;
+  }
   #main_sub .about .inner .warp b {
-    font: normal 10px/1 "Montserrat";
+    font: normal 11px/1 "Montserrat";
   }
   #main_sub .about .inner .warp span {
     font: normal 12px/1 "Montserrat";
@@ -764,23 +771,40 @@ table {
   }
 }
 @media screen and (max-width: 779px) {
+  #main_sub .about .inner {
+    padding: 100px 50px;
+  }
   #main_sub .about .inner h2 {
-    font: normal 30px/1 "Montserrat";
+    font: normal 30px/35px "Montserrat";
     width: 100%;
     text-align: center;
   }
   #main_sub .about .inner h2 span::after {
     bottom: -5px;
-    right: 14%;
+    right: 5%;
+  }
+  #main_sub .about .inner > img {
+    width: 400px;
+    height: 250px;
   }
   #main_sub .about .inner .warp {
-    padding-top: 50px;
+    padding: 0px 10px;
   }
   #main_sub .about .inner .warp b {
     font: normal 10px/1 "Montserrat";
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   #main_sub .about .inner .warp p {
     font: normal 14px/1 "Dongle";
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
   #main_sub .about .inner .warp span {
     font: normal 11px/1 "Montserrat";
@@ -1019,15 +1043,15 @@ table {
   }
 }
 @media screen and (max-width: 539px) {
+  #main_sub .about .inner {
+    padding: 100px 10px;
+  }
   #main_sub .about .inner h2 {
     font: bold 20px/1 "Montserrat";
     top: 20%;
   }
   #main_sub .about .inner h2 span::after {
     width: 80px;
-  }
-  #main_sub .about .inner .warp {
-    padding-top: 30px;
   }
   #main_sub .about .inner .warp strong {
     font: normal 30px/1 "Comforter Brush";
@@ -3116,8 +3140,16 @@ table {
   #figure_sub {
     overflow: hidden;
   }
-  #figure_sub .inner {
-    width: 100%;
+  #figure_sub .sub_visual > .inner {
+    left: 15%;
+    top: 54%;
+  }
+  #figure_sub .sub_visual > .inner::before {
+    width: 380px;
+    height: 365px;
+  }
+  #figure_sub .sub_visual > .inner h2 > .inner {
+    font: bold 100px/1 "Montserrat";
   }
 
   #footer_sub .inner {
@@ -3134,90 +3166,18 @@ table {
   }
 }
 @media screen and (max-width: 959px) {
-  #header_sub .inner h1 {
-    font: bold 25px/1 "Montserrat";
-    letter-spacing: 1.5px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #header_sub .inner .menuMo {
-    width: 100%;
-  }
-  #header_sub .inner .menuMo .gnb {
-    top: 30px;
-  }
-  #header_sub .inner .menuMo .gnb li a {
-    font: normal 24px/1 "Dongle";
-    letter-spacing: 1.4px;
-  }
-
-  #footer_sub .inner .wrap p {
-    font: normal 10px/1.3 "Montserrat";
-  }
-  #footer_sub .inner .wrap a {
-    font: bold 10px/1.3 "Montserrat";
-  }
-  #footer_sub .inner .wrap ul li {
-    margin-left: 15px;
-    padding-top: 5px;
-  }
-  #footer_sub .inner .wrap ul li i {
-    font-size: 13px;
-  }
-}
-@media screen and (max-width: 779px) {
-  #header_sub .inner h1 {
-    font: bold 25px/1 "Montserrat";
-    letter-spacing: 1.5px;
-    top: 40%;
-  }
-  #header_sub .inner .menuMo .gnb {
-    top: 30px;
-  }
-  #header_sub .inner .menuMo .gnb li {
-    margin-left: 35px;
-  }
-  #header_sub .inner .menuMo .gnb li a {
-    font: normal 12px/1 "Montserrat";
-    letter-spacing: 1.5px;
-  }
-  #header_sub .inner .menuMo .util li a {
-    font: normal 11px/1 "Montserrat";
-  }
-
-  #footer_sub .inner .wrap p {
-    font: normal 10px/1.3 "Montserrat";
-  }
-  #footer_sub .inner .wrap a {
-    font: normal 10px/1.3 "Montserrat";
-  }
-  #footer_sub .inner .wrap ul li {
-    margin-left: 17px;
-    padding-top: 5px;
-  }
-  #footer_sub .inner .wrap ul li:nth-child(1) {
-    margin-left: 0px;
-  }
-  #footer_sub .inner .wrap ul li i {
-    font-size: 13px;
-  }
-}
-@media screen and (max-width: 539px) {
   #header_sub {
-    height: 80vh;
     background: none;
   }
   #header_sub .inner {
-    padding: 35px 0px;
+    padding: 50px 0px 15px;
   }
   #header_sub .inner h1 {
     font: bold 22.5px/1 "Montserrat";
     letter-spacing: 1.5px;
     color: #fff;
-    top: 35px;
-    left: 80px;
+    top: 50px;
+    left: 50px;
     transition: all 2s;
   }
   #header_sub .inner h1.on {
@@ -3226,8 +3186,8 @@ table {
   #header_sub .inner .btnCall {
     display: block;
     position: absolute;
-    right: 15px;
-    top: 22.5px;
+    right: 50px;
+    top: 40px;
     cursor: pointer;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
@@ -3248,7 +3208,7 @@ table {
     transform: translateY(-50%);
   }
   #header_sub .inner .menuMo {
-    width: 75%;
+    width: 50%;
     height: calc(100vh + 35px);
     background: rgba(0, 0, 0, 0.9);
     top: -35px;
@@ -3288,7 +3248,7 @@ table {
     left: 10vw;
     top: 50vh;
     transform: translateY(-50%);
-    width: 55vw;
+    width: 33vw;
   }
   #header_sub .inner .menuMo .gnb li {
     margin-left: 0px;
@@ -3319,48 +3279,135 @@ table {
     cursor: pointer;
   }
 
+  #figure_sub .sub_visual > .inner {
+    left: 10%;
+    top: 54%;
+  }
+  #figure_sub .sub_visual > .inner::before {
+    width: 350px;
+    height: 335px;
+  }
+  #figure_sub .sub_visual > .inner h2 > .inner {
+    font: bold 75px/1 "Montserrat";
+  }
+
+  #footer_sub .inner .wrap p {
+    font: normal 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap a {
+    font: bold 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap ul li {
+    margin-left: 15px;
+    padding-top: 5px;
+  }
+  #footer_sub .inner .wrap ul li i {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 779px) {
+  #header_sub .inner h1 {
+    left: 40px;
+  }
+  #header_sub .inner .menuMo {
+    width: 60%;
+  }
+  #header_sub .inner .menuMo .gnb {
+    width: 40vw;
+  }
+
+  #figure_sub .sub_visual > .inner {
+    left: 0%;
+    top: 55%;
+  }
+  #figure_sub .sub_visual > .inner::before {
+    width: 300px;
+    height: 295px;
+  }
+  #figure_sub .sub_visual > .inner h2 {
+    top: -10px;
+  }
+  #figure_sub .sub_visual > .inner h2 > .inner {
+    font: bold 55px/1 "Montserrat";
+  }
+  #figure_sub .sub_visual > .inner .p1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    top: -15px;
+  }
+  #figure_sub .sub_visual > .inner .p2 {
+    top: -30px;
+    margin-left: 10px;
+  }
+
+  #footer_sub .inner .wrap p {
+    font: normal 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap a {
+    font: normal 10px/1.3 "Montserrat";
+  }
+  #footer_sub .inner .wrap ul li {
+    margin-left: 17px;
+    padding-top: 5px;
+  }
+  #footer_sub .inner .wrap ul li:nth-child(1) {
+    margin-left: 0px;
+  }
+  #footer_sub .inner .wrap ul li i {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #header_sub {
+    height: 80vh;
+  }
+  #header_sub .inner {
+    padding: 35px 0px;
+  }
+  #header_sub .inner h1 {
+    font: bold 25px/1 "Montserrat";
+    left: 10px;
+    top: 45px;
+  }
+  #header_sub .inner .btnCall {
+    right: 10px;
+    top: 30px;
+  }
+  #header_sub .inner .menuMo {
+    width: 75%;
+  }
+
   #figure_sub {
     margin-top: -100vh;
   }
   #figure_sub .sub_visual .pic {
     height: 100vh;
   }
-  #figure_sub .sub_visual .inner {
-    width: 100%;
+  #figure_sub .sub_visual > .inner {
+    left: 7.5%;
+    top: 55%;
   }
-  #figure_sub .sub_visual .inner h2 {
-    top: 65%;
-    font: normal 45px/1 "Montserrat";
-    letter-spacing: 2px;
+  #figure_sub .sub_visual > .inner::before {
+    width: 250px;
+    height: 395px;
   }
-  #figure_sub .sub_visual .inner > p {
-    display: block;
-    font: normal 11px/15px "Montserrat";
-    color: #ccc;
-    letter-spacing: 1.3px;
-    position: absolute;
-    top: 57.5%;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+  #figure_sub .sub_visual > .inner h2 {
+    top: 45px;
+    left: -30%;
   }
-  #figure_sub .sub_visual .inner > a {
-    display: block;
-    width: 70%;
-    height: 30px;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    letter-spacing: 1.3px;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #eee;
-    text-align: center;
-    font: normal 10px/30px "Montserrat";
+  #figure_sub .sub_visual > .inner h2 > .inner {
+    font: bold 40px/1 "Montserrat";
   }
-  #figure_sub .sub_visual .inner ul li {
-    font: normal 10px/1 "Montserrat";
+  #figure_sub .sub_visual > .inner .p1 {
+    top: 40px;
+    left: -28%;
+  }
+  #figure_sub .sub_visual > .inner .p2 {
+    top: 30px;
+    left: -28%;
   }
 
   #footer_sub .inner .wrap {
@@ -3460,33 +3507,33 @@ table {
   width: 100%;
 }
 #main_sub .youtube .inner .wrap .titles {
-  border: 1.5px solid #111;
-  padding-top: 25px;
+  padding-top: 45px;
   background: rgba(248, 248, 248, 0.95);
 }
 #main_sub .youtube .inner .wrap .titles i {
-  font-size: 75px;
+  font-size: 100px;
   text-align: center;
   color: #333;
   display: block;
   margin-bottom: 20px;
+  transition: 1s;
 }
 #main_sub .youtube .inner .wrap .titles h2 {
-  font: bold 25px/1px "Montserrat";
+  font: bold 30px/1px "Montserrat";
   color: #111;
   letter-spacing: 1.2px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   text-align: center;
 }
 #main_sub .youtube .inner .wrap .titles p {
-  font: normal 11px/1px "Montserrat";
+  font: normal 13px/1px "Montserrat";
   color: #333;
   letter-spacing: 1px;
   margin-bottom: 50px;
   text-align: center;
 }
 #main_sub .youtube .inner .wrap .video {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 #main_sub .youtube .inner .wrap .video article {
   display: flex;
@@ -3494,7 +3541,9 @@ table {
   margin-bottom: 100px;
   position: relative;
   filter: contrast(108%);
-  padding: 50px 50px;
+  padding: 75px 50px 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #main_sub .youtube .inner .wrap .video article:nth-child(2n+1) {
   transform: translateX(-100%);
@@ -3513,8 +3562,6 @@ table {
 }
 #main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content {
   width: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
   padding: 30px 0px;
   position: relative;
 }
@@ -3572,8 +3619,6 @@ table {
 }
 #main_sub .youtube .inner .wrap .video article:nth-child(2n) .content {
   width: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
   padding: 30px 0px;
   position: relative;
 }
@@ -3614,8 +3659,6 @@ table {
 }
 #main_sub .youtube .inner .wrap .video article a {
   display: block;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
   position: relative;
 }
 #main_sub .youtube .inner .wrap .video article a:hover img {
@@ -3633,7 +3676,7 @@ table {
   color: #111;
   letter-spacing: 0.5px;
   position: absolute;
-  top: 20px;
+  top: 40px;
 }
 #main_sub .pop {
   width: 70%;
@@ -3692,6 +3735,9 @@ table {
     width: 100%;
     padding: 100px 0px 50px;
   }
+  #main_sub .youtube .inner .wrap {
+    padding: 0px 30px;
+  }
   #main_sub .youtube .inner .wrap .video article {
     padding: 50px 70px;
   }
@@ -3742,11 +3788,17 @@ table {
   #main_sub .youtube .inner .wrap .video article:nth-child(2n) .content span {
     right: 0px;
   }
+  #main_sub .youtube .inner .wrap .video article h3 {
+    top: 25px;
+  }
   #main_sub .pop {
     width: 90%;
   }
 }
 @media screen and (max-width: 959px) {
+  #main_sub .youtube .inner .wrap {
+    padding: 0px 50px;
+  }
   #main_sub .youtube .inner .wrap .titles {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -3768,14 +3820,10 @@ table {
   #main_sub .youtube .inner .wrap .video article {
     flex-direction: column;
     margin-bottom: 150px;
-    padding: 50px 75px 50px 140px;
+    padding: 75px 0px 50px 0px;
   }
   #main_sub .youtube .inner .wrap .video article:nth-child(2n+1)::before {
-    width: 30px;
-    height: 65%;
-    left: 55px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: none;
   }
   #main_sub .youtube .inner .wrap .video article:nth-child(2n+1) .content {
     border-top: none;
@@ -3808,21 +3856,17 @@ table {
   }
   #main_sub .youtube .inner .wrap .video article:nth-child(2n) {
     flex-direction: column;
-    padding: 50px 140px 50px 75px;
+    padding: 75px 0px 50px 0px;
   }
   #main_sub .youtube .inner .wrap .video article:nth-child(2n)::after {
-    width: 30px;
-    height: 65%;
-    right: 55px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: none;
   }
   #main_sub .youtube .inner .wrap .video article:nth-child(2n) h3 {
     font: bold 23px/1 "Montserrat";
     color: #111;
     letter-spacing: 0.5px;
     position: absolute;
-    top: 10px;
+    top: 25px;
     width: 75%;
     white-space: nowrap;
     overflow: hidden;
@@ -3871,7 +3915,7 @@ table {
     color: #111;
     letter-spacing: 0.5px;
     position: absolute;
-    top: 10px;
+    top: 25px;
     width: 75%;
     white-space: nowrap;
     overflow: hidden;
@@ -3888,6 +3932,7 @@ table {
   #main_sub .youtube .inner .wrap .video article {
     padding: 50px 25px;
     margin-bottom: 100px;
+    border: 2px solid #000;
   }
   #main_sub .youtube .inner .wrap .video article:nth-child(2n+1)::before {
     display: none;
@@ -3902,6 +3947,7 @@ table {
   #main_sub .youtube .inner .wrap .video article:nth-child(2n) h3 {
     width: 100%;
     padding: 0px 50px;
+    top: 15px;
   }
   #main_sub .youtube .inner .wrap .video article a img {
     filter: none;
@@ -3912,6 +3958,7 @@ table {
   #main_sub .youtube .inner .wrap .video article h3 {
     padding-right: 50px;
     width: 100%;
+    top: 15px;
   }
 }
 @media screen and (max-width: 539px) {
@@ -3922,7 +3969,7 @@ table {
     font-size: 75px;
   }
   #main_sub .youtube .inner .wrap .titles h2 {
-    font: bold 17px/1px "Montserrat";
+    font: bold 15px/1px "Montserrat";
   }
   #main_sub .youtube .inner .wrap .titles p {
     padding: 0px 10px;
@@ -4092,11 +4139,12 @@ table {
 
 #main_join {
   width: 100%;
+  height: 100%;
   margin-top: -120px;
 }
 #main_join .join {
   width: 100%;
-  height: 100%;
+  position: relative;
 }
 #main_join .join img {
   width: 100%;
@@ -4108,12 +4156,12 @@ table {
   width: 1180px;
   margin: 0 auto;
   position: absolute;
-  margin-top: 225px;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.01);
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.7);
+  padding: 100px 50px;
 }
 #main_join .join .inner .wrap {
   width: 100%;
@@ -4127,28 +4175,22 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   background: rgba(163, 123, 59, 0.5);
 }
 #main_join .join .inner .wrap .moveLogin h2 {
   font: bold 50px/1 "Montserrat";
   letter-spacing: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-style: italic;
   color: #fff;
 }
 #main_join .join .inner .wrap .moveLogin p {
   font: normal 12px/18px "Montserrat";
   letter-spacing: 1.4px;
-  margin-bottom: 35px;
-  color: #fff;
-  width: 80%;
-}
-#main_join .join .inner .wrap .moveLogin span {
-  font: bold 13px/1 "Montserrat";
-  letter-spacing: 1.4px;
   margin-bottom: 20px;
   color: #fff;
+  width: 80%;
 }
 #main_join .join .inner .wrap .moveLogin a {
   display: block;
@@ -4313,13 +4355,8 @@ table {
     letter-spacing: 1.5px;
   }
 
-  #main_join .join img {
-    min-height: 1220px;
-  }
   #main_join .join .inner {
     width: 100%;
-    padding: 0px 20px;
-    margin-top: 202.5px;
   }
   #main_join .join .inner .wrap .signUp form table tr th {
     padding: 35px 0px;
@@ -4332,25 +4369,112 @@ table {
   #header_join .inner h1 {
     font: bold 25px/1 "Montserrat";
     letter-spacing: 1.5px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50px;
+    left: 50px;
+  }
+  #header_join .inner h1.on {
+    opacity: 0;
+  }
+  #header_join .inner .btnCall {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    cursor: pointer;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 25px;
+    height: 20px;
+    transition: all 2s;
+  }
+  #header_join .inner .btnCall.on {
+    opacity: 0;
+  }
+  #header_join .inner .btnCall div {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+  }
+  #header_join .inner .menuMo {
+    width: 50%;
+    height: calc(100vh + 35px);
+    background: rgba(0, 0, 0, 0.9);
+    top: -35px;
+    left: -100%;
+    opacity: 0;
+    transition: all 2s;
+    position: fixed;
+  }
+  #header_join .inner .menuMo.on {
+    animation: none;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    left: -5%;
+    position: fixed;
+  }
+  #header_join .inner .menuMo .logo2 {
+    font: bold 22.5px/1 "Montserrat";
+    letter-spacing: 1.5px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+  }
+  #header_join .inner .menuMo > p {
+    font: normal 18px/1 "Dongle";
+    letter-spacing: 1.4px;
+    color: #bbb;
+    display: block;
+    position: absolute;
+    top: 13.5vh;
+    left: 10vw;
   }
   #header_join .inner .menuMo .gnb {
-    top: 25px;
+    display: flex;
+    flex-direction: column;
+    left: 10vw;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 33vw;
+  }
+  #header_join .inner .menuMo .gnb li {
+    margin-left: 0px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   #header_join .inner .menuMo .gnb li a {
-    font: normal 23px/1 "Dongle";
-    letter-spacing: 1.4px;
+    font: normal 30px/1 "Dongle";
+    color: #ccc;
+  }
+  #header_join .inner .menuMo .gnb li a::after {
+    content: "";
+    display: none;
+    height: 0;
+  }
+  #header_join .inner .menuMo .gnb li a:hover::after {
+    content: "";
+    display: none;
+  }
+  #header_join .inner .menuMo .close {
+    position: absolute;
+    top: 7.5vh;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: block;
   }
 
-  #main_join .join img {
-    min-height: 1220px;
-  }
   #main_join .join .inner {
     width: 100%;
     padding: 0px 20px;
-    margin-top: 202.5px;
   }
   #main_join .join .inner .wrap .moveLogin {
     padding: 15px 20px;
@@ -4425,17 +4549,13 @@ table {
 }
 @media screen and (max-width: 779px) {
   #header_join .inner h1 {
-    font: normal 25px/1 "Montserrat";
-    top: 40%;
+    left: 40px;
+  }
+  #header_join .inner .menuMo {
+    width: 60%;
   }
   #header_join .inner .menuMo .gnb {
-    top: 30px;
-  }
-  #header_join .inner .menuMo .gnb li {
-    margin-left: 40px;
-  }
-  #header_join .inner .menuMo .gnb li a {
-    font: normal 13px/1 "Montserrat";
+    width: 40vw;
   }
 
   #main_join .join .inner .wrap .moveLogin h2 {
@@ -4487,132 +4607,26 @@ table {
 }
 @media screen and (max-width: 539px) {
   #header_join .inner h1 {
-    font: bold 25px/1 "Montserrat";
-    letter-spacing: 1.5px;
-    top: 50%;
-    transition: all 2s;
+    left: 10px;
+    top: 45px;
   }
   #header_join .inner h1.on {
     opacity: 0;
   }
   #header_join .inner .btnCall {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 22.5px;
-    cursor: pointer;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    width: 25px;
-    height: 20px;
-    transition: all 2s;
-  }
-  #header_join .inner .btnCall.on {
-    opacity: 0;
-  }
-  #header_join .inner .btnCall div {
-    width: 25px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    transform: translateY(-50%);
+    right: 10px;
+    top: 30px;
   }
   #header_join .inner .menuMo {
     width: 75%;
-    height: calc(100vh + 35px);
-    background: rgba(0, 0, 0, 0.9);
     top: -35px;
     left: -100%;
-    opacity: 0;
-    transition: all 2s;
-    position: fixed;
-  }
-  #header_join .inner .menuMo.on {
-    animation: none;
-    animation-fill-mode: forwards;
-    opacity: 1;
-    left: -5%;
-    position: fixed;
-  }
-  #header_join .inner .menuMo .logo2 {
-    font: bold 22.5px/1 "Montserrat";
-    letter-spacing: 1.5px;
-    color: #fff;
-    display: block;
-    position: absolute;
-    top: 10vh;
-    left: 10vw;
-  }
-  #header_join .inner .menuMo > p {
-    font: normal 18px/1 "Dongle";
-    letter-spacing: 1.4px;
-    color: #bbb;
-    display: block;
-    position: absolute;
-    top: 13.5vh;
-    left: 10vw;
   }
   #header_join .inner .menuMo .gnb {
-    display: flex;
-    flex-direction: column;
     left: 10vw;
-    top: 45vh;
+    top: 52.5vh;
     transform: translateY(-50%);
     width: 55vw;
-  }
-  #header_join .inner .menuMo .gnb li {
-    margin-left: 0px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  #header_join .inner .menuMo .gnb li:hover {
-    background: #eee;
-    transition: 0.5s;
-  }
-  #header_join .inner .menuMo .gnb li:hover a {
-    color: #111;
-    transition: 0.5s;
-  }
-  #header_join .inner .menuMo .gnb li a {
-    font: normal 30px/1 "Dongle";
-    color: #ccc;
-  }
-  #header_join .inner .menuMo .gnb li a::after {
-    content: "";
-    display: none;
-    height: 0;
-  }
-  #header_join .inner .menuMo .gnb li a:hover::after {
-    content: "";
-    display: none;
-  }
-  #header_join .inner .menuMo .util {
-    right: 5vw;
-    height: 95%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    bottom: 300px;
-  }
-  #header_join .inner .menuMo .util li a {
-    font: normal 20px/1 "Dongle";
-    color: #ccc;
-  }
-  #header_join .inner .menuMo .util li a:hover {
-    font-weight: bold;
-  }
-  #header_join .inner .menuMo .close {
-    display: block;
-    position: absolute;
-    top: 7.5vh;
-    right: 15px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
   }
 
   #main_join .join .inner .wrap .moveLogin h2 {
@@ -4756,14 +4770,13 @@ table {
 #main_login .login {
   width: 100%;
   position: relative;
-  filter: saturate(70%);
+  filter: saturate(55%);
   background-image: url(../img/figure00.png);
 }
 #main_login .login img {
   width: 100%;
   min-height: 1220px;
   object-fit: cover;
-  filter: blur(5px);
 }
 #main_login .login .inner {
   width: 1180px;
@@ -4792,7 +4805,7 @@ table {
   justify-content: center;
   align-items: center;
   padding: 150px 20px;
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.05);
 }
 #main_login .login .inner .wrap .moveJoin h2 {
   font: bold 50px/1 "Montserrat";
@@ -4818,17 +4831,15 @@ table {
   display: block;
   width: 150px;
   height: 40px;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #eee;
+  background: #222222;
+  border: 1px solid #272727;
   font: bold 15px/37px "Montserrat";
   letter-spacing: 1.4px;
-  transition: 0.5s;
+  transition: 1s;
 }
 #main_login .login .inner .wrap .moveJoin a:hover {
-  background: #222222;
-  color: #eee;
-  border: 1px solid #272727;
-  transition: 0.7s;
+  transform: scale(1.1);
 }
 #main_login .login .inner .wrap .loginForm {
   background: rgba(0, 0, 0, 0.8);
@@ -4838,11 +4849,14 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 150px 20px;
+  padding: 100px 20px;
   color: rgba(255, 255, 255, 0.9);
 }
 #main_login .login .inner .wrap .loginForm form {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #main_login .login .inner .wrap .loginForm form .fa-globe-americas {
   font-size: 70px;
@@ -4854,37 +4868,13 @@ table {
   font: bold 15px/40px "Montserrat";
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.9);
-  position: relative;
   margin-bottom: 30px;
   margin-top: 10px;
   display: block;
 }
-#main_login .login .inner .wrap .loginForm form strong::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 70%;
-  background: #fff;
-  height: 2px;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 #main_login .login .inner .wrap .loginForm form .userid {
-  position: relative;
-  margin-top: 70px;
-  margin-bottom: 15px;
-}
-#main_login .login .inner .wrap .loginForm form .userid::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 80%;
-  background: #fff;
-  height: 2px;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 #main_login .login .inner .wrap .loginForm form i {
   font-size: 20px;
@@ -4999,16 +4989,107 @@ table {
   #header_login .inner h1 {
     font: bold 25px/1 "Montserrat";
     letter-spacing: 1.5px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50px;
+    left: 50px;
+  }
+  #header_login .inner h1.on {
+    opacity: 0;
+  }
+  #header_login .inner .btnCall {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    cursor: pointer;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 25px;
+    height: 20px;
+    transition: all 2s;
+  }
+  #header_login .inner .btnCall.on {
+    opacity: 0;
+  }
+  #header_login .inner .btnCall div {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+  }
+  #header_login .inner .menuMo {
+    width: 50%;
+    height: calc(100vh + 35px);
+    background: rgba(0, 0, 0, 0.9);
+    top: -35px;
+    left: -100%;
+    opacity: 0;
+    transition: all 2s;
+    position: fixed;
+  }
+  #header_login .inner .menuMo.on {
+    animation: none;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    left: -5%;
+    position: fixed;
+  }
+  #header_login .inner .menuMo .logo2 {
+    font: bold 22.5px/1 "Montserrat";
+    letter-spacing: 1.5px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+  }
+  #header_login .inner .menuMo > p {
+    font: normal 18px/1 "Dongle";
+    letter-spacing: 1.4px;
+    color: #bbb;
+    display: block;
+    position: absolute;
+    top: 13.5vh;
+    left: 10vw;
   }
   #header_login .inner .menuMo .gnb {
-    top: 25px;
+    display: flex;
+    flex-direction: column;
+    left: 10vw;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 33vw;
+  }
+  #header_login .inner .menuMo .gnb li {
+    margin-left: 0px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   #header_login .inner .menuMo .gnb li a {
-    font: normal 23px/1 "Dongle";
-    letter-spacing: 1.4px;
+    font: normal 30px/1 "Dongle";
+    color: #ccc;
+  }
+  #header_login .inner .menuMo .gnb li a::after {
+    content: "";
+    display: none;
+    height: 0;
+  }
+  #header_login .inner .menuMo .gnb li a:hover::after {
+    content: "";
+    display: none;
+  }
+  #header_login .inner .menuMo .close {
+    position: absolute;
+    top: 7.5vh;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: block;
   }
 
   #main_login .login img {
@@ -5020,10 +5101,11 @@ table {
     left: 50%;
   }
   #main_login .login .inner .wrap .moveJoin {
-    padding: 125px 0px;
+    display: none;
   }
   #main_login .login .inner .wrap .loginForm {
     padding: 125px 0px;
+    width: 100%;
   }
   #main_login .login .inner .wrap .loginForm form strong {
     font: bold 10px/40px "Montserrat";
@@ -5064,59 +5146,25 @@ table {
   }
 }
 @media screen and (max-width: 779px) {
-  #header_login .inner h1 {
-    font: normal 25px/1 "Montserrat";
-    top: 40%;
+  #header_sub .inner h1 {
+    left: 40px;
   }
-  #header_login .inner .menuMo .gnb {
-    top: 30px;
+  #header_sub .inner .menuMo {
+    width: 60%;
   }
-  #header_login .inner .menuMo .gnb li {
-    margin-left: 40px;
-  }
-  #header_login .inner .menuMo .gnb li a {
-    font: normal 13px/1 "Montserrat";
+  #header_sub .inner .menuMo .gnb {
+    width: 40vw;
   }
 
   #main_login .login img {
     min-height: 1000px;
   }
   #main_login .login .inner {
-    width: 90%;
+    width: 80%;
     top: 56%;
     left: 50%;
   }
-  #main_login .login .inner .wrap {
-    flex-direction: column;
-  }
-  #main_login .login .inner .wrap .moveJoin {
-    width: 100%;
-    padding: 30px 0px;
-  }
-  #main_login .login .inner .wrap .moveJoin h2 {
-    font: bold 30px/1 "Montserrat";
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    font-style: italic;
-    color: #fff;
-  }
-  #main_login .login .inner .wrap .moveJoin p {
-    font: normal 10px/18px "Montserrat";
-    margin-bottom: 35px;
-  }
-  #main_login .login .inner .wrap .moveJoin span {
-    font: bold 12px/1 "Montserrat";
-  }
-  #main_login .login .inner .wrap .moveJoin a {
-    width: 130px;
-    height: 35px;
-    font: bold 13px/30px "Montserrat";
-    background: #fff;
-    border: 1px solid #fff;
-    color: #111;
-  }
   #main_login .login .inner .wrap .loginForm {
-    width: 100%;
     padding: 50px 0px;
   }
   #main_login .login .inner .wrap .loginForm form strong {
@@ -5130,154 +5178,28 @@ table {
 }
 @media screen and (max-width: 539px) {
   #header_login .inner h1 {
-    font: bold 25px/1 "Montserrat";
-    letter-spacing: 1.5px;
-    top: 50%;
-    transition: all 2s;
+    left: 10px;
+    top: 45px;
   }
   #header_login .inner h1.on {
     opacity: 0;
   }
   #header_login .inner .btnCall {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 22.5px;
-    cursor: pointer;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    width: 25px;
-    height: 20px;
-    transition: all 2s;
-  }
-  #header_login .inner .btnCall.on {
-    opacity: 0;
-  }
-  #header_login .inner .btnCall div {
-    width: 25px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    transform: translateY(-50%);
+    right: 10px;
+    top: 30px;
   }
   #header_login .inner .menuMo {
     width: 75%;
-    height: calc(100vh + 35px);
-    background: rgba(0, 0, 0, 0.9);
     top: -35px;
     left: -100%;
-    opacity: 0;
-    transition: all 2s;
-    position: fixed;
-  }
-  #header_login .inner .menuMo.on {
-    animation: none;
-    animation-fill-mode: forwards;
-    opacity: 1;
-    left: -5%;
-    position: fixed;
-  }
-  #header_login .inner .menuMo .logo2 {
-    font: bold 22.5px/1 "Montserrat";
-    letter-spacing: 1.5px;
-    color: #fff;
-    display: block;
-    position: absolute;
-    top: 10vh;
-    left: 10vw;
-  }
-  #header_login .inner .menuMo > p {
-    font: normal 18px/1 "Dongle";
-    letter-spacing: 1.4px;
-    color: #bbb;
-    display: block;
-    position: absolute;
-    top: 13.5vh;
-    left: 10vw;
   }
   #header_login .inner .menuMo .gnb {
-    display: flex;
-    flex-direction: column;
     left: 10vw;
-    top: 45vh;
+    top: 52.5vh;
     transform: translateY(-50%);
     width: 55vw;
   }
-  #header_login .inner .menuMo .gnb li {
-    margin-left: 0px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  #header_login .inner .menuMo .gnb li:hover {
-    background: #eee;
-    transition: 0.5s;
-  }
-  #header_login .inner .menuMo .gnb li:hover a {
-    color: #111;
-    transition: 0.5s;
-  }
-  #header_login .inner .menuMo .gnb li a {
-    font: normal 30px/1 "Dongle";
-    color: #ccc;
-  }
-  #header_login .inner .menuMo .gnb li a::after {
-    content: "";
-    display: none;
-    height: 0;
-  }
-  #header_login .inner .menuMo .gnb li a:hover::after {
-    content: "";
-    display: none;
-  }
-  #header_login .inner .menuMo .util {
-    right: 5vw;
-    height: 95%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    bottom: 300px;
-  }
-  #header_login .inner .menuMo .util li a {
-    font: normal 20px/1 "Dongle";
-    color: #ccc;
-  }
-  #header_login .inner .menuMo .util li a:hover {
-    font-weight: bold;
-  }
-  #header_login .inner .menuMo .close {
-    display: block;
-    position: absolute;
-    top: 7.5vh;
-    right: 15px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
 
-  #main_login .login .inner .wrap .moveJoin p {
-    margin-bottom: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-  #main_login .login .inner .wrap .moveJoin span {
-    font: bold 11px/1 "Montserrat";
-  }
-  #main_login .login .inner .wrap .moveJoin a {
-    width: 110px;
-    height: 30px;
-    font: bold 11px/27px "Montserrat";
-  }
-  #main_login .login .inner .wrap .loginForm {
-    width: 100%;
-    padding: 50px 0px;
-  }
   #main_login .login .inner .wrap .loginForm form .fa-globe-americas {
     font-size: 50px;
     margin-bottom: 5px;
@@ -5285,6 +5207,11 @@ table {
   #main_login .login .inner .wrap .loginForm form strong {
     font: bold 10px/40px "Montserrat";
     letter-spacing: 1.3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   #main_login .login .inner .wrap .loginForm form input[type=text], #main_login .login .inner .wrap .loginForm form input[type=password] {
     width: 70%;
@@ -6659,6 +6586,12 @@ body {
   #main .Projects .inner article .pic li {
     height: 500px;
   }
+  #main .Projects .inner article .pic li .vids video {
+    top: 5%;
+    left: 5%;
+    width: 40%;
+    height: 40%;
+  }
   #main .Projects .inner article .pic li a .line {
     width: 50px;
   }
@@ -7221,9 +7154,10 @@ body {
     top: 760px;
   }
   #main .Provide .inner .wrap article .content .contentGroup {
-    width: 295px;
-    height: 295px;
+    width: 100%;
+    height: 25vh;
     margin-bottom: 25px;
+    margin-right: 0px;
   }
   #main .Provide .inner .wrap article .content .contentGroup .contentFront i {
     font-size: 50px;

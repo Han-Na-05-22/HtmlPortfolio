@@ -11,9 +11,6 @@
 @import "join.scss";
 @import "login.scss";
 
-.inner{
-    // border:1px solid red;
-}
 
 body{
     overflow-x: hidden;
@@ -1592,11 +1589,22 @@ body{
             .inner{
     
                article{
+
     
                     .pic{
     
                         li{
                             height: 500px;
+
+                            .vids{
+            
+                                video{
+                                    top: 5%;
+                                    left: 5%;
+                                    width: 40%;
+                                    height:40%;
+                                }
+                            }
 
                             a{
 
@@ -1923,6 +1931,7 @@ body{
                             width: 50%;
                             height: 500px;
                             float: left;
+
 
                             a{
 
@@ -2492,9 +2501,11 @@ body{
                         .content{
 
                             .contentGroup{
-                                width: 295px;
-                                height: 295px;
+                               width: 100%;
+                                height:25vh;
                                 margin-bottom: 25px;
+                                margin-right: 0px;
+
                                 .contentBack{
                                     i{
 

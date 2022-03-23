@@ -2,113 +2,44 @@
 
 const slider = document.querySelector(".slider");
 const ul = slider.querySelector("ul");
-const lis2 = ul.querySelectorAll("li");
+const lis2 = slider.querySelectorAll("li");
 const prev = document.querySelector("#main_sub .prev");
 const next = document.querySelector("#main_sub .next");
 const speed = 50;
 let enableClick = true;
 let len = lis2.length;
-let testss = slider.querySelector("#dd");
-console.log(testss.style.width);
 
+init();
 
-window.addEventListener("resize",()=>{
-    let windows = window.innerWidth;
-    console.log(windows);
-
-    if(windows < 780){
-  
-
-        next.addEventListener("click",(e)=>{
-            e.preventDefault();
-            
-            if(enableClick){
-                enableClick = false;
-                nextSlide2();
-            }
-        });
-
-        prev.addEventListener("click",(e)=>{
-            e.preventDefault();
-
-            if(enableClick){
-                enableClick = false;
-                prevSlide2();
-            }
-        });
-        init3();
+next.addEventListener("click",(e)=>{
+    e.preventDefault();
+    
+    if(enableClick){
+        enableClick = false;
+        nextSlide();
     }
-})
+});
 
-let windows = window.innerWidth;
-console.log(windows);
-  
-    if(windows >= 780){
-        init();
+prev.addEventListener("click",(e)=>{
+    e.preventDefault();
 
-        next.addEventListener("click",(e)=>{
-            e.preventDefault();
-            
-            if(enableClick){
-                enableClick = false;
-                nextSlide();
-            }
-        });
-
-        prev.addEventListener("click",(e)=>{
-            e.preventDefault();
-
-            if(enableClick){
-                enableClick = false;
-                prevSlide();
-            }
-        });
-
-    }else{
-        if(windows < 780){
-            init2();
-
-        next.addEventListener("click",(e)=>{
-            e.preventDefault();
-            
-            if(enableClick){
-                enableClick = false;
-                nextSlide2();
-            }
-        });
-
-        prev.addEventListener("click",(e)=>{
-            e.preventDefault();
-
-            if(enableClick){
-                enableClick = false;
-                prevSlide2();
-            }
-        });
-
-
-
-        }
+    if(enableClick){
+        enableClick = false;
+        prevSlide();
     }
+});
 
 
 function init(){
     ul.style.left="-100%";
     ul.prepend(ul.lastElementChild);
+    
+    ul.style.width = `${100 * len}%`;
+    
+    lis2.forEach(li=>{
+        li.style.width = `${100 / len}%`;
+    })
 }
-
-function init2(){
-    ul.style.left="0%";
-}
-
-function init3(){
-    ul.style.left="0%";
-}
-
-function init4(){
-    ul.style.left="0%";
-}
-
 
 
 function nextSlide(){
@@ -138,34 +69,6 @@ function prevSlide(){
         }
     })
 }
-function nextSlide2(){
-
-    new Anim(ul,{
-        prop:"left",
-        value:"-100%",
-        duration:1,
-        callback:()=>{
-            ul.style.left="0%";
-            ul.append(ul.firstElementChild);
-            enableClick=true;
-        }
-    })
-}
-
-function prevSlide2(){
-
-    new Anim(ul,{
-        prop:"left",
-        value:"100%",
-        duration:1,
-        callback:()=>{
-            ul.style.left="0%";
-            ul.prepend(ul.lastElementChild);
-            enableClick=true;
-        }
-    })
-}
-
 
 // aboutPic
 
