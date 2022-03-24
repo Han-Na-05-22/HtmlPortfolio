@@ -46,7 +46,7 @@ window.addEventListener("scroll",e=>{
 
 
 
-    if(scroll >= posArr[2]){
+    if(scroll >= posArr[2] && scroll <=posArr[4]){
         Provide.classList.remove("on");
     }else{
         Provide.classList.add("on");

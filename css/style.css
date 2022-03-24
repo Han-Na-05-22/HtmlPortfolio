@@ -30,6 +30,10 @@ table {
   opacity: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #main_sub .about {
   width: 100%;
   background: rgba(0, 0, 0, 0.87);
@@ -1052,6 +1056,9 @@ table {
   }
   #main_sub .about .inner h2 span::after {
     width: 80px;
+  }
+  #main_sub .about .inner > img {
+    width: 100%;
   }
   #main_sub .about .inner .warp strong {
     font: normal 30px/1 "Comforter Brush";
@@ -3170,7 +3177,7 @@ table {
     background: none;
   }
   #header_sub .inner {
-    padding: 50px 0px 15px;
+    padding: 50px 10px;
   }
   #header_sub .inner h1 {
     font: bold 22.5px/1 "Montserrat";
@@ -3208,10 +3215,10 @@ table {
     transform: translateY(-50%);
   }
   #header_sub .inner .menuMo {
-    width: 50%;
-    height: calc(100vh + 35px);
+    width: 350px;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.9);
-    top: -35px;
+    top: 0px;
     left: -100%;
     opacity: 0;
     transition: all 2s;
@@ -3221,7 +3228,7 @@ table {
     animation: none;
     animation-fill-mode: forwards;
     opacity: 1;
-    left: -5%;
+    left: 0%;
     position: fixed;
   }
   #header_sub .inner .menuMo .logo2 {
@@ -3230,8 +3237,8 @@ table {
     color: #fff;
     display: block;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
+    top: 100px;
+    left: 50px;
   }
   #header_sub .inner .menuMo > p {
     font: normal 18px/1 "Dongle";
@@ -3239,23 +3246,23 @@ table {
     color: #bbb;
     display: block;
     position: absolute;
-    top: 13.5vh;
-    left: 10vw;
+    top: 130px;
+    left: 50px;
   }
   #header_sub .inner .menuMo .gnb {
     display: flex;
     flex-direction: column;
-    left: 10vw;
-    top: 50vh;
-    transform: translateY(-50%);
-    width: 33vw;
+    top: 200px;
+    left: 50px;
+    transform: translateY(0%);
+    width: 100%;
   }
   #header_sub .inner .menuMo .gnb li {
     margin-left: 0px;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
+    width: 70%;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
   }
   #header_sub .inner .menuMo .gnb li a {
     font: normal 30px/1 "Dongle";
@@ -3310,10 +3317,25 @@ table {
     left: 40px;
   }
   #header_sub .inner .menuMo {
-    width: 60%;
+    width: 250px;
+  }
+  #header_sub .inner .menuMo .logo2 {
+    left: 20px;
+    top: 50px;
+  }
+  #header_sub .inner .menuMo > p {
+    left: 20px;
+    top: 80px;
   }
   #header_sub .inner .menuMo .gnb {
-    width: 40vw;
+    left: 20px;
+    top: 130px;
+  }
+  #header_sub .inner .menuMo .gnb li {
+    width: 80%;
+  }
+  #header_sub .inner .menuMo .close {
+    top: 15px;
   }
 
   #figure_sub .sub_visual > .inner {
@@ -3375,9 +3397,6 @@ table {
   #header_sub .inner .btnCall {
     right: 10px;
     top: 30px;
-  }
-  #header_sub .inner .menuMo {
-    width: 75%;
   }
 
   #figure_sub {
@@ -4159,14 +4178,13 @@ table {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.01);
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.7);
   padding: 100px 50px;
 }
 #main_join .join .inner .wrap {
   width: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.7);
 }
 #main_join .join .inner .wrap .moveLogin {
   width: 100%;
@@ -4341,18 +4359,17 @@ table {
 }
 
 @media screen and (max-width: 1179px) {
+  #header_join {
+    padding: 0px 10px;
+  }
   #header_join .inner {
     width: 100%;
-    position: relative;
-    margin: 0 auto;
-    padding: 60px 10px;
   }
   #header_join .inner .menuMo .gnb {
-    top: 20px;
+    top: 25px;
   }
   #header_join .inner .menuMo .gnb li a {
-    font: normal 25px/1 "Dongle";
-    letter-spacing: 1.5px;
+    font: normal 28px/1 "Dongle";
   }
 
   #main_join .join .inner {
@@ -4366,11 +4383,19 @@ table {
   }
 }
 @media screen and (max-width: 959px) {
+  #header_join {
+    background: none;
+  }
+  #header_join .inner {
+    padding: 50px 10px;
+  }
   #header_join .inner h1 {
-    font: bold 25px/1 "Montserrat";
+    font: bold 22.5px/1 "Montserrat";
     letter-spacing: 1.5px;
+    color: #fff;
     top: 50px;
     left: 50px;
+    transition: all 2s;
   }
   #header_join .inner h1.on {
     opacity: 0;
@@ -4400,10 +4425,10 @@ table {
     transform: translateY(-50%);
   }
   #header_join .inner .menuMo {
-    width: 50%;
-    height: calc(100vh + 35px);
+    width: 350px;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.9);
-    top: -35px;
+    top: 0px;
     left: -100%;
     opacity: 0;
     transition: all 2s;
@@ -4413,7 +4438,7 @@ table {
     animation: none;
     animation-fill-mode: forwards;
     opacity: 1;
-    left: -5%;
+    left: 0%;
     position: fixed;
   }
   #header_join .inner .menuMo .logo2 {
@@ -4422,8 +4447,8 @@ table {
     color: #fff;
     display: block;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
+    top: 100px;
+    left: 50px;
   }
   #header_join .inner .menuMo > p {
     font: normal 18px/1 "Dongle";
@@ -4431,23 +4456,23 @@ table {
     color: #bbb;
     display: block;
     position: absolute;
-    top: 13.5vh;
-    left: 10vw;
+    top: 130px;
+    left: 50px;
   }
   #header_join .inner .menuMo .gnb {
     display: flex;
     flex-direction: column;
-    left: 10vw;
-    top: 50vh;
-    transform: translateY(-50%);
-    width: 33vw;
+    top: 200px;
+    left: 50px;
+    transform: translateY(0%);
+    width: 100%;
   }
   #header_join .inner .menuMo .gnb li {
     margin-left: 0px;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
+    width: 70%;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
   }
   #header_join .inner .menuMo .gnb li a {
     font: normal 30px/1 "Dongle";
@@ -4552,10 +4577,25 @@ table {
     left: 40px;
   }
   #header_join .inner .menuMo {
-    width: 60%;
+    width: 250px;
+  }
+  #header_join .inner .menuMo .logo2 {
+    left: 20px;
+    top: 50px;
+  }
+  #header_join .inner .menuMo > p {
+    left: 20px;
+    top: 80px;
   }
   #header_join .inner .menuMo .gnb {
-    width: 40vw;
+    left: 20px;
+    top: 130px;
+  }
+  #header_join .inner .menuMo .gnb li {
+    width: 80%;
+  }
+  #header_join .inner .menuMo .close {
+    top: 15px;
   }
 
   #main_join .join .inner .wrap .moveLogin h2 {
@@ -4606,27 +4646,17 @@ table {
   }
 }
 @media screen and (max-width: 539px) {
+  #header_join .inner {
+    padding: 35px 0px;
+  }
   #header_join .inner h1 {
+    font: bold 25px/1 "Montserrat";
     left: 10px;
     top: 45px;
-  }
-  #header_join .inner h1.on {
-    opacity: 0;
   }
   #header_join .inner .btnCall {
     right: 10px;
     top: 30px;
-  }
-  #header_join .inner .menuMo {
-    width: 75%;
-    top: -35px;
-    left: -100%;
-  }
-  #header_join .inner .menuMo .gnb {
-    left: 10vw;
-    top: 52.5vh;
-    transform: translateY(-50%);
-    width: 55vw;
   }
 
   #main_join .join .inner .wrap .moveLogin h2 {
@@ -4936,18 +4966,17 @@ table {
   }
 }
 @media screen and (max-width: 1179px) {
+  #header_login {
+    padding: 0px 10px;
+  }
   #header_login .inner {
     width: 100%;
-    position: relative;
-    margin: 0 auto;
-    padding: 60px 10px;
   }
   #header_login .inner .menuMo .gnb {
-    top: 20px;
+    top: 25px;
   }
   #header_login .inner .menuMo .gnb li a {
-    font: normal 25px/1 "Dongle";
-    letter-spacing: 1.5px;
+    font: normal 28px/1 "Dongle";
   }
 
   #main_login .login img {
@@ -4986,11 +5015,19 @@ table {
   }
 }
 @media screen and (max-width: 959px) {
+  #header_login {
+    background: none;
+  }
+  #header_login .inner {
+    padding: 50px 10px;
+  }
   #header_login .inner h1 {
-    font: bold 25px/1 "Montserrat";
+    font: bold 22.5px/1 "Montserrat";
     letter-spacing: 1.5px;
+    color: #fff;
     top: 50px;
     left: 50px;
+    transition: all 2s;
   }
   #header_login .inner h1.on {
     opacity: 0;
@@ -5020,10 +5057,10 @@ table {
     transform: translateY(-50%);
   }
   #header_login .inner .menuMo {
-    width: 50%;
-    height: calc(100vh + 35px);
+    width: 350px;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.9);
-    top: -35px;
+    top: 0px;
     left: -100%;
     opacity: 0;
     transition: all 2s;
@@ -5033,7 +5070,7 @@ table {
     animation: none;
     animation-fill-mode: forwards;
     opacity: 1;
-    left: -5%;
+    left: 0%;
     position: fixed;
   }
   #header_login .inner .menuMo .logo2 {
@@ -5042,8 +5079,8 @@ table {
     color: #fff;
     display: block;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
+    top: 100px;
+    left: 50px;
   }
   #header_login .inner .menuMo > p {
     font: normal 18px/1 "Dongle";
@@ -5051,23 +5088,23 @@ table {
     color: #bbb;
     display: block;
     position: absolute;
-    top: 13.5vh;
-    left: 10vw;
+    top: 130px;
+    left: 50px;
   }
   #header_login .inner .menuMo .gnb {
     display: flex;
     flex-direction: column;
-    left: 10vw;
-    top: 50vh;
-    transform: translateY(-50%);
-    width: 33vw;
+    top: 200px;
+    left: 50px;
+    transform: translateY(0%);
+    width: 100%;
   }
   #header_login .inner .menuMo .gnb li {
     margin-left: 0px;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
+    width: 70%;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
   }
   #header_login .inner .menuMo .gnb li a {
     font: normal 30px/1 "Dongle";
@@ -5146,14 +5183,29 @@ table {
   }
 }
 @media screen and (max-width: 779px) {
-  #header_sub .inner h1 {
+  #header_login .inner h1 {
     left: 40px;
   }
-  #header_sub .inner .menuMo {
-    width: 60%;
+  #header_login .inner .menuMo {
+    width: 250px;
   }
-  #header_sub .inner .menuMo .gnb {
-    width: 40vw;
+  #header_login .inner .menuMo .logo2 {
+    left: 20px;
+    top: 50px;
+  }
+  #header_login .inner .menuMo > p {
+    left: 20px;
+    top: 80px;
+  }
+  #header_login .inner .menuMo .gnb {
+    left: 20px;
+    top: 130px;
+  }
+  #header_login .inner .menuMo .gnb li {
+    width: 80%;
+  }
+  #header_login .inner .menuMo .close {
+    top: 15px;
   }
 
   #main_login .login img {
@@ -5177,27 +5229,17 @@ table {
   }
 }
 @media screen and (max-width: 539px) {
+  #header_login .inner {
+    padding: 35px 0px;
+  }
   #header_login .inner h1 {
+    font: bold 25px/1 "Montserrat";
     left: 10px;
     top: 45px;
-  }
-  #header_login .inner h1.on {
-    opacity: 0;
   }
   #header_login .inner .btnCall {
     right: 10px;
     top: 30px;
-  }
-  #header_login .inner .menuMo {
-    width: 75%;
-    top: -35px;
-    left: -100%;
-  }
-  #header_login .inner .menuMo .gnb {
-    left: 10vw;
-    top: 52.5vh;
-    transform: translateY(-50%);
-    width: 55vw;
   }
 
   #main_login .login .inner .wrap .loginForm form .fa-globe-americas {
@@ -5335,25 +5377,6 @@ body {
   left: 0;
   animation: MenuHover 0.5s;
   animation-fill-mode: forwards;
-}
-#header .inner .menuMo .util {
-  position: absolute;
-  left: 57%;
-  top: 15%;
-}
-#header .inner .menuMo .util::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#header .inner .menuMo .util li {
-  float: left;
-  margin-left: 30px;
-  text-align: center;
-}
-#header .inner .menuMo .util li a {
-  font: normal 20px/1 "Dongle";
-  color: #fff;
 }
 #header .inner .menuMo .close {
   position: absolute;
@@ -6826,29 +6849,66 @@ body {
 }
 @media screen and (max-width: 779px) {
   #header .inner .menuMo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    top: -100%;
-    left: 0;
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: -100%;
     opacity: 0;
     transition: all 2s;
   }
   #header .inner .menuMo.on {
-    animation: MenuMo 1.7s;
+    animation: none;
     animation-fill-mode: forwards;
     opacity: 1;
+    top: 0;
+    left: 0%;
+  }
+  #header .inner .menuMo > p {
+    display: block;
+    font: normal 20px/1 "Dongle";
+    color: #ccc;
+    top: 90px;
+    position: absolute;
+    width: 100%;
+    left: 10px;
+  }
+  #header .inner .menuMo h1 {
+    top: 70px;
+    left: 10px;
   }
   #header .inner .menuMo .gnb {
-    top: 90%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    left: 10px;
+    top: 120px;
+    transform: translateY(0%);
+    width: 100%;
   }
   #header .inner .menuMo .gnb li {
-    margin-left: 35px;
+    margin-left: 0px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    margin-bottom: 30px;
+    margin-top: 15px;
   }
   #header .inner .menuMo .gnb li a {
-    font: normal 22px/1 "Dongle";
+    font: normal 30px/1 "Dongle";
+    color: #ccc;
+  }
+  #header .inner .menuMo .gnb li a::after {
+    content: "";
+    display: none;
+    height: 0;
+  }
+  #header .inner .menuMo .gnb li a:hover::after {
+    content: "";
+    display: none;
+  }
+  #header .inner .menuMo .close {
+    right: 15px;
+    top: 15px;
   }
 
   #figure {
@@ -7037,63 +7097,6 @@ body {
   #header {
     height: 80vh;
   }
-  #header .inner .menuMo {
-    position: fixed;
-    width: 60%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    top: 0;
-    left: -100%;
-    opacity: 0;
-    transition: all 2s;
-  }
-  #header .inner .menuMo.on {
-    animation: none;
-    animation-fill-mode: forwards;
-    opacity: 1;
-    top: 0;
-    left: -1%;
-  }
-  #header .inner .menuMo > p {
-    display: block;
-    font: normal 20px/1 "Dongle";
-    color: #ccc;
-    top: 9vh;
-    left: 5vw;
-    position: absolute;
-    width: 55vw;
-  }
-  #header .inner .menuMo h1 {
-    top: 6.5vh;
-  }
-  #header .inner .menuMo .gnb {
-    display: flex;
-    flex-direction: column;
-    left: 5vw;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55vw;
-  }
-  #header .inner .menuMo .gnb li {
-    margin-left: 0px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  #header .inner .menuMo .gnb li a {
-    font: normal 30px/1 "Dongle";
-    color: #ccc;
-  }
-  #header .inner .menuMo .gnb li a::after {
-    content: "";
-    display: none;
-    height: 0;
-  }
-  #header .inner .menuMo .gnb li a:hover::after {
-    content: "";
-    display: none;
-  }
 
   #figure {
     margin-top: -80vh;
@@ -7155,18 +7158,28 @@ body {
   }
   #main .Provide .inner .wrap article .content .contentGroup {
     width: 100%;
-    height: 25vh;
+    height: 250px;
     margin-bottom: 25px;
     margin-right: 0px;
   }
   #main .Provide .inner .wrap article .content .contentGroup .contentFront i {
-    font-size: 50px;
+    font-size: 40px;
   }
   #main .Provide .inner .wrap article .content .contentGroup .contentFront span {
     font-size: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   #main .Provide .inner .wrap article .content .contentGroup .contentFront p {
     font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
   #main .Projects .inner article .pic li {
     width: 100%;

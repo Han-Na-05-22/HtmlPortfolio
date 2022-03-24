@@ -286,27 +286,24 @@
 
 @media screen and(max-width:1179px){
     #header_login{
-
+        padding:0px 10px;
+    
+    
         .inner{
             width: 100%;
-            position: relative;
-            margin: 0 auto;
-            padding: 60px 10px;
-    
-            h1{
-            }
     
             .menuMo{
     
                 .gnb{
-                    top: 20px;
+                    top:25px;
     
                     li{
+
     
                         a{
-                            font:normal 25px/1 'Dongle';
-                            letter-spacing: 1.5px;
+                            font:normal 28px/1 'Dongle';
                         }
+
                     }
                 }
             }
@@ -370,18 +367,21 @@
 
 @media screen and(max-width:959px){
     #header_login{
-
+        background: none;
         .inner{
-    
+            padding:50px 10px;
+
             h1{
-                font:bold 25px/1 'Montserrat';
+                font:bold 22.5px/1 'Montserrat';
                 letter-spacing: 1.5px;
-                top: 50px;
+                color:#fff;
+                top:  50px;
                 left: 50px;
+                transition: all 2s;
 
                 &.on{opacity: 0;}
             }
-    
+
             .btnCall{
                 display: block;
                 position: absolute;
@@ -408,10 +408,10 @@
             }
     
             .menuMo{
-                width: 50%;
-                height:calc(100vh + 35px);
+                width: 350px;
+                height: 100vh;
                 background: rgba(0,0,0,.9);
-                top: -35px;
+                top: 0px;
                 left: -100%;
                 opacity: 0;
                 transition: all 2s;
@@ -421,7 +421,7 @@
                     animation: none;
                     animation-fill-mode: forwards;
                     opacity: 1;
-                    left: -5%;
+                    left: 0%;
                     position: fixed;
                 }
 
@@ -431,8 +431,8 @@
                     color:#fff;
                     display: block;
                     position: absolute;
-                    top: 10vh;
-                    left: 10vw;
+                    top: 100px;
+                    left: 50px;
                 }
     
                 >p{
@@ -441,24 +441,24 @@
                     color:#bbb;
                     display: block;
                     position: absolute;
-                    top: 13.5vh;
-                    left: 10vw;
+                    top: 130px;
+                    left: 50px;
                 }
 
                 .gnb{
                     display: flex;
                     flex-direction: column;
-                    left: 10vw;
-                    top: 50vh;
-                    transform: translateY(-50%);
-                    width: 33vw;
+                    top: 200px;
+                    left: 50px;
+                    transform: translateY(0%);
+                    width: 100%;
                     
                     li{
                         margin-left: 0px;
                         border-bottom: 0.5px solid rgba(255,255,255,.3);
-                        width: 100%;
+                        width: 70%;
                         margin-bottom: 30px;
-                        margin-top:30px;
+                        margin-top:15px;
 
                         a{
                             font:normal 30px/1 'Dongle';
@@ -568,16 +568,32 @@
 }
 
 @media screen and(max-width:779px){
-    #header_sub{
+    #header_login{
 
         .inner{
             h1{left: 40px;}
     
             .menuMo{
-                width: 60%;
+                width: 250px;
 
+                .logo2{
+                    left: 20px;
+                    top:50px;
+                }
+    
+                >p{
+                    left: 20px;
+                    top:80px;
+                }
 
-                .gnb{width: 40vw;}
+                .gnb{
+                    left: 20px;
+                    top:130px;
+                    
+                    li{width: 80%;}
+                }
+
+                .close{ top: 15px;}
             }
         }
     }
@@ -623,32 +639,17 @@
     #header_login{
 
         .inner{
-    
+            padding:35px 0px;
+
             h1{
+                font:bold 25px/1 'Montserrat';
                 left: 10px;
                 top:45px;
-
-                &.on{
-                    opacity: 0;
-                }
             }
 
             .btnCall{
                 right: 10px;
                 top:30px;
-            }
-    
-            .menuMo{
-                width: 75%;
-                top: -35px;
-                left: -100%;
-
-                .gnb{
-                    left: 10vw;
-                    top: 52.5vh;
-                    transform: translateY(-50%);
-                    width: 55vw;
-                }
             }
         }
     }

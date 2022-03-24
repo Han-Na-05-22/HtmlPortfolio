@@ -135,29 +135,6 @@ body{
                 }
             }
 
-            .util{
-                position: absolute;
-                left: 57%;
-                top: 15%;
-
-                &::after{
-                    content: '';
-                    display: block;
-                    clear: both;
-                }
-                
-                li{
-                    float: left;
-                    margin-left: 30px;
-                    text-align: center;
-
-                    a{
-                        font:normal 20px/1 'Dongle';
-                        color:#fff;
-                    }
-                }
-            }
-
             .close{
                 position: absolute;
                 right:1075px;
@@ -978,18 +955,7 @@ body{
         top: 0;
         left: 0;
         opacity: 1;
-        // transform: rotateY(-180deg);
         z-index:15;
-
-        // &.on{
-        //     animation: ProjectsSliderBg 2.1s 1.2s;
-        //     animation-fill-mode: forwards;
-
-        //     .liSlider{
-        //         animation: ProjectsSlider 2s 1.1s;
-        //         animation-fill-mode: forwards;
-        //     }
-        // }
 
         .projectsClose{
             width: 30px;
@@ -1066,7 +1032,6 @@ body{
                 .picBg{
                     width: 100%;
                     height: 150px;
-                    // background: rgb(214, 177, 118);
                     background:linear-gradient(45deg,rgb(113, 172, 211),rgb(141, 185, 214));
                     position: absolute;
                     bottom: 77px;
@@ -2008,36 +1973,77 @@ body{
         .inner{
     
             .menuMo{
-                position: absolute;
-                width: 100%;
-                height:100% ;
-                background: rgba(0,0,0,.35);
-                top: -100%;
-                left: 0;
+                position: fixed;
+                width: 200px;
+                height: 100vh;
+                background: rgba(0,0,0,.9);
+                top: 0;
+                left: -100%;
                 opacity: 0;
                 transition: all 2s;
     
                 &.on{
-                    animation: MenuMo 1.7s;
+                    animation: none;
                     animation-fill-mode: forwards;
                     opacity: 1;
+                    top: 0;
+                    left: 0%;
+                }
+
+                >p{
+                    display: block;
+                    font:normal 20px/1 'Dongle';
+                    color:#ccc;
+                    top:90px;
+                    position: absolute;
+                    width: 100%;
+                    left:10px;
                 }
     
                 h1{
-
+                    top:70px;
+                    left:10px;
                 }
     
                 .gnb{
-                    top: 90%;
-                    transform: translate(-50%, -50%);
+                    display: flex;
+                    flex-direction: column;
+                    left:10px;
+                    top:120px;
+                    transform: translateY(0%);
+                    width: 100%;
     
                     li{
-                        margin-left: 35px;
+                        margin-left: 0px;
+                        border-bottom: 0.5px solid rgba(255,255,255,.3);
+                        width: 80%;
+                        margin-bottom: 30px;
+                        margin-top:15px;
 
                         a{
-                            font:normal 22px/1 'Dongle';
+                            font:normal 30px/1 'Dongle';
+                            color:#ccc;
+
+                            &::after{
+                                content: '';
+                                display: none;
+                                height: 0;
+                            }
+    
+                            &:hover{
+    
+                                &::after{
+                                    content: '';
+                                    display: none;
+                                }
+                            }
                         }
                     }
+                }
+
+                .close{
+                    right: 15px;
+                    top: 15px;
                 }
             }
         }
@@ -2334,81 +2340,7 @@ body{
 
 @media screen and(max-width:539px) {
 
-    #header{
-        height: 80vh;
-
-        .inner{
-    
-            .menuMo{
-                position: fixed;
-                width: 60%;
-                height: 100vh;
-                background: rgba(0,0,0,.9);
-                top: 0;
-                left: -100%;
-                opacity: 0;
-                transition: all 2s;
-    
-                &.on{
-                    animation: none;
-                    animation-fill-mode: forwards;
-                    opacity: 1;
-                    top: 0;
-                    left: -1%;
-                }
-
-                >p{
-                    display: block;
-                    font:normal 20px/1 'Dongle';
-                    color:#ccc;
-                    top:9vh;
-                    left: 5vw;
-                    position: absolute;
-                    width: 55vw;
-                }
-    
-                h1{
-                    top:6.5vh;
-                }
-    
-                .gnb{
-                    display: flex;
-                    flex-direction: column;
-                    left: 5vw;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 55vw;
-    
-                    li{
-                        margin-left: 0px;
-                        border-bottom: 0.5px solid rgba(255,255,255,.3);
-                        width: 100%;
-                        margin-bottom: 30px;
-                        margin-top:30px;
-
-                        a{
-                            font:normal 30px/1 'Dongle';
-                            color:#ccc;
-
-                            &::after{
-                                content: '';
-                                display: none;
-                                height: 0;
-                            }
-    
-                            &:hover{
-    
-                                &::after{
-                                    content: '';
-                                    display: none;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    #header{ height: 80vh; }
 
 
     #figure{
@@ -2472,7 +2404,6 @@ body{
                             position: absolute;
                             top:640px;
                             left: -42px;
-                            // white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;                
                             display: -webkit-box;
@@ -2502,7 +2433,7 @@ body{
 
                             .contentGroup{
                                width: 100%;
-                                height:25vh;
+                               height: 250px;
                                 margin-bottom: 25px;
                                 margin-right: 0px;
 
@@ -2514,15 +2445,25 @@ body{
 
                                 .contentFront{
                                     i{
-                                        font-size: 50px;
+                                        font-size: 40px;
                                     }
         
                                     span{
                                         font-size:25px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;   
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 1; 
+                                        -webkit-box-orient: vertical;
                                     }
         
                                     p{
                                         font-size:17px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;   
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3; 
+                                        -webkit-box-orient: vertical;
                                     }
                                 }
                             }
@@ -2688,4 +2629,3 @@ body{
         }
     }
 }
-
