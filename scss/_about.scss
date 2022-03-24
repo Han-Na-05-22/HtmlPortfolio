@@ -212,9 +212,9 @@
                     width: 30px;
                     height: 30px;
                     background: rgba(241, 195, 121, 0.849);
-                    bottom: 0;
-                    left: 49%;
-                    transform: translateX(-50%);
+                    left: 5%;
+                    transform: translate(-50%,-50%);
+                    top: 50%;
                     text-align: center;
                     color:#fff;
 
@@ -230,8 +230,9 @@
                     width: 30px;
                     height: 30px;
                     background: rgba(241, 195, 121, 0.849);
-                    left: 51%;
-                    transform: translateX(-50%);
+                    right: 5%;
+                    transform: translate(-50%,-50%);
+                    top: 50%;
                     text-align: center;
                     color:#fff;
 
@@ -617,16 +618,6 @@
                             }
                         }
                     }
-    
-                    .prev{
-                        left: 47%;
-                        bottom: 10px;
-                    }
-    
-                    .next{
-                        left: 53%;
-                        bottom: 10px;
-                    }
                 }
             }
         }
@@ -873,16 +864,6 @@
                                 }
                             }
                         }
-                    }
-    
-                    .prev{
-                        left: 47%;
-                        bottom: 10px;
-                    }
-    
-                    .next{
-                        left: 53%;
-                        bottom: 10px;
                     }
                 }
             }
@@ -1141,40 +1122,6 @@
                                     }
                                 }
                             }
-                        }
-                    }
-    
-                    .prev{
-                        background: none;
-                        left: 10px;
-                        bottom: 225px;
-                        transform: rotateZ(90deg);
-
-                        i{
-                            font-size: 30px;
-                            color:#ddd;
-
-                            &:hover{
-                                color: rgba(241, 195, 121, 0.849);
-                            }
-
-                        }
-                    }
-    
-                    .next{
-                        background: none;
-                        left: 10px;
-                        bottom: 180px;
-                        transform: rotateZ(90deg);
-                        
-                        i{
-                            font-size: 30px;
-                            color:#ddd;
-
-                            &:hover{
-                                color: rgba(241, 195, 121, 0.849);
-                            }
-
                         }
                     }
                 }
@@ -1488,23 +1435,6 @@
                         }
                     }
     
-                    .prev{
-                        left: 5px;
-                        bottom: 150px;
-
-                        i{
-                            font-size: 25px;
-                        }
-                    }
-    
-                    .next{
-                        left: 5px;
-                        bottom: 100px;
-                        
-                        i{
-                            font-size: 25px;
-                        }
-                    }
                 }
             }
         }
