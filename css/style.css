@@ -2899,7 +2899,7 @@ body {
 }
 #figure_sub .sub_visual > .inner {
   position: absolute;
-  left: 30%;
+  left: 20%;
   top: 50%;
   transform: translateY(-30%);
   text-align: left;
